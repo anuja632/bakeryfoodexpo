@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bakery and Food Tech Expo 2026</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome (Optional for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Bootstrap Navbar -->
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-custom bg-white shadow-sm sticky-top">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+
+    <!-- Logo (Mobile Only, centered below 1080px) -->
+    <a class="navbar-brand mobile-logo" href="index.html">
+      <img src="./images/logo.png" loading="lazy" alt="Bakery & Food Tech Expo" class="navbar-logo" style="height:70px;">
+    </a>
+
+    <!-- Hamburger (for mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-center d-none d-lg-block">
+      <ul class="navbar-nav w-100 justify-content-center align-items-center">
+        
+        <!-- Left Menu -->
+        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+
+        <!-- Dropdown: Exhibitors -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle left-gap" href="#" id="exhibitorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            EXHIBITORS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="exhibitorsDropdown">
+            <li><a class="dropdown-item" href="exhibitors.html">EXHIBITORS</a></li>
+            <li><a class="dropdown-item" href="images/floorplan.pdf" target="_blank">FLOOR PLAN</a></li>
+            <li><a class="dropdown-item" href="images/brochure.pdf" target="_blank">BROCHURE</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown: Visitors -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle left-gap" href="#" id="visitorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            VISITORS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="visitorsDropdown">
+            <li><a class="dropdown-item" href="visitors.html">VISITORS</a></li>
+            <li><a class="dropdown-item" href="images/floorplan.pdf" target="_blank">FLOOR PLAN</a></li>
+            <li><a class="dropdown-item" href="images/brochure.pdf" target="_blank">BROCHURE</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="sponsorship.html">SPONSORSHIP</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+
+    <!-- Right-side Button -->
+    <div class="d-none d-lg-block">
+      <a href="about.html" class="btn-default  text-white  ms-3 rounded-3">REGISTERED</a>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+
+
+<div class="page-header parallaxie" style="background-image: url('https://atulbakery.com/wp-content/uploads/2025/01/Atul-Website-Banner-1.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Page Header Box start -->
+        <div class="page-header-box text-center">
+          <h1 class="text-anime">
+            <div class="line">
+              <div class="word">Exhibitors</div>
+            </div>
+          </h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb wow fadeInUp" data-wow-delay="0.5s">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>   <li>/</li>           <li class="breadcrumb-item active" aria-current="page"> Exhibitors</li>
+            </ol>
+          </nav>
+        </div>
+        <!-- Page Header Box end -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Floating Action Buttons -->
+<div class="floating-buttons">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/917406213220" class="fab-btn whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Phone -->
+  <a href="tel:+917406213220" class="fab-btn phone" aria-label="Call Us">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <!-- Scroll To Top -->
+  <button class="fab-btn scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</div>
+
+
+<!-- =======================
+     Footer Start
+======================== -->
+<footer class="footer pt-5 pb-0">
+  <div class="container">
+    <div class="row align-items-start text-center text-md-start">
+
+      <!-- Logo + Social Links -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <img src="./images/logo.png" alt="Bakery & Food Tech Expo Logo" class="img-fluid mb-3">
+        <div class="social-links text-center ">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Explore Links -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5 class="footer-title">Explore</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#home"><i class="fas fa-home me-2"></i>Home</a></li>
+          <li><a href="#about"><i class="fas fa-info-circle me-2"></i>About</a></li>
+          <li><a href="#exhibitors"><i class="fas fa-store-alt me-2"></i>Exhibitors</a></li>
+          <li><a href="#visitors"><i class="fas fa-user-friends me-2"></i>Visitors</a></li>
+          <li><a href="#sponsorship"><i class="fas fa-handshake me-2"></i>Sponsorship</a></li>
+          <li><a href="gallery.html"><i class="fas fa-image me-2"></i>Gallery</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope me-2"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Expo Dates -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-title">Expo Dates</h5>
+        <p class="mb-1"><i class="fas fa-calendar-alt me-2"></i>MARCH 13, 2026</p>
+        <p class="mb-1"><i class="fas fa-calendar-alt me-2"></i>MARCH 14, 2026</p>
+        <p class="mb-3"><i class="fas fa-calendar-alt me-2"></i>MARCH 15, 2026</p>
+        <p class="mb-2 small"><i class="fas fa-map-marker-alt me-2"></i>Hills Exhibition Center,Hosur, Tamil Nadu</p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-4 col-md-6 mb-4 text-md-start text-center">
+        <h5 class="footer-title">Contact Us</h5>
+        <div class="contact-info">
+          <p><i class="fas fa-phone me-2" ></i> +91 7406213220, +91 7406213221</p>
+          <p><i class="fas fa-phone me-2"></i> +91 7406213222, +91 7406213223</p>
+          <p><i class="fas fa-phone me-2"></i> 080 23238677, 080 23238699</p>
+          <p><i class="fas fa-envelope me-2"></i> bakerynfoodtecexpo.com@gmail.com</p>
+          <p><i class="fas fa-envelope me-2"></i> info@bakerynfoodtecexpo.com</p>
+          <p class="small mb-0"><i class="fas fa-map-marker-alt me-2"></i>#372/1, 3rd Floor, 4th Stage, 8th Main Road,Basaweshwaranagar, Bangalore - 560079</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Image -->
+    <div class="text-center mt-4">
+      <img src="https://jayasurya1912.github.io/Agri-Expo/images/fotin.png" alt="Bakery & Food Tech Expo Footer Image" class="footer-bottom-img img-fluid">
+    </div>
+
+    <!-- Copyright -->
+    <hr class="border-light ">
+    <div class="text-center small pb-1">
+      © 2026 Bakery & Food Tech Expo. All Rights Reserved.
+      <span class="developed-by">Developed by <a href="https://www.webads.live/" target="_blank">Webads</a></span>
+    </div>
+  </div>
+</footer>
+<!-- =======================
+     Footer End
+======================== -->
+
+
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  new WOW().init();
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
