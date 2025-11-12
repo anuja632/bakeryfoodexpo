@@ -11,11 +11,15 @@
 <link rel="stylesheet" href="./asset/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="./asset/images/banner/bakerylogo.png">
+
 </head>
 <body>
 
 <!-- Bootstrap Navbar -->
-
+<div class="top">
+  <img src="./asset/images/banner/topnav.png">
+</div>
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg navbar-custom bg-white shadow-sm sticky-top">
   <div class="container-fluid d-flex align-items-center justify-content-between">
@@ -64,7 +68,7 @@
 
         <li class="nav-item"><a class="nav-link" href="sponsorship.html">SPONSORSHIP</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">CONTACT</a></li>
       </ul>
     </div>
 
@@ -75,7 +79,33 @@
   </div>
 </nav>
 <!-- Navbar End -->
+<!-- ===== Offcanvas Menu (Mobile) ===== -->
+<div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header justify-content-between align-items-center">
+    <!-- Logo -->
+    <a href="index.html" class="navbar-brand m-0">
+      <img src="./asset/images/logo.png" alt="Bakery Expo Logo" style="height: 80px;">
+    </a>
+    <!-- Close button -->
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
 
+  <div class="offcanvas-body">
+    <ul class="navbar-nav text-center">
+      <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+      <li class="nav-item"><a class="nav-link" href="exhibitors.html">EXHIBITORS</a></li>
+      <li class="nav-item"><a class="nav-link" href="visitors.html">VISITORS</a></li>
+      <li class="nav-item"><a class="nav-link" href="sponsorship.html">SPONSORSHIP</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+      <li class="nav-item"><a class="nav-link active" href="contact.html">CONTACT</a></li>
+    </ul>
+
+    <div class="text-center mt-4">
+      <a href="about.html" class="btn-default">REGISTERED</a>
+    </div>
+  </div>
+</div>
 <!-- Banner Section -->
 <div class="page-headers position-relative">
   <div class="container text-center text-white">

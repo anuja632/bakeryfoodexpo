@@ -11,13 +11,17 @@
 <link rel="stylesheet" href="./asset/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="./asset/images/banner/bakerylogo.png">
+
 </head>
 
 <body>
 
 <!-- Bootstrap Navbar -->
 
-
+<div class="top">
+  <img src="./asset/images/banner/topnav.png">
+</div>
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg navbar-custom bg-white shadow-sm sticky-top">
   <div class="container-fluid d-flex align-items-center justify-content-between">
@@ -42,11 +46,11 @@
 
         <!-- Dropdown: Exhibitors -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle left-gap" href="#" id="exhibitorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link active dropdown-toggle left-gap" href="#" id="exhibitorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             EXHIBITORS
           </a>
           <ul class="dropdown-menu" aria-labelledby="exhibitorsDropdown">
-            <li><a class="dropdown-item" href="exhibitors.html">EXHIBITORS</a></li>
+            <li><a class="dropdown-item active" href="exhibitors.html">EXHIBITORS</a></li>
             <li><a class="dropdown-item" href="./asset/images/BAKERY AND FOOD TEC EXPO – 2026 FLOOR PLAN.pdf" target="_blank">FLOOR PLAN</a></li>
             <li><a class="dropdown-item" href="./asset/images/BAKERY AND FOOD TEC EXPO – 2026 PROFILE.pdf" target="_blank">BROCHURE</a></li>
           </ul>
@@ -78,11 +82,63 @@
 </nav>
 <!-- Navbar End -->
 
+<!-- ===== Offcanvas Menu (Mobile) ===== -->
+<div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header justify-content-between align-items-center">
+    <!-- Logo -->
+    <a href="index.html" class="navbar-brand m-0">
+      <img src="./asset/images/logo.png" alt="Bakery Expo Logo" style="height: 80px;">
+    </a>
+    <!-- Close button -->
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
 
+  <div class="offcanvas-body">
+    <ul class="navbar-nav text-center">
+      <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+      <li class="nav-item"><a class="nav-link active" href="exhibitors.html">EXHIBITORS</a></li>
+      <li class="nav-item"><a class="nav-link" href="visitors.html">VISITORS</a></li>
+      <li class="nav-item"><a class="nav-link" href="sponsorship.html">SPONSORSHIP</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+    </ul>
+
+    <div class="text-center mt-4">
+      <a href="about.html" class="btn-default">REGISTERED</a>
+    </div>
+  </div>
+</div>
 
 <div class="page-header">
-  <img src="./asset/images/banner/bakeryexhibitors.png">
+  <img src="./asset/images/banner/bakeryb1.png">
 </div>
+<section class="top-section">
+  <div class="container">
+    <div class="content">
+      <h1>
+        <span class="highlight">The Bakery & Food Tec Expo 2026</span>, Showcase. Connect. Grow.
+      </h1>
+      <p class="subtext">
+        Showcase your products, connect with industry leaders, and expand your business in the bakery, food processing, and hospitality sectors.
+      </p>
+      <p>
+        Participate in a high-impact event that brings together top manufacturers, suppliers, and innovators. 
+        Engage directly with key buyers, decision-makers, and distributors from across India and beyond. 
+        Whether launching new machinery or expanding market presence, this expo ensures maximum visibility and business growth.
+      </p>
+      <a href="#" class="btn-default">Register Now</a>
+    </div>
+
+    <div class="images">
+      <img src="https://exposol.de/wp-content/uploads/2021/02/Fortune_1200-x-900-1.jpg" alt="Main Exhibition" class="main-image">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/ee707929221607.55e819edd0838.jpg" alt="Agri Field" class="small-image">
+    </div>
+  </div>
+</section>
+
+
+
 <!-- Main Title Start -->
 <div class="main-title text-center mt-5">
   <h2 class="text-dark d-flex align-items-center justify-content-center gap-3 flex-wrap">
@@ -228,6 +284,102 @@
 
   </div>
 </div>
+
+<!-- ===== Exhibitor Registration Section ===== -->
+<section class="exhibitor-register-section py-5">
+  <div class="container">
+    <!-- Main Title -->
+<!-- Main Title End -->
+  <div class="container">
+  <!-- Main Title Start -->
+<div class="main-title text-center mb-5">
+  <h2 class="text-dark d-flex align-items-center justify-content-center gap-3 flex-wrap">
+    <!-- Left SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="23" viewBox="0 0 68 23" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.2 1.97854C10.8 -0.321462 6.90001 -0.821462 4.40001 1.57854C2.00001 3.87854 2.30001 7.57854 3.70001 10.2785C3.80001 10.4785 3.90001 10.5785 4.00001 10.7785C4.00001 10.8785 4.10001 10.9785 4.10001 10.9785C5.60001 13.2785 7.80001 15.0785 10.2 16.2785C17.3 19.7785 27.1 18.8785 37.6 14.7785C46.4 11.3785 56.6 9.47854 67.3 11.6785C56.9 7.67854 47.5 10.0785 37 14.0785C25.5 18.4785 16.5 18.8785 10.4 15.7785C7.70001 14.3785 5.00001 12.1785 3.70001 9.27854C2.70001 6.97854 2.50001 3.67854 4.60001 1.87854C5.30001 1.27854 6.10001 0.878538 7.00001 0.778538C7.90001 0.578538 8.90001 0.578538 9.90001 0.878538C11.5 1.27854 13.2 2.47854 14 3.97854C14.3 4.47854 14.4 5.17854 14.2 5.67854C14.1 6.27854 13.6 6.77854 13.1 6.87854C11.9 7.17854 10.4 6.37854 10.2 5.17854C10.2 4.97854 10.2 4.77854 10.3 4.67854C10.4 4.57854 10.6 4.47854 10.8 4.57854C11 4.67854 11.1 4.77854 11.2 4.87854C11.3 4.67854 11.2 4.37854 11 4.17854C10.6 3.77854 9.90001 3.97854 9.70001 4.47854C9.40001 4.87854 9.50001 5.27854 9.60001 5.67854C9.90001 6.27854 10.3 6.77854 10.9 7.17854C11.8 7.67854 13.1 7.87854 14 7.17854C14.4 6.87854 14.6 6.47854 14.7 5.97854C14.9 5.37854 14.8 4.67854 14.6 4.07854C14.4 3.17854 13.8 2.57854 13.2 1.97854Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 3.67847C0.3 4.27847 0.7 5.17847 1.1 5.77847C1.1 5.87847 1.2 5.87847 1.2 5.97847C1.3 5.97847 1.3 5.97847 1.3 6.07847C1.4 6.17847 1.5 6.27847 1.6 6.47847C1.8 6.67847 1.9 6.97847 2.1 7.17847C2.3 7.47847 2.4 7.67847 2.5 7.97847C2.6 8.17847 2.6 8.37847 2.6 8.57847C2.6 8.67847 2.6 8.77847 2.6 8.87847C2.6 9.07847 2.5 9.07847 2.3 9.07847C1.9 9.07847 1.7 8.87847 1.4 8.67847C1 8.27847 0.6 7.77847 0.4 7.17847C0.3 6.97847 0.2 6.77847 0.2 6.47847C0.1 6.27847 0.1 5.97847 0 5.77847C0 5.47847 0 5.27847 0 4.97847C0 4.77847 0.1 4.47847 0.1 4.27847C0.2 4.17847 0.3 3.97847 0.5 3.67847C0.4 3.67847 0.4 3.67847 0.5 3.67847Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M32.1 16.9784C32.8 16.5784 33.7 16.4784 34.4 16.3784C34.3 19.6784 30.6 20.5784 28 21.4784C29.7 20.2784 30.2 17.8784 32.1 16.9784Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.80002 4.0786C6.30002 4.2786 5.90002 4.3786 5.60002 4.8786C5.30002 5.2786 5.20002 5.7786 5.10002 6.2786C4.90002 6.9786 4.80002 7.6786 4.40002 8.2786C4.20002 8.5786 4.00002 8.4786 3.80002 8.2786C3.40002 7.8786 3.30002 7.2786 3.40002 6.6786C3.50002 6.0786 3.70002 5.5786 4.10002 5.0786C4.70002 4.3786 5.70002 3.5786 6.70002 3.9786C6.70002 4.0786 6.80002 4.0786 6.80002 4.0786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10.7 17.2786C10.7 17.3786 10.7 17.3786 10.7 17.3786C10.4 17.7786 10 17.9786 9.50001 18.0786C9.00001 18.1786 8.50001 18.0786 8.00001 17.9786C6.70001 17.5786 5.40001 16.8786 4.20001 16.2786C4.90001 16.3786 5.70001 16.2786 6.40001 16.2786C7.10001 16.2786 7.90001 16.1786 8.60001 16.2786C9.00001 16.3786 9.30001 16.4786 9.60001 16.5786C9.90001 16.7786 10.2 16.9786 10.5 17.1786C10.6 17.1786 10.6 17.1786 10.7 17.2786C10.6 17.2786 10.6 17.2786 10.7 17.2786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 18.5785L16.6 18.6785C16.6 18.7785 16.6 18.7785 16.6 18.8785C16.4 19.4785 15.9 19.7785 15.3 19.9785C14 20.3785 12.7 20.3785 11.4 20.1785C11.2 20.1785 10.9 20.0785 10.7 20.0785C10.5 20.0785 10.3 19.9785 10.1 19.9785C11.3 19.6785 12.4 19.0785 13.6 18.5785C14.1 18.3785 14.7 18.2785 15.3 18.1785C15.4 18.2785 16.2 18.2785 16.5 18.5785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.19999 10.1785C8.19999 10.2785 8.19999 10.3785 8.19999 10.3785C8.19999 10.4785 8.19999 10.5785 8.29999 10.5785C8.39999 10.6785 8.39999 10.8785 8.49999 10.9785C8.59999 11.2785 8.79999 11.4785 8.99999 11.6785C9.39999 12.1785 9.89999 12.5785 10.4 12.9785C10.9 13.3785 11.3 13.8785 11.5 14.3785C11.6 14.5785 11.7 14.7785 11.7 15.0785C11.7 15.1785 11.7 15.1785 11.7 15.2785L11.6 15.3785C11.5 15.3785 11.4 15.3785 11.3 15.3785C10.5 15.2785 9.69999 14.7785 9.19999 14.1785C8.69999 13.5785 8.39999 12.9785 8.19999 12.1785C7.99999 11.5785 7.99999 10.8785 8.19999 10.1785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7.1 6.27856C7 6.37856 6.9 6.57856 6.9 6.67856C6.9 6.77856 6.8 6.97856 6.8 7.07856C6.7 7.27856 6.7 7.57856 6.7 7.77856C6.7 8.27856 6.8 8.77856 6.9 9.37856C7.1 10.3786 7.2 11.3786 6.9 12.3786C6.9 12.3786 6.9 12.4786 6.8 12.4786C6.7 12.5786 6.4 12.3786 6.3 12.2786C6.1 12.1786 6 11.9786 5.8 11.8786C5.5 11.5786 5.3 11.1786 5.3 10.7786V10.6786C5.2 10.0786 5.3 9.47856 5.4 8.97856C5.6 8.27856 5.9 7.47856 6.4 6.87856C6.6 6.57856 6.8 6.47856 7.1 6.27856Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1 10.7786C1.3 11.0786 1.5 11.3786 1.8 11.5786C2.1 11.7786 2.5 11.9786 2.8 12.0786C3.4 12.2786 4 12.4786 4.6 12.7786C5.2 13.0786 5.8 13.4786 6.1 13.9786L6.2 14.0786C6.2 14.2786 6 14.3786 5.9 14.3786C4.8 14.6786 3.5 14.2786 2.6 13.5786C2.1 13.1786 1.8 12.7786 1.5 12.2786C1.3 11.9786 1 11.3786 1 10.7786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M11.8 11.0786C12.8 12.6786 14.7 13.3786 16 14.5786C20.6 19.8786 9.79998 15.1786 11.8 11.0786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M22.4 18.5785C22.6 18.6785 22.6 18.9785 22.6 19.1785C22.6 19.4785 22.5 19.6785 22.3 19.8785C22.2 20.0785 22 20.1785 21.8 20.2785C21.4 20.5785 21 20.7785 20.5 20.8785C20 21.0785 19.5 21.1785 18.9 21.2785C18.4 21.3785 17.9 21.4785 17.3 21.4785C16.9 21.4785 16.4 21.4785 16 21.4785C15.9 21.4785 15.7 21.4785 15.6 21.3785C15.7 21.3785 15.8 21.2785 15.9 21.2785C16 21.2785 16.1 21.1785 16.2 21.1785C16.4 21.0785 16.6 20.9785 16.8 20.8785C17.2 20.6785 17.6 20.4785 17.9 20.1785C18.6 19.6785 19.4 19.2785 20.2 18.8785C20.7 18.6785 21.3 18.4785 21.9 18.4785C22.2 18.5785 22.3 18.5785 22.4 18.5785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M23.2 16.5785C23.1 16.6785 23.1 16.6785 23.1 16.6785C21.6 16.7785 20.1 16.3785 18.8 15.4785C17.7 14.6785 16.8 13.6785 16.3 12.4785C17.7 13.3785 19.3 13.7785 20.8 14.4785C21.8 14.9785 22.6 15.5785 23.3 16.4785C23.2 16.4785 23.2 16.4785 23.2 16.5785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M28.3 18.6785C28.3 18.7785 28.3 18.7785 28.3 18.8785C27.9 19.6785 27.3 20.3785 26.6 20.8785C26.2 21.1785 25.7 21.3785 25.2 21.5785C24.7 21.7785 24.2 21.8785 23.7 22.0785C23.2 22.1785 22.7 22.2785 22.2 22.2785C22 22.2785 21.8 22.2785 21.6 22.2785L21.7 22.1785L21.8 22.0785C21.9 21.9785 22 21.9785 22.1 21.8785C22.3 21.6785 22.5 21.5785 22.6 21.3785C23 20.9785 23.3 20.5785 23.7 20.1785C24.1 19.7785 24.5 19.3785 24.9 19.0785C25.3 18.7785 25.7 18.4785 26.2 18.3785C26.9 18.1785 27.6 18.2785 28.3 18.5785C28.2 18.5785 28.2 18.5785 28.3 18.6785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M20.1 11.5786C22.2 12.7786 24.8 12.8786 26.9 14.0786C32.5 18.2786 22 16.0786 20.1 11.5786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M34.3 14.4785C30.2 16.8785 27.6 11.5785 24.5 9.97852C28 10.6785 31.9 11.4785 34.3 14.4785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M30.3 8.27856C33.1 8.87856 38.2 9.47856 39.1 12.7786C35.8 13.6786 32 11.1786 30.3 8.27856Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M36 18.1785C36.1 16.5785 37.5 15.2785 38.9 14.6785C38.9 16.1785 37.3 17.8785 36 18.1785Z" fill="#B12028"></path></svg>
+
+    <!-- Title Text -->
+    <span>Exhibitor Registration</span>
+
+    <!-- Right SVG -->
+ <svg xmlns="http://www.w3.org/2000/svg" width="68" height="23" viewBox="0 0 68 23" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M54.1 1.97854C56.5 -0.321462 60.4 -0.821462 62.9 1.57854C65.3 3.87854 65 7.57854 63.6 10.2785C63.5 10.4785 63.4 10.5785 63.3 10.7785C63.3 10.8785 63.2 10.9785 63.2 10.9785C61.7 13.2785 59.5 15.0785 57.1 16.2785C50 19.7785 40.2 18.8785 29.7 14.7785C20.9 11.3785 10.7 9.47854 3.8147e-05 11.6785C10.4 7.67854 19.8 10.0785 30.3 14.0785C41.8 18.4785 50.8 18.8785 56.9 15.7785C59.6 14.3785 62.3 12.1785 63.6 9.27854C64.6 6.97854 64.8 3.67854 62.7 1.87854C62 1.27854 61.2 0.878538 60.3 0.778538C59.4 0.578538 58.4 0.578538 57.4 0.878538C55.8 1.27854 54.1 2.47854 53.3 3.97854C53 4.47854 52.9 5.17854 53.1 5.67854C53.2 6.27854 53.7 6.77854 54.2 6.87854C55.4 7.17854 56.9 6.37854 57.1 5.17854C57.1 4.97854 57.1 4.77854 57 4.67854C56.9 4.57854 56.7 4.47854 56.5 4.57854C56.3 4.67854 56.2 4.77854 56.1 4.87854C56 4.67854 56.1 4.37854 56.3 4.17854C56.7 3.77854 57.4 3.97854 57.6 4.47854C57.9 4.87854 57.8 5.27854 57.7 5.67854C57.4 6.27854 57 6.77854 56.4 7.17854C55.5 7.67854 54.2 7.87854 53.3 7.17854C52.9 6.87854 52.7 6.47854 52.6 5.97854C52.4 5.37854 52.5 4.67854 52.7 4.07854C52.9 3.17854 53.5 2.57854 54.1 1.97854Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M66.8 3.67847C67 4.27847 66.6 5.17847 66.2 5.77847C66.2 5.87847 66.1 5.87847 66.1 5.97847C66 5.97847 66 5.97847 66 6.07847C65.9 6.17847 65.8 6.27847 65.7 6.47847C65.5 6.67847 65.4 6.97847 65.2 7.17847C65 7.47847 64.9 7.67847 64.8 7.97847C64.7 8.17847 64.7 8.37847 64.7 8.57847C64.7 8.67847 64.7 8.77847 64.7 8.87847C64.7 9.07847 64.8 9.07847 65 9.07847C65.4 9.07847 65.6 8.87847 65.9 8.67847C66.3 8.27847 66.7 7.77847 66.9 7.17847C67 6.97847 67.1 6.77847 67.1 6.47847C67.2 6.27847 67.2 5.97847 67.3 5.77847C67.3 5.47847 67.3 5.27847 67.3 4.97847C67.3 4.77847 67.2 4.47847 67.2 4.27847C67.1 4.17847 67 3.97847 66.8 3.67847C66.9 3.67847 66.9 3.67847 66.8 3.67847Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M35.2001 16.9784C34.5001 16.5784 33.6 16.4784 32.9 16.3784C33 19.6784 36.7 20.5784 39.3 21.4784C37.6 20.2784 37.1001 17.8784 35.2001 16.9784Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M60.5 4.0786C61 4.2786 61.4 4.3786 61.7 4.8786C62 5.2786 62.1 5.7786 62.2 6.2786C62.4 6.9786 62.5 7.6786 62.9 8.2786C63.1 8.5786 63.3 8.4786 63.5 8.2786C63.9 7.8786 64 7.2786 63.9 6.6786C63.8 6.0786 63.6 5.5786 63.2 5.0786C62.6 4.3786 61.6 3.5786 60.6 3.9786C60.6 4.0786 60.5 4.0786 60.5 4.0786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M56.6 17.2786C56.6 17.3786 56.6 17.3786 56.6 17.3786C56.9 17.7786 57.3 17.9786 57.8 18.0786C58.3 18.1786 58.8 18.0786 59.3 17.9786C60.6 17.5786 61.9 16.8786 63.1 16.2786C62.4 16.3786 61.6 16.2786 60.9 16.2786C60.2 16.2786 59.4 16.1786 58.7 16.2786C58.3 16.3786 58 16.4786 57.7 16.5786C57.4 16.7786 57.1 16.9786 56.8 17.1786C56.7 17.1786 56.7 17.1786 56.6 17.2786C56.7 17.2786 56.7 17.2786 56.6 17.2786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M50.8001 18.5785L50.7001 18.6785C50.7001 18.7785 50.7001 18.7785 50.7001 18.8785C50.9001 19.4785 51.4001 19.7785 52.0001 19.9785C53.3001 20.3785 54.6001 20.3785 55.9001 20.1785C56.1001 20.1785 56.4001 20.0785 56.6001 20.0785C56.8001 20.0785 57.0001 19.9785 57.2001 19.9785C56.0001 19.6785 54.9001 19.0785 53.7001 18.5785C53.2001 18.3785 52.6001 18.2785 52.0001 18.1785C51.9001 18.2785 51.1001 18.2785 50.8001 18.5785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M59.1001 10.1785C59.1001 10.2785 59.1001 10.3785 59.1001 10.3785C59.1001 10.4785 59.1001 10.5785 59.0001 10.5785C58.9001 10.6785 58.9001 10.8785 58.8001 10.9785C58.7001 11.2785 58.5001 11.4785 58.3001 11.6785C57.9001 12.1785 57.4001 12.5785 56.9001 12.9785C56.4001 13.3785 56.0001 13.8785 55.8001 14.3785C55.7001 14.5785 55.6001 14.7785 55.6001 15.0785C55.6001 15.1785 55.6001 15.1785 55.6001 15.2785L55.7001 15.3785C55.8001 15.3785 55.9001 15.3785 56.0001 15.3785C56.8001 15.2785 57.6001 14.7785 58.1001 14.1785C58.6001 13.5785 58.9001 12.9785 59.1001 12.1785C59.3001 11.5785 59.3001 10.8785 59.1001 10.1785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M60.2001 6.27856C60.3001 6.37856 60.4001 6.57856 60.4001 6.67856C60.4001 6.77856 60.5001 6.97856 60.5001 7.07856C60.6001 7.27856 60.6001 7.57856 60.6001 7.77856C60.6001 8.27856 60.5001 8.77856 60.4001 9.37856C60.2001 10.3786 60.1001 11.3786 60.4001 12.3786C60.4001 12.3786 60.4001 12.4786 60.5001 12.4786C60.6001 12.5786 60.9001 12.3786 61.0001 12.2786C61.2001 12.1786 61.3001 11.9786 61.5001 11.8786C61.8001 11.5786 62.0001 11.1786 62.0001 10.7786V10.6786C62.1001 10.0786 62.0001 9.47856 61.9001 8.97856C61.7001 8.27856 61.4001 7.47856 60.9001 6.87856C60.7001 6.57856 60.5001 6.47856 60.2001 6.27856Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M66.3 10.7786C66 11.0786 65.8 11.3786 65.5 11.5786C65.2 11.7786 64.8 11.9786 64.5 12.0786C63.9 12.2786 63.3 12.4786 62.7 12.7786C62.1 13.0786 61.5 13.4786 61.2 13.9786L61.1 14.0786C61.1 14.2786 61.3 14.3786 61.4 14.3786C62.5 14.6786 63.8 14.2786 64.7 13.5786C65.2 13.1786 65.5 12.7786 65.8 12.2786C66 11.9786 66.3 11.3786 66.3 10.7786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M55.5001 11.0786C54.5001 12.6786 52.6001 13.3786 51.3001 14.5786C46.7001 19.8786 57.5001 15.1786 55.5001 11.0786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M44.9001 18.5785C44.7001 18.6785 44.7001 18.9785 44.7001 19.1785C44.7001 19.4785 44.8001 19.6785 45.0001 19.8785C45.1001 20.0785 45.3001 20.1785 45.5001 20.2785C45.9001 20.5785 46.3001 20.7785 46.8001 20.8785C47.3001 21.0785 47.8001 21.1785 48.4001 21.2785C48.9001 21.3785 49.4001 21.4785 50.0001 21.4785C50.4001 21.4785 50.9001 21.4785 51.3001 21.4785C51.4001 21.4785 51.6001 21.4785 51.7001 21.3785C51.6001 21.3785 51.5001 21.2785 51.4001 21.2785C51.3001 21.2785 51.2001 21.1785 51.1001 21.1785C50.9001 21.0785 50.7001 20.9785 50.5001 20.8785C50.1001 20.6785 49.7001 20.4785 49.4001 20.1785C48.7001 19.6785 47.9001 19.2785 47.1001 18.8785C46.6001 18.6785 46.0001 18.4785 45.4001 18.4785C45.1001 18.5785 45.0001 18.5785 44.9001 18.5785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M44.1001 16.5785C44.2001 16.6785 44.2001 16.6785 44.2001 16.6785C45.7001 16.7785 47.2001 16.3785 48.5001 15.4785C49.6001 14.6785 50.5001 13.6785 51.0001 12.4785C49.6001 13.3785 48.0001 13.7785 46.5001 14.4785C45.5001 14.9785 44.7001 15.5785 44.0001 16.4785C44.1001 16.4785 44.1001 16.4785 44.1001 16.5785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M39.0001 18.6785C39.0001 18.7785 39.0001 18.7785 39.0001 18.8785C39.4001 19.6785 40.0001 20.3785 40.7001 20.8785C41.1001 21.1785 41.6001 21.3785 42.1001 21.5785C42.6001 21.7785 43.1001 21.8785 43.6001 22.0785C44.1001 22.1785 44.6001 22.2785 45.1001 22.2785C45.3001 22.2785 45.5001 22.2785 45.7001 22.2785L45.6001 22.1785L45.5001 22.0785C45.4001 21.9785 45.3001 21.9785 45.2001 21.8785C45.0001 21.6785 44.8001 21.5785 44.7001 21.3785C44.3001 20.9785 44.0001 20.5785 43.6001 20.1785C43.2001 19.7785 42.8001 19.3785 42.4001 19.0785C42.0001 18.7785 41.6001 18.4785 41.1001 18.3785C40.4001 18.1785 39.7001 18.2785 39.0001 18.5785C39.1001 18.5785 39.1001 18.5785 39.0001 18.6785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M47.2001 11.5786C45.1001 12.7786 42.5001 12.8786 40.4001 14.0786C34.8001 18.2786 45.3001 16.0786 47.2001 11.5786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M33 14.4785C37.1 16.8785 39.7 11.5785 42.8 9.97852C39.3 10.6785 35.4 11.4785 33 14.4785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M37.0001 8.27856C34.2001 8.87856 29.1001 9.47856 28.2001 12.7786C31.5001 13.6786 35.3001 11.1786 37.0001 8.27856Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M31.3 18.1785C31.2 16.5785 29.8 15.2785 28.4 14.6785C28.4 16.1785 30 17.8785 31.3 18.1785Z" fill="#B12028"></path></svg>
+  </h2>
+  <h5 class="text-dark text-center">  Showcase Your Brand to Thousands at the <span>Bakery & Food Expo 2026</h5>
+</div>
+
+    <!-- Registration Form -->
+    <form id="exhibitor-form" class="p-4 shadow rounded bg-light">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label fw-bold">Company Name</label>
+          <input type="text" name="company" class="form-control" placeholder="Enter your company name" required />
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label fw-bold">Contact Person Name</label>
+          <input type="text" name="contact_person" class="form-control" placeholder="Full name" required />
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label fw-bold">Designation</label>
+          <input type="text" name="designation" class="form-control" placeholder="Your designation" />
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label fw-bold">Mobile Number</label>
+          <input type="tel" name="phone" class="form-control" placeholder="Enter your mobile number" required />
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label fw-bold">Email ID</label>
+          <input type="email" name="email" class="form-control" placeholder="example@email.com" required />
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label fw-bold">Website</label>
+          <input type="url" name="website" class="form-control" placeholder="https://yourcompany.com" />
+        </div>
+
+        <div class="col-12">
+          <label class="form-label fw-bold">Address</label>
+          <textarea name="address" rows="2" class="form-control" placeholder="Full address"></textarea>
+        </div>
+
+        <div class="col-12">
+          <label class="form-label fw-bold">Products / Services of Your Company</label>
+          <textarea name="products" rows="2" class="form-control" placeholder="List your products/services"></textarea>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label fw-bold">Bare Space / Shell Space</label>
+          <select id="spaceType" name="spaceType" class="form-select" required>
+            <option value="">Choose...</option>
+            <option value="Bare Space">Bare Space</option>
+            <option value="Shell Space">Shell Space</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label fw-bold">Preferred Stall Area (in Sq. Mtr.)</label>
+          <input type="text" id="stallArea" name="stallArea" class="form-control" placeholder="e.g., 9, 18, 27" />
+        </div>
+
+        <div class="col-12 text-center mt-4">
+          <button type="submit" class="btn-default">Register Now</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== Exhibitor Form Script ===== -->
+<script>
+  document.getElementById("exhibitor-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("🎉 Thank you for registering as an exhibitor! Our team will contact you shortly.");
+    // window.location.href = "thankyou.html";
+  });
+</script>
 
 
 <!-- Floating Action Buttons -->

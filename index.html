@@ -6,16 +6,36 @@
   <title>Bakery and Food Tech Expo 2026</title>
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Animate.css (for WOW.js) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- Custom CSS (your own style file) -->
+  <link rel="stylesheet" href="css/style.css">
   <!-- Font Awesome (Optional for icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="./asset/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="./asset/images/banner/bakerylogo.png">
+
 </head>
 <body>
 
 <!-- Bootstrap Navbar -->
-
+<div class="top">
+  <img src="./asset/images/banner/topnav.png">
+</div>
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg navbar-custom bg-white shadow-sm sticky-top">
   <div class="container-fluid d-flex align-items-center justify-content-between">
@@ -35,7 +55,7 @@
       <ul class="navbar-nav w-100 justify-content-center align-items-center">
         
         <!-- Left Menu -->
-        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
 
         <!-- Dropdown: Exhibitors -->
@@ -75,9 +95,237 @@
   </div>
 </nav>
 <!-- Navbar End -->
+ <!-- ===== Offcanvas Menu (Mobile) ===== -->
+<div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header justify-content-between align-items-center">
+    <!-- Logo -->
+    <a href="index.html" class="navbar-brand m-0">
+      <img src="./asset/images/logo.png" alt="Bakery Expo Logo" style="height: 80px;">
+    </a>
+    <!-- Close button -->
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <ul class="navbar-nav text-center">
+      <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+      <li class="nav-item"><a class="nav-link" href="exhibitors.html">EXHIBITORS</a></li>
+      <li class="nav-item"><a class="nav-link" href="visitors.html">VISITORS</a></li>
+      <li class="nav-item"><a class="nav-link" href="sponsorship.html">SPONSORSHIP</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+    </ul>
+
+    <div class="text-center mt-4">
+      <a href="about.html" class="btn-default">REGISTERED</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== About Section ===== -->
+<section class="about-section hom-about style-v01 section-padding white-bg">
+  <div class="container">
+    <div class="row g-4 align-items-center justify-content-center">
+
+      <!-- Carousel / Images -->
+      <div class="col-lg-6 col-md-6 order-md-0 order-1">
+        <div class="banner-img-wp">
+          <div class="banner-carousel owl-carousel owl-theme wow fadeInDown" data-wow-delay="0.5s">
+            <div class="item"><img src="https://i.pinimg.com/736x/fa/61/c7/fa61c71637fe6957e8ce72e6a3867c9d.jpg" alt="Pizza" class="shaped-img"></div>
+            <div class="item"><img src="https://bakerstechnologyfair.com/assets/img/home/intro-img-2.jpg" alt="img" class="shaped-img"></div>
+            <div class="item"><img src="https://bakerstechnologyfair.com/assets/img/home/intro-img-3.jpg" alt="img" class="shaped-img"></div>
+            <div class="item"><img src="https://bakerstechnologyfair.com/assets/img/home/intro-img-4.jpg" alt="img" class="shaped-img"></div>
+            <div class="item"><img src="https://bakerstechnologyfair.com/assets/img/home/intro-img-5.jpg" alt="img" class="shaped-img"></div>
+            <div class="item"><img src="https://bakerstechnologyfair.com/assets/img/home/intro-img-6.jpg" alt="img" class="shaped-img"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="col-lg-6 col-md-6">
+        <div class="about-contentv1">
+          <div class="section-title">
+            <h2 class="wow fadeInDown mobile-content" data-wow-delay=".3s">
+              Discover the Future of Baking & Confectionery
+            </h2>
+            <p class="wow fadeInUp mobile-content" data-wow-delay=".4s">
+              Bakery and Food Expo 2026 brings together the most innovative brands and professionals from the baking, confectionery, snack, and food processing industries. Explore the latest in equipment, ingredients, and technology designed to elevate your business.
+            </p>
+            <p class="wow fadeInUp mobile-content" data-wow-delay=".4s">
+              Connect with top suppliers, discover cutting-edge solutions, and gain insights into emerging trends. Whether you are a bakery owner, chef, food manufacturer, or entrepreneur, this expo offers the tools and inspiration to stay ahead in a competitive industry.
+            </p>
+
+            <!-- Key Icons -->
+            <div class="key">
+              <div class="key-item-1">
+                <img src="https://bakerstechnologyfair.com/assets/img/icon/bakery-icon.png" alt="Bakery">
+                <p>Bakery</p>
+              </div>
+              <div class="key-item-1">
+                <img src="https://bakerstechnologyfair.com/assets/img/icon/confectionary-icon.png" alt="Confectionery">
+                <p>Confectionery</p>
+              </div>
+              <div class="key-item-1">
+                <img src="https://bakerstechnologyfair.com/assets/img/icon/snack-icon4.png" alt="Sweet & Snack">
+                <p>Sweet & Snack</p>
+              </div>
+            </div>
+
+            <div class="button-center mt-5">
+              <a href="about.html" class="btn-default">Register</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
+<section class="countdown-section">
 
+  <!-- Left: Logo -->
+  <div class="countdown-logo">
+    <img src="./asset/images/logo.png" alt="Bakery Logo">
+  </div>
+
+  <!-- Center: Countdown -->
+  <div class="countdown-content">
+    <span><i class="fa-solid fa-clock"></i> Countdown</span>
+    <h2>Bakery & Confectionery Expo — Sweet Countdown Begins!</h2>
+
+    <div class="timer">
+      <div><span id="days">00</span><small>Days</small></div>
+      <div><span id="hours">00</span><small>Hours</small></div>
+      <div><span id="minutes">00</span><small>Minutes</small></div>
+      <div><span id="seconds">00</span><small>Seconds</small></div>
+    </div>
+  </div>
+
+  <!-- Right: Image + Button -->
+  <div class="countdown-image">
+    <img src="https://bakerstechnologyfair.com/assets/img/footer/icon-3.png" alt="Chef">
+    <a href="contact.html"class="ticket-btn">Buy Ticket</a>
+  </div>
+
+</section>
+<section class="expo-category-section">
+  <h2>Who Will Exhibit?</h2>
+
+  <div class="expo-category-grid">
+    <div class="expo-category-box">
+      <img src="https://indiahorecaexpo.com/assets/img/food_confluence/exhibit-baked.png" alt="Bakery Equipment">
+      <h3>Bakery Equipment & Machinery</h3>
+    </div>
+
+    <div class="expo-category-box">
+      <img src="https://indiahorecaexpo.com/assets/img/visitor_profile/kitchen-planners.png" alt="Commercial Kitchen Equipment">
+      <h3>Commercial Kitchen Equipment</h3>
+    </div>
+
+    <div class="expo-category-box">
+      <img src="https://indiahorecaexpo.com/assets/img/visitor_profile/hotel.png" alt="Hotel & Restaurant Supplies">
+      <h3>Hotel & Restaurant Supplies</h3>
+    </div>
+
+    <div class="expo-category-box">
+      <img src="https://bakerstechnologyfair.com/assets/img/exhibit/why-packaging.png" alt="Food Processing & Packaging Machinery">
+      <h3>Food Processing & Packaging Machinery</h3>
+    </div>
+
+    <div class="expo-category-box">
+      <img src="https://bakerstechnologyfair.com/assets/img/exhibit/why-icecream.png" alt="Ice Cream, Dairy & Beverage Machines">
+      <h3>Ice Cream, Dairy & Beverage Machines</h3>
+    </div>
+
+    <div class="expo-category-box">
+      <img src="https://indiahorecaexpo.com/assets/img/food_confluence/visit-caterers.png" alt="Fast Food & Catering Equipment">
+      <h3>Fast Food & Catering Equipment</h3>
+    </div>
+
+    <div class="expo-category-box">
+      <img src="https://indiahorecaexpo.com/assets/img/exhibitor_profile/refrigeration-equipment.png" alt="Refrigeration, Freezers & Chillers">
+      <h3>Refrigeration, Freezers & Chillers</h3>
+    </div>
+
+    <div class="expo-category-box">
+      <img src="https://indiahorecaexpo.com/assets/img/food_confluence/visit-importers.png" alt="Flour Kneading, Mixing & Ovens">
+      <h3>Importers & Exporters</h3>
+    </div>
+
+    <div class="expo-category-box">
+      <img src="https://indiahorecaexpo.com/assets/img/exhibitor_profile/fresh-fruits.png" alt="Nut, Grain & Oil Processing Machinery">
+      <h3>Fresh fruits and Vegetables</h3>
+    </div>
+
+    <div class="expo-category-box">
+      <img src="https://indiahorecaexpo.com/assets/img/food_confluence/exhibit-frozen.png" alt="Food Waste Management & Disposers">
+      <h3>Meat, Poultry & Seafood </h3>
+    </div>
+
+    <div class="expo-category-box">
+      <img src="https://indiahorecaexpo.com/assets/img/food_confluence/visit-bakery.png" alt="Confectionery & Sweet-Making Machines">
+      <h3>Confectionery & Sweet-Making Machines</h3>
+    </div>
+
+    <div class="expo-category-box">
+      <img src="https://indiahorecaexpo.com/assets/img/exhibitor_profile/beverage.png" alt="Bar & Beverage Accessories">
+      <h3>Bar & Beverage Accessories</h3>
+    </div>
+  </div>
+</section>
+
+<section class="key-highlights">
+  <div class="container">
+    <div class="highlights-left">
+      <h2>Key Highlights of World Food India 2024 ✨</h2>
+
+      <div class="highlight-grid">
+        <div class="highlight-box">
+          <i class="fas fa-users"></i>
+          <h3>85K</h3>
+          <p>Visitors</p>
+        </div>
+
+        <div class="highlight-box">
+          <i class="fas fa-ruler-combined"></i>
+          <h3>70K</h3>
+          <p>sq. m. Gross Exhibition Area</p>
+        </div>
+
+        <div class="highlight-box">
+          <i class="fas fa-store"></i>
+          <h3>1.5K</h3>
+          <p>Exhibitors</p>
+        </div>
+
+        <div class="highlight-box">
+          <i class="fas fa-flag"></i>
+          <h3>20</h3>
+          <p>Country Pavilions</p>
+        </div>
+
+        <div class="highlight-box">
+          <i class="fas fa-globe"></i>
+          <h3>809</h3>
+          <p>International Buyers from 90 Countries</p>
+        </div>
+
+        <div class="highlight-box">
+          <i class="fas fa-handshake"></i>
+          <h3>8.1K</h3>
+          <p>B2B/G Discussions</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlights-right">
+      <img src="https://www.ellorabakeryequipments.com/images/expo/24.jpg" alt="Event Meeting">
+    </div>
+  </div>
+</section>
 
 <!-- =======================
      Footer Start
@@ -158,12 +406,39 @@
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- ===== JS Scripts ===== -->
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-<script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <!-- WOW.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
   new WOW().init();
+
+  // Initialize Owl Carousel
+  $('.banner-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,        // disable prev/next arrows
+    dots: false,       // disable pagination dots
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 1 },
+      1000: { items: 1 }
+    }
+  });
 </script>
+
 <script src="js/script.js"></script>
+<script src="./asset/js/custom.js"></script>
 </body>
 </html>
