@@ -1,189 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why Bakery & Food Tec Expo 2026?</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industry Statistics Slider</title>
 
-<!-- Google Fonts & AOS -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-.whyexpo-section{max-width:1600px;margin:0 auto;padding:60px 20px 100px;font-family:'Poppins',sans-serif;overflow:hidden}
-.whyexpo-title{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:40px;color:#951F44}
-.whyexpo-filters{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin-bottom:60px}
-.whyexpo-filters button{
-  padding:10px 32px;border:none;border-radius:999px;
-  font-size:15px;font-weight:500;color:#555;background:#f6f6f6;
-  transition:.3s;cursor:pointer
-}
-.whyexpo-filters button:hover{background:#ddd}
-.whyexpo-filters .active{background:#951F44;color:#fff}
+  <!-- Owl Carousel CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+  />
 
-.whyexpo-container{display:flex;flex-direction:column;gap:5rem;transition:opacity .8s ease-in-out;opacity:1}
-.whyexpo-container.fade-out{opacity:0}
+  <style>
+    .mainindustry{
+      background-image: url("https://ithemeslab.com/tempkits/foodkit/wp-content/uploads/2020/02/hm-bg.png");
+    }
+    .industry-stats-section {
+      max-width: 1100px;
+    
+      margin: auto;
+      text-align: center;
+      padding: 60px 0;
+    }
 
-@media(min-width:992px){
-  .whyexpo-container{flex-direction:row;align-items:flex-start;justify-content:space-between;gap:3rem}
-}
+    .industry-stats-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #951f44;
+      margin-bottom: 40px;
+    }
 
-.whyexpo-text{flex:1;position:relative}
-.whyexpo-number{font-size:230px;font-weight:700;color:#e1e1e1;line-height:.8;user-select:none}
-.whyexpo-content{position:absolute;top:150px;left:0}
-.whyexpo-line{width:60px;height:3px;background:#951F44;margin-bottom:12px}
-.whyexpo-content h3{color:#951F44;font-size:.9rem;letter-spacing:1px;font-weight:600;margin-bottom:12px;text-transform:uppercase}
-.whyexpo-content p{max-width:580px;font-size:15px;line-height:1.8;color:#444;margin-bottom:25px;transition:all .3s ease}
+    .industry-stats-carousel .item {
+      display: flex;
+      justify-content: center;
+    }
 
-.whyexpo-btn{
-  display:inline-flex;align-items:center;gap:10px;padding:12px 28px;
-  border-radius:999px;font-size:14px;font-weight:500;color:#fff;
-  background:linear-gradient(to top,#520040,#D02AAC);
-  border:2px solid white;overflow:hidden;position:relative;
-  cursor:pointer;transition:border .3s ease, transform .3s ease;
-}
-.whyexpo-btn:hover{border-color:#D02AAC;transform:translateY(-2px)}
-.whyexpo-btn svg{width:18px;height:18px;transition:transform .3s ease;z-index:2;position:relative}
-.whyexpo-btn:hover svg{transform:translateX(5px)}
-.whyexpo-btn::after{
-  content:"";position:absolute;inset:0;background:#000;
-  transform:translateX(-100%);transition:transform .5s ease-in-out;z-index:1
-}
-.whyexpo-btn:hover::after{transform:translateX(0)}
-.whyexpo-btn span{position:relative;z-index:2}
+    /* === CARD STYLE === */
+    .industry-stat-card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      border-radius: 0 0 30px 0;
+      padding: 40px 25px 45px;
+      width: 90%;
+      max-width: 320px;
+      transition: 0.3s ease;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+      text-align: left;
+      color: #fff;
+      overflow: hidden;
+    }
 
-.whyexpo-image{flex:1;position:relative;max-width:600px;margin:0 auto}
-.whyexpo-bg{
-  position:absolute;top:-20px;right:-10px;bottom:0;left:0;
-  background:linear-gradient(to right,#56126d,#9b1b6c);
-  height:480px;z-index:1;border-radius:12px;opacity:.95
-}
-.whyexpo-frame::before,.whyexpo-frame::after{
-  content:"";position:absolute;background:white
-}
-.whyexpo-frame::before{top:12px;right:8px;width:10px;bottom:-5px}
-.whyexpo-frame::after{right:8px;left:0;height:10px;bottom:-5px}
-.whyexpo-frame img{
-  width:100%;height:400px;object-fit:cover;position:relative;z-index:2;opacity:.9;border-radius:12px;transition:transform 2s ease-in-out;
-}
-.whyexpo-frame img:hover{transform:scale(1.05)}
+    /* Gradient overlay for text readability */
+    .industry-stat-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75));
+      border-radius: 0 0 30px 0;
+      z-index: 0;
+      transition: 0.4s ease;
+    }
 
-@media(max-width:768px){
-  .whyexpo-title{font-size:2rem}
-  .whyexpo-number{font-size:150px}
-  .whyexpo-content{position:relative;top:0;left:0}
-  .whyexpo-bg{height:350px}
-  .whyexpo-frame img{height:300px}
-}
-</style>
+    .industry-stat-card * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .industry-stat-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* === Number Box === */
+    .industry-number-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+      border: 12px solid #fff;
+      border-bottom-right-radius: 30px;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 4px 20px;
+      color: #000;
+      z-index: 2;
+    }
+
+    /* === Icon === */
+    .industry-icon {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      color: #fff;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    }
+
+    /* === Text === */
+    .industry-stat-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 60px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .industry-stat-card p {
+      font-size: 14px;
+      color: #f8f8f8;
+      line-height: 1.6;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    }
+
+    /* === Hover Effect === */
+    .industry-stat-card:hover::before {
+      background: linear-gradient(to bottom, rgba(149, 31, 68, 0.8), rgba(149, 31, 68, 0.9));
+    }
+
+    /* Owl Dots */
+    .owl-dots .owl-dot span {
+      background: #ccc;
+      width: 10px;
+      height: 10px;
+    }
+
+    .owl-dots .owl-dot.active span {
+      background: #951f44;
+    }
+
+    @media (max-width: 768px) {
+      .industry-stat-card {
+        width: 85%;
+      }
+    }
+  </style>
 </head>
-
 <body>
-<section class="whyexpo-section">
-  <h1 class="whyexpo-title" data-aos="slide-right">Why Bakery & Food Tec Expo 2026?</h1>
-
-  <!-- Tabs -->
-  <div class="whyexpo-filters" data-aos="slide-up">
-    <button class="active" data-index="0">For Exhibitors</button>
-    <button data-index="1">For Investors</button>
-    <button data-index="2">For Buyers & Sellers</button>
-    <button data-index="3">To Showcase</button>
-  </div>
-
-  <!-- Dynamic Content -->
-  <div class="whyexpo-container" id="whyexpo-content"></div>
-</section>
-
-<!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({duration:1000,once:true});
-
-const whyexpoData = [
-  {
-    number: "01",
-    title: "For Exhibitors",
-    text: "Bakery & Food Tec Expo 2026 provides an exceptional platform for exhibitors to showcase cutting-edge bakery, confectionery, and food processing technologies to a targeted audience of industry professionals, buyers, and distributors. Exhibitors can launch new products, demonstrate innovations, and establish strong brand visibility in one of India’s fastest-growing markets for food technology and equipment.",
-    img: "https://images.unsplash.com/photo-1604908177225-055f974c2b42?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    number: "02",
-    title: "For Investors",
-    text: "Bakery & Food Tec Expo 2026 serves as a strategic gateway for investors looking to capitalize on the booming bakery and processed food sectors. With India’s rising demand for packaged foods, expanding retail chains, and a growing café culture, investors can explore scalable opportunities across machinery manufacturing, automation, cold storage, logistics, and sustainable packaging. The expo connects investors directly with manufacturers, distributors, and policymakers, enabling data-driven investment decisions and long-term business growth.",
-    img: "https://images.unsplash.com/photo-1621276879633-5b5b87f3f3cf?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    number: "03",
-    title: "For Buyers & Sellers",
-    text: "The Expo acts as a vibrant B2B marketplace, connecting buyers, suppliers, and traders from across India and abroad. Visitors can explore a comprehensive range of bakery equipment, ingredients, packaging solutions, and food processing systems — all under one roof. The event enables businesses to discover new suppliers, negotiate deals, and expand their sourcing networks efficiently.",
-    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    number: "04",
-    title: "To Showcase",
-    text: "Bakery & Food Tec Expo 2026 is more than an exhibition — it’s a showcase of innovation and excellence in the bakery and food industry. From automated baking lines to eco-friendly packaging, exhibitors present next-generation solutions that redefine production standards. Live demonstrations, product launches, and interactive sessions create a powerful platform to engage audiences and drive brand recognition.",
-    img: "https://images.unsplash.com/photo-1613145993482-4a3e9d9a3b89?auto=format&fit=crop&w=800&q=80"
-  }
-];
-
-const container = document.getElementById("whyexpo-content");
-const buttons = document.querySelectorAll(".whyexpo-filters button");
-let current = 0;
-let autoplay;
-
-// render section with fade animation
-function showWhyexpo(i){
-  const s = whyexpoData[i];
-  container.classList.add("fade-out");
-  setTimeout(()=>{
-    container.innerHTML = `
-      <div class="whyexpo-text" data-aos="slide-up">
-        <div class="whyexpo-number">${s.number}</div>
-        <div class="whyexpo-content">
-          <div class="whyexpo-line"></div>
-          <h3>${s.title}</h3>
-          <p>${s.text}</p>
-          <button class="whyexpo-btn" onclick="window.location.href='register.html'">
-            <span>Register Now</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
-            </svg>
-          </button>
+<div class="mainindustry">
+  <section class="industry-stats-section">
+    <h2>Industry Statistics</h2>
+  
+    <div class="owl-carousel industry-stats-carousel owl-theme">
+  
+      <div class="item">
+        <div class="industry-stat-card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtTE-wAag69B9lyMPvnPwEpEr_m5Im_esjwPIP_2Uc4zBSeq1jPA0xU0zxM_syu9zVSoc&usqp=CAU');">
+          <div class="industry-number-box">1</div>
+          <i class="fa-solid fa-chart-line industry-icon"></i>
+          <h3>Accelerating Market Expansion</h3>
+          <p>India’s bakery sector now exceeds USD 12 billion in value, witnessing robust annual growth fueled by evolving consumer lifestyles and rising urban demand.</p>
         </div>
       </div>
-      <div class="whyexpo-image" data-aos="slide-up">
-        <div class="whyexpo-bg"></div>
-        <div class="whyexpo-frame"><img src="${s.img}" alt="${s.title}"></div>
-      </div>`;
-    buttons.forEach(b=>b.classList.remove("active"));
-    buttons[i].classList.add("active");
-    container.classList.remove("fade-out");
-    AOS.refreshHard();
-  }, 400);
-}
+  
+      <div class="item">
+        <div class="industry-stat-card" style="background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=900&q=80');">
+          <div class="industry-number-box">2</div>
+          <i class="fa-solid fa-industry industry-icon"></i>
+          <h3>Strengthening Food Processing Backbone</h3>
+          <p>Accounting for nearly 11% of India’s manufacturing GVA, the food processing industry serves as a vital employment generator and export contributor.</p>
+        </div>
+      </div>
+  
+      <div class="item">
+        <div class="industry-stat-card" style="background-image: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=900&q=80');">
+          <div class="industry-number-box">3</div>
+          <i class="fa-solid fa-bread-slice industry-icon"></i>
+          <h3>Growing Appetite for Bakery Products</h3>
+          <p>Demand for baked goods such as breads and confectioneries is increasing by 15–20% annually, driven by consumer preference for artisanal and health-focused.</p>
+        </div>
+      </div>
+  
+      <div class="item">
+        <div class="industry-stat-card" style="background-image: url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=900&q=80');">
+          <div class="industry-number-box">4</div>
+          <i class="fa-solid fa-plane-up industry-icon"></i>
+          <h3>Strong Momentum in Exports</h3>
+          <p>Processed and baked food exports from India have crossed USD 1.5 billion, with significant traction in the Middle East, European, and Asian markets.</p>
+        </div>
+      </div>
+  
+      <div class="item">
+        <div class="industry-stat-card" style="background-image: url('https://etimg.etb2bimg.com/photo/106076445.cms');">
+          <div class="industry-number-box">5</div>
+          <i class="fa-solid fa-lightbulb industry-icon"></i>
+          <h3>New Horizons for Innovation</h3>
+          <p>The surge of café culture and rapid QSR expansion are creating new opportunities for growth in baking equipment, packaging solutions, and automation technologies.</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+</div>
 
-// autoplay every 6s
-function startWhyexpoAutoplay(){
-  clearInterval(autoplay);
-  autoplay = setInterval(()=>{
-    current = (current + 1) % whyexpoData.length;
-    showWhyexpo(current);
-  },6000);
-}
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-// manual switch
-buttons.forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    current = parseInt(btn.dataset.index);
-    showWhyexpo(current);
-    startWhyexpoAutoplay();
-  });
-});
-
-// init
-showWhyexpo(current);
-startWhyexpoAutoplay();
-</script>
+  <script>
+    $(".industry-stats-carousel").owlCarousel({
+      loop: true,
+      margin: 30,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      smartSpeed: 800,
+      responsive: {
+        0: { items: 1 },
+        768: { items: 2 },
+        1024: { items: 4 }
+      }
+    });
+  </script>
 </body>
 </html>

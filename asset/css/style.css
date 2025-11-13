@@ -2702,3 +2702,127 @@ height: 100%;
     animation-duration: 25s;
   }
 }
+
+
+    .mainindustry{
+      background-image: url("https://ithemeslab.com/tempkits/foodkit/wp-content/uploads/2020/02/hm-bg.png");
+    }
+    .industry-stats-section {
+      max-width: 1100px;
+    
+      margin: auto;
+      text-align: center;
+      padding: 60px 0;
+    }
+
+    .industry-stats-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #951f44;
+      margin-bottom: 40px;
+    }
+
+    .industry-stats-carousel .item {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* === CARD STYLE === */
+    .industry-stat-card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      border-radius: 0 0 30px 0;
+      padding: 40px 25px 45px;
+      width: 90%;
+      max-width: 320px;
+      transition: 0.3s ease;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+      text-align: left;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    /* Gradient overlay for text readability */
+    .industry-stat-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75));
+      border-radius: 0 0 30px 0;
+      z-index: 0;
+      transition: 0.4s ease;
+    }
+
+    .industry-stat-card * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .industry-stat-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* === Number Box === */
+    .industry-number-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+      border: 12px solid #fff;
+      border-bottom-right-radius: 30px;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 4px 20px;
+      color: #000;
+      z-index: 2;
+    }
+
+    /* === Icon === */
+    .industry-icon {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      color: #fff;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    }
+
+    /* === Text === */
+    .industry-stat-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 60px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .industry-stat-card p {
+      font-size: 14px;
+      color: #f8f8f8;
+      line-height: 1.6;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    }
+
+    /* === Hover Effect === */
+    .industry-stat-card:hover::before {
+      background: linear-gradient(to bottom, rgba(149, 31, 68, 0.8), rgba(149, 31, 68, 0.9));
+    }
+
+    /* Owl Dots */
+    .owl-dots .owl-dot span {
+      background: #ccc;
+      width: 10px;
+      height: 10px;
+    }
+
+    .owl-dots .owl-dot.active span {
+      background: #951f44;
+    }
+
+    @media (max-width: 768px) {
+      .industry-stat-card {
+        width: 85%;
+      }
+    }
