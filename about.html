@@ -123,6 +123,10 @@
     </div>
   </div>
 </div>
+
+<div class="page-header">
+  <img src="./asset/images/banner/bakeryabout.png">
+</div>
 <!-- Main Title Start -->
 <div class="main-title text-center mt-5">
   <h2 class="text-dark d-flex align-items-center justify-content-center gap-3 flex-wrap">
@@ -217,6 +221,28 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+<section class="vision-mission-section">
+  <div class="section-heading">
+    <h2>Our Vision & Mission</h2>
+    <p>Inspiring innovation and empowering growth in India’s bakery and food processing industries.</p>
+  </div>
+
+  <div class="vision-mission-container">
+    <!-- Vision -->
+    <div class="vision-box">
+      <div class="vision-icon"><i class="fa-solid fa-eye"></i></div>
+      <h3>Our Vision</h3>
+      <p>To be India’s leading platform that inspires innovation, collaboration, and sustainable growth in the bakery, food processing, and hospitality industries, while fostering global connections and empowering businesses to achieve excellence through technology and creativity.</p>
+    </div>
+
+    <!-- Mission -->
+    <div class="mission-box">
+      <div class="mission-icon"><i class="fa-solid fa-bullseye"></i></div>
+      <h3>Our Mission</h3>
+      <p>To create a dynamic platform that connects industry professionals, showcases innovative bakery and food technologies, and promotes sustainable growth through collaboration, knowledge sharing, and global business opportunities.</p>
     </div>
   </div>
 </section>
@@ -421,7 +447,19 @@
     });
 </script>
 
-
+<script>
+  // Optional fade-in on scroll animation
+  const boxes = document.querySelectorAll(".vision-box, .mission-box");
+  window.addEventListener("scroll", () => {
+    boxes.forEach((box) => {
+      const boxTop = box.getBoundingClientRect().top;
+      if (boxTop < window.innerHeight - 100) {
+        box.style.opacity = "1";
+        box.style.transform = "translateY(0)";
+      }
+    });
+  });
+</script>
 <script src="js/script.js"></script>
 <script src="./asset/js/custom.js"></script>
 </body>
