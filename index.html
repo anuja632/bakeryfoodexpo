@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bakery and Food Tech Expo 2026</title>
-  <!-- Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./asset/images/banner/bakerylogo.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Animate.css (for WOW.js) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-  <!-- Custom CSS (your own style file) -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Font Awesome (Optional for icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="./asset/css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="./asset/images/banner/bakerylogo.png">
-
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./asset/css/style.css" />
 </head>
 <body>
+
 
 <!-- Bootstrap Navbar -->
 <div class="top">
@@ -82,7 +81,7 @@
           </ul>
         </li>
 
-        <li class="nav-item"><a class="nav-link" href="sponsorship.html">SPONSORSHIP</a></li>
+        <li class="nav-item"><a class="nav-link " href="sponsorship.html">SPONSORSHIP</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
       </ul>
@@ -611,57 +610,54 @@
      Footer End
 ======================== -->
 
+  <!-- jQuery (one copy) - required by OwlCarousel -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <!-- ===== JS Scripts ===== -->
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-  <!-- Bootstrap JS -->
+  <!-- Bootstrap bundle (includes Popper) - only one copy -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Owl Carousel JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-  <!-- WOW.js -->
+  <!-- WOW.js (for Animate.css triggering) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
   <script>
-  new WOW().init();
-  $(".home-banner-carousel").owlCarousel({
-    items: 1,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 2500,
-    autoplayHoverPause: true,
-    smartSpeed: 800,
-    dots: true,
-    nav: false,
-    
-  });
-  // Initialize Owl Carousel
-  $('.banner-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: false,        // disable prev/next arrows
-    dots: false,       // disable pagination dots
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: { items: 1 },
-      600: { items: 1 },
-      1000: { items: 1 }
-    }
-  });
-</script>
+    // Initialize WOW
+    new WOW().init();
 
+    // Home banner carousel
+    $(".home-banner-carousel").owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 2500,
+      autoplayHoverPause: true,
+      smartSpeed: 800,
+      dots: true,
+      nav: false
+    });
 
-<script src="js/script.js"></script>
-<script src="./asset/js/custom.js"></script>
+    // Banner carousel
+    $('.banner-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 1 },
+        1000: { items: 1 }
+      }
+    });
+  </script>
+
+  <!-- Your custom scripts (load after libraries) -->
+  <script src="js/script.js"></script>
+  <script src="./asset/js/custom.js"></script>
+
 </body>
 </html>
