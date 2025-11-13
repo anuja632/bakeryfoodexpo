@@ -721,6 +721,21 @@ textarea.form-control {
   text-shadow: 0 0 5px rgba(149, 31, 68, 0.3);
 }
 
+.footer-dates {
+  background-color: #951f44;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.footer-dates i {
+  color: #fff;
+}
+
+.footer-dates p,
+.footer-dates h5 {
+  margin-bottom: 0.6rem;
+}
+
 /* =========================
    Responsive Design
 ========================= */
