@@ -122,26 +122,25 @@
     </div>
   </div>
 </div>
-<div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-<div class="carousel-indicators">
-<button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-<button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-<button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-</div>
+<!-- ===== Home Banner Carousel Section ===== -->
+<section class="home-banner-section">
+  <div class="owl-carousel home-banner-carousel owl-theme">
 
+    <div class="item">
+      <img src="./asset/images/banner/baner1.png" alt="Slide 1">
+    </div>
 
-<div class="carousel-inner">
-<div class="carousel-item active">
-<img src="./asset/images/banner/baner1.png" class="d-block w-100" alt="Slide 1">
-</div>
-<div class="carousel-item">
-<img src="./asset/images/banner/baner2.png" class="d-block w-100" alt="Slide 2">
-</div>
-<div class="carousel-item">
-<img src="./asset/images/banner/baner3.png" class="d-block w-100" alt="Slide 3">
-</div>
-</div>
-</div>
+    <div class="item">
+      <img src="./asset/images/banner/baner2.png" alt="Slide 2">
+    </div>
+
+    <div class="item">
+      <img src="./asset/images/banner/baner3.png" alt="Slide 3">
+    </div>
+
+  </div>
+</section>
+
 <!-- Main Title Start -->
 <div class="main-title text-center mt-5">
   <h2 class="text-dark d-flex align-items-center justify-content-center gap-3 flex-wrap">
@@ -633,7 +632,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script>
   new WOW().init();
-
+  $(".home-banner-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2500,
+    autoplayHoverPause: true,
+    smartSpeed: 800,
+    dots: true,
+    nav: false,
+    
+  });
   // Initialize Owl Carousel
   $('.banner-carousel').owlCarousel({
     loop: true,

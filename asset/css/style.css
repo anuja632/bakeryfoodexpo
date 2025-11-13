@@ -2956,3 +2956,46 @@ height: 100%;
       padding: 70px 8%;
     }
   }
+
+
+   /* ===== Banner Section ===== */
+  .home-banner-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .home-banner-carousel .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+/* ===== Dots Styling ===== */
+.home-banner-carousel .owl-dots {
+  position: absolute;
+  bottom: 20px;          /* Position dots at bottom of banner */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin: 0;
+  z-index: 10;           /* Ensure dots appear above images */
+}
+
+.home-banner-carousel .owl-dots .owl-dot span {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  border-radius: 50%;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+.home-banner-carousel .owl-dots .owl-dot.active span {
+  background: #951f44;
+  transform: scale(1.3);
+}
+
+
+
