@@ -1960,51 +1960,51 @@ clip-path: inset(0 0 0 0 round 25%);
 }
 /* Background Images */
 .bakery {
-  background: url('https://i.pinimg.com/736x/9f/d2/d0/9fd2d0747a4af6ee46c37d75f1c61e0a.jpg') center/cover no-repeat;
+  background: url('../images/homeexhibit/bakeryexhibit.jpg') center/cover no-repeat;
 }
 
 .kitchen {
-  background: url('https://i.pinimg.com/1200x/54/01/13/5401137c851395e29b045e8058ed9e49.jpg') center/cover no-repeat;
+  background: url('../images/homeexhibit/flour.jpg') center/cover no-repeat;
 }
 
 .hotel {
-  background: url('https://i.pinimg.com/736x/5b/10/4c/5b104c695ca85257a3df8f67e7a757d8.jpg') center/cover no-repeat;
+  background: url('../images/homeexhibit/hotel') center/cover no-repeat;
 }
 
 .packaging {
-  background: url('https://i.pinimg.com/736x/7f/58/b8/7f58b824135b4f914bd7a60837d44b8b.jpg') center/cover no-repeat;
+  background: url('../images/homeexhibit/process.jpg') center/cover no-repeat;
 }
 
 .dairy {
-  background: url('https://i.pinimg.com/736x/ae/df/0f/aedf0fa0a88b877fca94d7060b419c03.jpg') center/cover no-repeat;
+  background: url('../images/homeexhibit/exhiticecream.jpg') center/cover no-repeat;
 }
 
 .catering {
-  background: url('https://i.pinimg.com/736x/0a/24/82/0a24826602ab1d8fd2a24d8713344894.jpg') center/cover no-repeat;
+  background: url('../images/homeexhibit/fastfood') center/cover no-repeat;
 }
 
 .refrigeration {
-  background: url('https://i.pinimg.com/736x/8e/1a/27/8e1a27cdd7fdf20f58484ec22833b84c.jpg') center/cover no-repeat;
+  background: url('../images/homeexhibit/exhibitreg.jpg') center/cover no-repeat;
 }
 
 .exporters {
-  background: url('https://i.pinimg.com/736x/ce/60/f0/ce60f051d71cf21f62b9e4b8474d42c9.jpg') center/cover no-repeat;
+  background: url('../images/homeexhibit/importand\ export') center/cover no-repeat;
 }
 
 .fruits {
-  background: url('https://i.pinimg.com/736x/10/b5/9d/10b59d0e093e5ddb5eb9df3973f73bc1.jpg') center/cover no-repeat;
+  background: url('../images/homeexhibit/fruits.jpg') center/cover no-repeat;
 }
 
 .meat {
-  background: url('https://i.pinimg.com/736x/68/49/4c/68494c5d5766d37e5f458c7a4f22f726.jpg') center/cover no-repeat;
+  background: url('../images/homeexhibit/sea.jpg') center/cover no-repeat;
 }
 
 .confectionery {
-  background: url('https://i.pinimg.com/1200x/38/33/a7/3833a7674cff44afbee6290d259afc8a.jpg') center/cover no-repeat;
+  background: url('../images/homeexhibit/cake.jpg') center/cover no-repeat;
 }
 
 .beverage {
-  background: url('https://i.pinimg.com/736x/2e/9c/5e/2e9c5e6eb81e2a9273aea8e2ebd50d89.jpg') center/cover no-repeat;
+  background: url('../images/homeexhibit/oil') center/cover no-repeat;
 }
 
 
@@ -2705,7 +2705,7 @@ height: 100%;
 
 
     .mainindustry{
-      background-image: url("https://ithemeslab.com/tempkits/foodkit/wp-content/uploads/2020/02/hm-bg.png");
+      background-image: url("../images/industrybg.png");
     }
     .industry-stats-section {
       max-width: 1100px;
@@ -2843,7 +2843,7 @@ height: 100%;
     left: -80px;
     width: 300px;
     height: 300px;
-    background: url("https://baker.la-studioweb.com/wp-content/uploads/2021/10/m9-sd-1-2.png") no-repeat;
+    background: url("../images/shape/m9-sd-1-2.png") no-repeat;
     background-size: contain;
     opacity: 1;
     animation: floatShape 6s ease-in-out infinite;
@@ -2856,7 +2856,7 @@ height: 100%;
     right: -80px;
     width: 350px;
     height: 350px;
-    background: url("https://baker.la-studioweb.com/wp-content/uploads/2021/10/m9-bg-4.png") no-repeat;
+    background: url("../images/shape/m9-bg-4.png") no-repeat;
     background-size: contain;
     opacity: 1;
     animation: floatShapeReverse 8s ease-in-out infinite;
