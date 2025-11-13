@@ -2189,72 +2189,305 @@ clip-path: inset(0 0 0 0 round 25%);
   }
 
 }
+/* ===============================
+   WHY EXPO SECTION STYLES
+   =============================== */
 
-
-.whyexpo-section{max-width:1600px;margin:0 auto;padding:60px 20px 100px;font-family:'Poppins',sans-serif;overflow:hidden}
-.whyexpo-title{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:40px;color:#951F44}
-.whyexpo-filters{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin-bottom:60px}
-.whyexpo-filters button{
-  padding:10px 32px;border:none;border-radius:999px;
-  font-size:15px;font-weight:500;color:#555;background:#f6f6f6;
-  transition:.3s;cursor:pointer
-}
-.whyexpo-filters button:hover{background:#ddd}
-.whyexpo-filters .active{background:#951F44;color:#fff}
-
-.whyexpo-container{display:flex;flex-direction:column;gap:5rem;transition:opacity .8s ease-in-out;opacity:1}
-.whyexpo-container.fade-out{opacity:0}
-
-@media(min-width:992px){
-  .whyexpo-container{flex-direction:row;align-items:flex-start;justify-content:space-between;gap:3rem}
+.whyexpo-section {
+  position: relative;
+  background-image: url("https://newkit.moxcreative.com/breadmeal/wp-content/uploads/sites/6/2022/07/assorted-breads-isolated-on-white.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Parallax-style effect on desktop */
+  padding: 80px 0;
+  color: #222;
+  z-index: 1;
 }
 
-.whyexpo-text{flex:1;position:relative}
-.whyexpo-number{font-size:230px;font-weight:700;color:#e1e1e1;line-height:.8;user-select:none}
-.whyexpo-content{position:absolute;top:150px;left:0}
-.whyexpo-line{width:60px;height:3px;background:#951F44;margin-bottom:12px}
-.whyexpo-content h3{color:#951F44;font-size:.9rem;letter-spacing:1px;font-weight:600;margin-bottom:12px;text-transform:uppercase}
-.whyexpo-content p{max-width:580px;font-size:15px;line-height:1.8;color:#444;margin-bottom:25px;transition:all .3s ease}
+/* Gradient overlay improves readability */
+.whyexpo-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.8) 30%,
+    rgba(255, 255, 255, 0.4) 70%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  backdrop-filter: brightness(0.9);
+  z-index: 0;
+}
 
-.whyexpo-btn{
-  display:inline-flex;align-items:center;gap:10px;padding:12px 28px;
-  border-radius:999px;font-size:14px;font-weight:500;color:#fff;
-  background:linear-gradient(to top,#520040,#951F44);
-  border:2px solid white;overflow:hidden;position:relative;
-  cursor:pointer;transition:border .3s ease, transform .3s ease;
+/* Keep content centered within full-width background */
+.whyexpo-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
 }
-.whyexpo-btn:hover{border-color:#D02AAC;transform:translateY(-2px)}
-.whyexpo-btn svg{width:18px;height:18px;transition:transform .3s ease;z-index:2;position:relative}
-.whyexpo-btn:hover svg{transform:translateX(5px)}
-.whyexpo-btn::after{
-  content:"";position:absolute;inset:0;background:#000;
-  transform:translateX(-100%);transition:transform .5s ease-in-out;z-index:1
-}
-.whyexpo-btn:hover::after{transform:translateX(0)}
-.whyexpo-btn span{position:relative;z-index:2}
 
-.whyexpo-image{flex:1;position:relative;max-width:600px;margin:0 auto}
-.whyexpo-bg{
-  position:absolute;top:-20px;right:-10px;bottom:0;left:0;
-  background:linear-gradient(to right,#56126d,#9b1b6c);
-  height:450px;z-index:1;border-radius:12px;opacity:.95
+/* Section Title */
+.whyexpo-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #951F44;
 }
-.whyexpo-frame::before,.whyexpo-frame::after{
-  content:"";position:absolute;background:white
-}
-.whyexpo-frame::before{top:12px;right:8px;width:10px;bottom:-5px}
-.whyexpo-frame::after{right:8px;left:0;height:10px;bottom:-5px}
-.whyexpo-frame img{
-  width:100%;height:400px;object-fit:cover;position:relative;z-index:2;opacity:.9;border-radius:12px;transition:transform 2s ease-in-out;
-}
-.whyexpo-frame img:hover{transform:scale(1.05)}
 
-@media(max-width:768px){
-  .whyexpo-title{font-size:2rem}
-  .whyexpo-number{font-size:150px}
-  .whyexpo-content{position:relative;top:0;left:0}
-  .whyexpo-bg{height:350px}
-  .whyexpo-frame img{height:300px}
+/* Filter Buttons */
+.whyexpo-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.whyexpo-filters button {
+  padding: 10px 32px;
+  border: none;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+  background: #f6f6f6;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.whyexpo-filters button:hover {
+  background: #ddd;
+}
+
+.whyexpo-filters .active {
+  background: #951F44;
+  color: #fff;
+}
+
+/* Content Area */
+.whyexpo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  transition: opacity 0.8s ease-in-out;
+  opacity: 1;
+}
+
+.whyexpo-container.fade-out {
+  opacity: 0;
+}
+
+@media (min-width: 992px) {
+  .whyexpo-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+}
+
+/* Text Side */
+.whyexpo-text {
+  flex: 1;
+  position: relative;
+}
+
+.whyexpo-number {
+  font-size: 230px;
+  font-weight: 700;
+  color: rgba(149, 31, 68, 0.08); /* soft berry tint instead of flat gray */
+  line-height: 0.8;
+  user-select: none;
+}
+
+.whyexpo-content {
+  position: absolute;
+  top: 150px;
+  left: 0;
+}
+
+.whyexpo-line {
+  width: 60px;
+  height: 3px;
+  background: #951F44;
+  margin-bottom: 12px;
+}
+
+.whyexpo-content h3 {
+  color: #951F44;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* Improved readability for paragraph text */
+.whyexpo-content p {
+  max-width: 580px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #222;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.85); /* translucent white card */
+  padding: 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* Button */
+.whyexpo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(to top, #520040, #951F44);
+  border: 2px solid white;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+.whyexpo-btn:hover {
+  border-color: #D02AAC;
+  transform: translateY(-2px);
+}
+
+.whyexpo-btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.whyexpo-btn:hover svg {
+  transform: translateX(5px);
+}
+
+.whyexpo-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.whyexpo-btn:hover::after {
+  transform: translateX(0);
+}
+
+.whyexpo-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Image Side */
+.whyexpo-image {
+  flex: 1;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.whyexpo-bg {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, #56126d, #9b1b6c);
+  height: 450px;
+  z-index: 1;
+  border-radius: 12px;
+  opacity: 0.9;
+}
+
+.whyexpo-frame::before,
+.whyexpo-frame::after {
+  content: "";
+  position: absolute;
+  background: white;
+}
+
+.whyexpo-frame::before {
+  top: 12px;
+  right: 8px;
+  width: 10px;
+  bottom: -5px;
+}
+
+.whyexpo-frame::after {
+  right: 8px;
+  left: 0;
+  height: 10px;
+  bottom: -5px;
+}
+
+.whyexpo-frame img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  opacity: 0.95;
+  border-radius: 12px;
+  transition: transform 2s ease-in-out;
+}
+
+.whyexpo-frame img:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   RESPONSIVE STYLES
+   =============================== */
+
+@media (max-width: 992px) {
+  .whyexpo-section {
+    background-attachment: scroll; /* Disable parallax for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .whyexpo-title {
+    font-size: 2rem;
+  }
+
+  .whyexpo-number {
+    font-size: 150px;
+  }
+
+  .whyexpo-content {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .whyexpo-bg {
+    height: 350px;
+  }
+
+  .whyexpo-frame img {
+    height: 300px;
+  }
+
+  .whyexpo-content p {
+    background: rgba(255, 255, 255, 0.95); /* slightly stronger for smaller screens */
+  }
 }
 
 /* Hero Section */
@@ -2355,3 +2588,23 @@ height: 100%;
 @media (max-width: 600px){
 .carousel-item img { height: 220px; }
 }
+
+/* ===============================
+   CONTACT SECTION (Image + Form)
+   =============================== */
+
+.text-primary-custom {
+  color: #951F44 !important;
+}
+
+.bakeryform{
+  padding: 14px;
+}
+
+/* Make image fit perfectly */
+.bakery-contact {
+  object-fit: cover;
+  height: 590px;
+  width: 100%;
+}
+
