@@ -105,7 +105,7 @@ a:focus{
 }
 
 /* Show and center only below 1080px */
-@media (max-width: 1079px) {
+@media (max-width: 1000px) {
   .mobile-logo {
     display: block;
     text-align: center;
@@ -116,6 +116,9 @@ a:focus{
     display: block;
     margin: 0 auto;
   }
+  .navbar-nav {
+    gap: 14px;
+}
 
   /* Optional: keep navbar tidy on smaller widths */
   .navbar {
@@ -130,7 +133,19 @@ a:focus{
   }
 }
 
+@media (max-width:1150px){
+  .countdown-section{
+  padding:50px 0% !important;
 
+}
+.countdown-logo img {
+  height:100px !important;
+}
+.countdown-content {
+  max-width:450px !important;
+}
+
+}
 
 .btn-default {
 	display: inline-block;
@@ -374,7 +389,7 @@ a:focus{
 
 /* Banner Section */
 .page-headers {
-  background-image: url('/asset/images/banner/bakeryexhibitors.png');
+  background-image: url('https://newkit.moxcreative.com/breadmeal/wp-content/uploads/sites/6/2022/07/freshly-baked-sweet-bread-e1657906735182.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1222,11 +1237,15 @@ textarea.form-control {
       grid-template-columns: 1fr;
     }
   }
+  .bak{
+    background-image: url("https://baker.la-studioweb.com/wp-content/uploads/2021/10/m8-bg-5.jpg");
+  }
     .category-section {
     max-width: 1200px;
     margin: auto;
     text-align: center;
     padding: 10px;
+   
   }
 
     .category-section h2 {
@@ -1548,6 +1567,50 @@ textarea.form-control {
   line-height: 1.6;
   text-align: justify;
 }
+.about-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section .shape {
+  position: absolute;
+  z-index: 0;
+  opacity: 1;
+  animation: floatShape 6s ease-in-out infinite alternate;
+}
+
+/* Shape 1 (top-left) */
+.about-section .shape-1 {
+  top: 0px;
+  left: -60px;
+  width: 250px;
+}
+
+/* Shape 2 (bottom-right) */
+.about-section .shape-2 {
+bottom: -119px;
+    right: -109px;
+    width: 478px;
+}
+
+@keyframes floatShape {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(20px) rotate(5deg); }
+}
+
+.shaped-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  clip-path: ellipse(45% 35% at 50% 50%);
+  display: block;
+}
+
+@keyframes zoomPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
 
 /* ===== Key Icons ===== */
 .key {
@@ -1578,11 +1641,12 @@ textarea.form-control {
 .banner-carousel .item img,
 .shaped-img {
   width: 100%;
-  height: 550px;
+  height: 600px;
   object-fit: cover;
-  clip-path: circle(at 50% 50%);
+clip-path: inset(0 0 0 0 round 25%);
+
+  /* clip-path: circle(at 50% 50%); */
   display: block;
-  animation: zoomPulse 6s ease-in-out infinite;
 }
 
 
@@ -1600,16 +1664,29 @@ textarea.form-control {
 /* Optional: spacing between carousel items */
 .banner-carousel .item {
   padding: 0 10px;
-}.countdown-section {
+}
+.countdown-section { 
   position: relative;
-  background: linear-gradient(90deg, #951F44, #b2446b, #ff9ea9);
+  background-image: url('../images/bakerytimer.jpg');
+  background-size: cover;
+  background-position: center;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 10%;
+  padding: 50px 2%;
   overflow: hidden;
   flex-wrap: wrap;
+  isolation: isolate;
+}
+
+/* Add a dark overlay for readability */
+.countdown-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(149, 31, 68, 0.75); /* #951F44 overlay */
+  z-index: 0;
 }
 
 /* --- Left Logo --- */
@@ -1618,6 +1695,8 @@ textarea.form-control {
   width: auto;
   background-color: #ffffff;
   border-radius: 10px;
+  z-index: 2;
+  position: relative;
 }
 
 /* --- Center Countdown Text --- */
@@ -1632,7 +1711,7 @@ textarea.form-control {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  opacity: 0.8;
+  opacity: 0.9;
   margin-bottom: 5px;
 }
 
@@ -1661,15 +1740,15 @@ textarea.form-control {
 
 .timer div small {
   font-size: 0.8rem;
-  letter-spacing: 1px;
   text-transform: uppercase;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /* --- Right Image + Button --- */
 .countdown-image {
   position: relative;
   text-align: center;
+  z-index: 2;
 }
 
 .countdown-image img {
@@ -1680,8 +1759,8 @@ textarea.form-control {
 
 .ticket-btn {
   position: absolute;
-  bottom: 10%;
-  left: -200px;
+  bottom: -60px;
+  left: -20px;
   background: #fff;
   color: #951F44;
   font-weight: 600;
@@ -1704,7 +1783,7 @@ textarea.form-control {
   50% { transform: translateY(-10px); }
 }
 
-/* --- 📱 Responsive Design (Tablet + Mobile) --- */
+/* --- Responsive --- */
 @media (max-width: 992px) {
   .countdown-section {
     flex-direction: column;
@@ -1740,11 +1819,9 @@ textarea.form-control {
     margin-top: 20px;
     left: auto;
     bottom: auto;
-    transform: none;
   }
 }
 
-/* --- 📱 Extra Small Devices (under 500px) --- */
 @media (max-width: 500px) {
   .countdown-content h2 {
     font-size: 1.2rem;
@@ -1768,161 +1845,513 @@ textarea.form-control {
   }
 }
 
-
-  .expo-category-section {
-    padding: 60px 8%;
-    text-align: center;
-  }
-
-  .expo-category-section h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #951F44;
-    margin-bottom: 40px;
-  }
-
-  .expo-category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-
-  .expo-category-box {
-    background: #951F44;
-    color: #fff;
-    padding: 40px 20px;
-    border-radius: 12px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.4s ease;
-  }
-
-  .expo-category-box:hover {
-    transform: translateY(-8px);
-    background: #b93b64;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  }
-
-.expo-category-box img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
-  filter: brightness(0) invert(1);
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.expo-category-box:hover img {
-  transform: scale(1.1);
-  filter: brightness(0) invert(1);
-}
-
-
-  .expo-category-box h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-
-  /* Alternate background colors */
-  .expo-category-box:nth-child(2n) { background: #E86E14; }
-  .expo-category-box:nth-child(3n) { background: #008060; }
-  .expo-category-box:nth-child(4n) { background: #008FD5; }
-  .expo-category-box:nth-child(5n) { background: #c0392b; }
-  .expo-category-box:nth-child(6n) { background: #f39c12; }
-  .expo-category-box:nth-child(7n) { background: #1abc9c; }
-  .expo-category-box:nth-child(8n) { background: #9b59b6; }
-
-  @media (max-width: 768px) {
-    .expo-category-box {
-      padding: 30px 15px;
-    }
-    .expo-category-box i {
-      font-size: 2rem;
-    }
-  }
-
-  .key-highlights {
-  padding: 60px 8%;
-  background: #fff;
-}
-
-.key-highlights .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.highlights-left {
-  flex: 1;
-  min-width: 320px;
-}
-
-.highlights-left h2 {
-  color: #951F44;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.highlight-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-}
-
-.highlight-box {
-  background: #951F44;
-  color: #fff;
+.expo-category-section {
   text-align: center;
-  padding: 25px 15px;
-  border-radius: 10px;
+  padding: 80px 5%;
+  background-color: #fff5f7;
+  background-image: url("https://newkit.moxcreative.com/breadmeal/wp-content/uploads/sites/6/2022/07/Asset-3-1-e1657906929718.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.expo-category-section h2 {
+  font-size: 2.2rem;
+  color: #951F44;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.expo-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* --- Card --- */
+.expo-category-box {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+/* --- Dark Overlay --- */
+.expo-category-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: background 0.4s ease, transform 0.4s ease;
+}
+
+/* --- Text --- */
+.expo-category-box h3 {
+  position: relative;
+  z-index: 2;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 107px 50px;
+  border-radius: 4px;
   transition: all 0.4s ease;
 }
 
+/* --- Border (inset from edges) --- */
+.expo-category-box h3::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  right: 10%;
+  bottom: 15%;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all 0.4s ease;
+}
+
+/* --- Hover --- */
+.expo-category-box:hover h3::before {
+  border-color: #fff;
+}
+
+.expo-category-box:hover::before {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.05);
+}
+/* Background Images */
+.bakery {
+  background: url('https://i.pinimg.com/736x/9f/d2/d0/9fd2d0747a4af6ee46c37d75f1c61e0a.jpg') center/cover no-repeat;
+}
+
+.kitchen {
+  background: url('https://i.pinimg.com/1200x/54/01/13/5401137c851395e29b045e8058ed9e49.jpg') center/cover no-repeat;
+}
+
+.hotel {
+  background: url('https://i.pinimg.com/736x/5b/10/4c/5b104c695ca85257a3df8f67e7a757d8.jpg') center/cover no-repeat;
+}
+
+.packaging {
+  background: url('https://i.pinimg.com/736x/7f/58/b8/7f58b824135b4f914bd7a60837d44b8b.jpg') center/cover no-repeat;
+}
+
+.dairy {
+  background: url('https://i.pinimg.com/736x/ae/df/0f/aedf0fa0a88b877fca94d7060b419c03.jpg') center/cover no-repeat;
+}
+
+.catering {
+  background: url('https://i.pinimg.com/736x/0a/24/82/0a24826602ab1d8fd2a24d8713344894.jpg') center/cover no-repeat;
+}
+
+.refrigeration {
+  background: url('https://i.pinimg.com/736x/8e/1a/27/8e1a27cdd7fdf20f58484ec22833b84c.jpg') center/cover no-repeat;
+}
+
+.exporters {
+  background: url('https://i.pinimg.com/736x/ce/60/f0/ce60f051d71cf21f62b9e4b8474d42c9.jpg') center/cover no-repeat;
+}
+
+.fruits {
+  background: url('https://i.pinimg.com/736x/10/b5/9d/10b59d0e093e5ddb5eb9df3973f73bc1.jpg') center/cover no-repeat;
+}
+
+.meat {
+  background: url('https://i.pinimg.com/736x/68/49/4c/68494c5d5766d37e5f458c7a4f22f726.jpg') center/cover no-repeat;
+}
+
+.confectionery {
+  background: url('https://i.pinimg.com/1200x/38/33/a7/3833a7674cff44afbee6290d259afc8a.jpg') center/cover no-repeat;
+}
+
+.beverage {
+  background: url('https://i.pinimg.com/736x/2e/9c/5e/2e9c5e6eb81e2a9273aea8e2ebd50d89.jpg') center/cover no-repeat;
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+
+  .expo-category-box h3 {
+    font-size: 1rem;
+  }
+}
+
+.text-primary-color {
+  color: #951F44;
+}
+
+/* Section Base */
+.key-highlights {
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+/* Decorative Shapes */
+.shape {
+  position: absolute;
+  z-index: 0;
+  opacity: 1;
+}
+.shape-top {
+  top: -6px;
+  left: 8px;
+  width: 180px;
+}
+.shape-bottom {
+  bottom: 0px;
+  right: 0px;
+  width: 200px;
+}
+
+/* Highlight Boxes */
+.highlight-box {
+  background: #fff;
+  color: #951F44;
+  border: 2px solid #951F44;
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.4s ease;
+}
+.highlight-box:hover {
+  background: #951F44;
+  color: #fff;
+  transform: scale(1.05);
+}
 .highlight-box i {
   font-size: 2rem;
   margin-bottom: 10px;
 }
-
 .highlight-box h3 {
   font-size: 1.6rem;
   font-weight: 700;
   margin: 5px 0;
 }
-
 .highlight-box p {
   font-size: 0.9rem;
+  margin: 0;
 }
 
-.highlight-box:hover {
-  transform: translateY(-6px);
-  background: #b93b64;
-}
-
-.highlights-right {
-  flex: 1;
-  text-align: center;
-}
-
-.highlights-right img {
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+/* Side Images */
+.highlight-side-img {
+  border-radius: 20px;
+  height: auto;
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+  .highlight-side-img {
+    max-height: 300px;
+    margin-bottom: 20px;
+  }
+}
+
+.bakery-quote {
+  background: #fff5f7;
+  padding: 40px 0%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bakery-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Left Image */
+.bakery-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.bakery-left img {
+  max-width: 260px;
+  height: auto;
+}
+
+/* Right Image */
+.bakery-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.bakery-right img {
+  max-width: 280px;
+  height: auto;
+}
+
+/* Center Text */
+.bakery-text {
+  text-align: center;
+  color: #951F44;
+  z-index: 2;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.bakery-text h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.bakery-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.bakery-text .event-info {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.register-btn {
+  display: inline-block;
+  margin: 20px 0;
+  background: #951F44;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  background: #b93b64;
+  transform: translateY(-3px);
+}
+
+.subtext {
+  font-size: 1rem;
+  color: #951F44;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .bakery-left img,
+  .bakery-right img {
+    max-width: 180px;
+    opacity: 0.7;
+  }
+
+  .bakery-text h2 {
+    font-size: 1.7rem;
+  }
+  .key-highlights {
+
+  padding-top: 9rem !important;
+    padding-bottom: 9rem !important;
+}
+}
+
+
 @media (max-width: 768px) {
-  .key-highlights .container {
-    flex-direction: column;
+  .bakery-left img,
+  .bakery-right img {
+    max-width: 140px;
+    opacity: 0.7;
+  }
+  .bakery-text {
+    padding: 0 20px;
+     max-width: 600px;
   }
 
-  .highlight-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .bakery-text h2 {
+    font-size: 1.5rem;
   }
 
-  .highlights-left h2 {
-    text-align: center;
+  .bakery-text p {
+    font-size: 1rem;
+   
   }
+  .highlight-box h3{
+    font-size: 24px;
+  }
+  .highlight-box {
+    padding: 10px;
+  }
+
+}
+
+
+.whyexpo-section{max-width:1600px;margin:0 auto;padding:60px 20px 100px;font-family:'Poppins',sans-serif;overflow:hidden}
+.whyexpo-title{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:40px;color:#951F44}
+.whyexpo-filters{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin-bottom:60px}
+.whyexpo-filters button{
+  padding:10px 32px;border:none;border-radius:999px;
+  font-size:15px;font-weight:500;color:#555;background:#f6f6f6;
+  transition:.3s;cursor:pointer
+}
+.whyexpo-filters button:hover{background:#ddd}
+.whyexpo-filters .active{background:#951F44;color:#fff}
+
+.whyexpo-container{display:flex;flex-direction:column;gap:5rem;transition:opacity .8s ease-in-out;opacity:1}
+.whyexpo-container.fade-out{opacity:0}
+
+@media(min-width:992px){
+  .whyexpo-container{flex-direction:row;align-items:flex-start;justify-content:space-between;gap:3rem}
+}
+
+.whyexpo-text{flex:1;position:relative}
+.whyexpo-number{font-size:230px;font-weight:700;color:#e1e1e1;line-height:.8;user-select:none}
+.whyexpo-content{position:absolute;top:150px;left:0}
+.whyexpo-line{width:60px;height:3px;background:#951F44;margin-bottom:12px}
+.whyexpo-content h3{color:#951F44;font-size:.9rem;letter-spacing:1px;font-weight:600;margin-bottom:12px;text-transform:uppercase}
+.whyexpo-content p{max-width:580px;font-size:15px;line-height:1.8;color:#444;margin-bottom:25px;transition:all .3s ease}
+
+.whyexpo-btn{
+  display:inline-flex;align-items:center;gap:10px;padding:12px 28px;
+  border-radius:999px;font-size:14px;font-weight:500;color:#fff;
+  background:linear-gradient(to top,#520040,#951F44);
+  border:2px solid white;overflow:hidden;position:relative;
+  cursor:pointer;transition:border .3s ease, transform .3s ease;
+}
+.whyexpo-btn:hover{border-color:#D02AAC;transform:translateY(-2px)}
+.whyexpo-btn svg{width:18px;height:18px;transition:transform .3s ease;z-index:2;position:relative}
+.whyexpo-btn:hover svg{transform:translateX(5px)}
+.whyexpo-btn::after{
+  content:"";position:absolute;inset:0;background:#000;
+  transform:translateX(-100%);transition:transform .5s ease-in-out;z-index:1
+}
+.whyexpo-btn:hover::after{transform:translateX(0)}
+.whyexpo-btn span{position:relative;z-index:2}
+
+.whyexpo-image{flex:1;position:relative;max-width:600px;margin:0 auto}
+.whyexpo-bg{
+  position:absolute;top:-20px;right:-10px;bottom:0;left:0;
+  background:linear-gradient(to right,#56126d,#9b1b6c);
+  height:450px;z-index:1;border-radius:12px;opacity:.95
+}
+.whyexpo-frame::before,.whyexpo-frame::after{
+  content:"";position:absolute;background:white
+}
+.whyexpo-frame::before{top:12px;right:8px;width:10px;bottom:-5px}
+.whyexpo-frame::after{right:8px;left:0;height:10px;bottom:-5px}
+.whyexpo-frame img{
+  width:100%;height:400px;object-fit:cover;position:relative;z-index:2;opacity:.9;border-radius:12px;transition:transform 2s ease-in-out;
+}
+.whyexpo-frame img:hover{transform:scale(1.05)}
+
+@media(max-width:768px){
+  .whyexpo-title{font-size:2rem}
+  .whyexpo-number{font-size:150px}
+  .whyexpo-content{position:relative;top:0;left:0}
+  .whyexpo-bg{height:350px}
+  .whyexpo-frame img{height:300px}
+}
+
+/* Hero Section */
+.baking-hero {
+  position: relative;
+  height: 500px;
+  background: url('../images/bakerydiscover.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.baking-hero .overlay {
+  position: absolute;
+  inset: 0;
+  /* Darker gradient overlay for better readability */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+.baking-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.baking-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffc107;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.baking-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #f5f5f5;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Centered Play Button */
+.play-btn {
+  position: absolute;
+  top: 80%; /* center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #ffc107;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffc107;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  z-index: 3;
+}
+
+.play-btn:hover {
+  background: #ffc107;
+  color: #000;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .baking-hero {
+    height: 400px;
+    padding: 40px 20px;
+  }
+
+  .baking-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .play-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+}
+
+.carousel-item img {
+width: 100%;
+height: 100%;
+}
+@media (max-width: 900px){
+.carousel-item img { height: 360px; }
+}
+@media (max-width: 600px){
+.carousel-item img { height: 220px; }
 }

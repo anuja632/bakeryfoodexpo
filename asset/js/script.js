@@ -68,6 +68,9 @@ form.addEventListener("submit", function (e) {
     alert("🎉 Thank you for registering as an exhibitor! Our team will contact you shortly.");
     // window.location.href = "thankyou.html";
   });
+document.getElementById('playVideo').addEventListener('click', () => {
+  alert("Play video or open modal here!");
+});
 
 
 const scrollBtn = document.getElementById("scrollTopBtn");

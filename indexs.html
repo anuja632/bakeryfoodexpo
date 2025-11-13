@@ -1,222 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Category Cards — image on top center</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Bakery & Food Tec Expo 2026?</title>
 
-<!-- AOS (optional) -->
+<!-- Google Fonts & AOS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
-  :root{
-    --card-width: 340px;
-    --img-size: 170px;
-    --card-gradient: linear-gradient(86deg, #e71c1c, #d5e11abd);
-  }
+*{box-sizing:border-box;margin:0;padding:0}
+.whyexpo-section{max-width:1600px;margin:0 auto;padding:60px 20px 100px;font-family:'Poppins',sans-serif;overflow:hidden}
+.whyexpo-title{text-align:center;font-size:2.5rem;font-weight:700;margin-bottom:40px;color:#951F44}
+.whyexpo-filters{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin-bottom:60px}
+.whyexpo-filters button{
+  padding:10px 32px;border:none;border-radius:999px;
+  font-size:15px;font-weight:500;color:#555;background:#f6f6f6;
+  transition:.3s;cursor:pointer
+}
+.whyexpo-filters button:hover{background:#ddd}
+.whyexpo-filters .active{background:#951F44;color:#fff}
 
-  body{
-    margin:0;
-    font-family: "Poppins", sans-serif;
-    background:#422303;
-    color:#fff;
-    min-height:100vh;
-  }
+.whyexpo-container{display:flex;flex-direction:column;gap:5rem;transition:opacity .8s ease-in-out;opacity:1}
+.whyexpo-container.fade-out{opacity:0}
 
-  h1{
-    text-align:center;
-    margin:48px 0 24px;
-    font-weight:700;
-  }
+@media(min-width:992px){
+  .whyexpo-container{flex-direction:row;align-items:flex-start;justify-content:space-between;gap:3rem}
+}
 
-  .wrap{
-    max-width:1200px;
-    margin:0 auto 80px;
-    padding:0 20px;
-    display:flex;
-    gap:40px;
-    justify-content:center;
-    flex-wrap:wrap;
-  }
+.whyexpo-text{flex:1;position:relative}
+.whyexpo-number{font-size:230px;font-weight:700;color:#e1e1e1;line-height:.8;user-select:none}
+.whyexpo-content{position:absolute;top:150px;left:0}
+.whyexpo-line{width:60px;height:3px;background:#951F44;margin-bottom:12px}
+.whyexpo-content h3{color:#951F44;font-size:.9rem;letter-spacing:1px;font-weight:600;margin-bottom:12px;text-transform:uppercase}
+.whyexpo-content p{max-width:580px;font-size:15px;line-height:1.8;color:#444;margin-bottom:25px;transition:all .3s ease}
 
-  /* card container */
-  .card {
-    position:relative;
-    width:var(--card-width);
-    height:360px;                  /* collapsed height before hover */
-    border-radius:20px;
-    background:var(--card-gradient);
-    box-shadow:0 30px 60px rgba(0,0,0,0.35);
-    overflow:visible;
-    transition:height .42s cubic-bezier(.2,.9,.3,1), transform .3s ease;
-    display:block;
-  }
+.whyexpo-btn{
+  display:inline-flex;align-items:center;gap:10px;padding:12px 28px;
+  border-radius:999px;font-size:14px;font-weight:500;color:#fff;
+  background:linear-gradient(to top,#520040,#D02AAC);
+  border:2px solid white;overflow:hidden;position:relative;
+  cursor:pointer;transition:border .3s ease, transform .3s ease;
+}
+.whyexpo-btn:hover{border-color:#D02AAC;transform:translateY(-2px)}
+.whyexpo-btn svg{width:18px;height:18px;transition:transform .3s ease;z-index:2;position:relative}
+.whyexpo-btn:hover svg{transform:translateX(5px)}
+.whyexpo-btn::after{
+  content:"";position:absolute;inset:0;background:#000;
+  transform:translateX(-100%);transition:transform .5s ease-in-out;z-index:1
+}
+.whyexpo-btn:hover::after{transform:translateX(0)}
+.whyexpo-btn span{position:relative;z-index:2}
 
-  .card:hover{
-    height:460px;                  /* expanded height on hover */
-    transform:translateY(-10px);
-    box-shadow:0 40px 80px rgba(0,0,0,0.45);
-  }
+.whyexpo-image{flex:1;position:relative;max-width:600px;margin:0 auto}
+.whyexpo-bg{
+  position:absolute;top:-20px;right:-10px;bottom:0;left:0;
+  background:linear-gradient(to right,#56126d,#9b1b6c);
+  height:480px;z-index:1;border-radius:12px;opacity:.95
+}
+.whyexpo-frame::before,.whyexpo-frame::after{
+  content:"";position:absolute;background:white
+}
+.whyexpo-frame::before{top:12px;right:8px;width:10px;bottom:-5px}
+.whyexpo-frame::after{right:8px;left:0;height:10px;bottom:-5px}
+.whyexpo-frame img{
+  width:100%;height:400px;object-fit:cover;position:relative;z-index:2;opacity:.9;border-radius:12px;transition:transform 2s ease-in-out;
+}
+.whyexpo-frame img:hover{transform:scale(1.05)}
 
-  /* Image box sits overlapping top center */
-  .img-box {
-    position:absolute;
-    top: - (var(--img-size) / 3);  /* not used by browsers — replaced below with calc */
-    top: calc(-1 * (var(--img-size) / 2.6)); /* visually lifts image above card */
-    left:50%;
-    transform:translateX(-50%);
-    width:var(--img-size);
-    height:var(--img-size);
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,0.45);
-    transition: transform .45s ease, top .45s ease, box-shadow .45s ease;
-    z-index:4;
-    background:#111;
-  }
-
-  /* scale / float image more on hover */
-  .card:hover .img-box{
-    top: calc(-1 * (var(--img-size) / 1.6));
-    transform: translateX(-50%) scale(1.03);
-    box-shadow:0 22px 50px rgba(0,0,0,0.55);
-  }
-
-  .img-box img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-  }
-
-  /* content area (starts lower to accommodate overlapping image) */
-  .content {
-    position:absolute;
-    left:0;
-    right:0;
-    top: 55%;                   /* initial top (adjusted) */
-    transform: translateY(-10%);
-    padding: 28px 26px;
-    text-align:center;
-    transition: top .45s ease, height .45s ease, transform .45s ease;
-    z-index:3;
-    color:#111;
-    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.06));
-    border-bottom-left-radius:20px;
-    border-bottom-right-radius:20px;
-    height:calc(45% - 20px);
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-  }
-
-  /* on hover reveal more content by moving top upward */
-  .card:hover .content{
-    top:35%;
-    height: calc(65% - 20px);
-  }
-
-  .title{
-    font-size:1.4rem;
-    font-weight:800;
-    margin: (var(--img-size) / 6) 0 10px;
-    letter-spacing:0.5px;
-    color:#000;
-  }
-
-  .desc{
-    font-size:0.95rem;
-    line-height:1.55;
-    color:#2a2a2a;
-    margin-bottom:18px;
-    text-align:center;
-  }
-
-  .read{
-    display:inline-block;
-    background:#000;
-    color:#fff;
-    padding:10px 20px;
-    text-decoration:none;
-    border-radius:4px;
-    font-weight:600;
-    transition: background .2s ease, transform .18s ease;
-    align-self:center;
-  }
-
-  .read:hover{ background:#222; transform:translateY(-2px); }
-
-  /* small screens adjustments */
-  @media (max-width:900px){
-    :root{ --card-width:300px; --img-size:150px; }
-    .card{ height:340px; }
-    .card:hover{ height:440px; }
-  }
-
-  @media (max-width:520px){
-    :root{ --card-width:92%; --img-size:140px; }
-    .wrap{ gap:24px; padding-bottom:40px; }
-    .card{ width:var(--card-width); height:360px; }
-    .card:hover{ height:460px; }
-    .img-box{ top:calc(-1 * (var(--img-size) / 2.2)); }
-    .card:hover .img-box{ top:calc(-1 * (var(--img-size) / 1.5)); }
-  }
+@media(max-width:768px){
+  .whyexpo-title{font-size:2rem}
+  .whyexpo-number{font-size:150px}
+  .whyexpo-content{position:relative;top:0;left:0}
+  .whyexpo-bg{height:350px}
+  .whyexpo-frame img{height:300px}
+}
 </style>
 </head>
+
 <body>
+<section class="whyexpo-section">
+  <h1 class="whyexpo-title" data-aos="slide-right">Why Bakery & Food Tec Expo 2026?</h1>
 
-  <h1>CATEGORY... 🪶</h1>
-
-  <div class="wrap">
-    <!-- Card 1 -->
-    <a class="card" href="#" data-aos="fade-right">
-      <div class="img-box">
-        <img src="./asset/images/gallery1.jpg" alt="History">
-      </div>
-
-      <div class="content">
-        <div class="title">HISTORY</div>
-        <div class="desc">
-          Explore the rich history of the Tamil culture and its ancient civilization.
-        </div>
-        <span class="read">Read More</span>
-      </div>
-    </a>
-
-    <!-- Card 2 -->
-    <a class="card" href="#" data-aos="fade-up">
-      <div class="img-box">
-        <img src="https://cdn.pixabay.com/photo/2017/03/24/06/27/crown-2177603_1280.jpg" alt="Kings">
-      </div>
-
-      <div class="content">
-        <div class="title">KINGS</div>
-        <div class="desc">
-          Learn about the great kings of Tamil Nadu and their contributions to the world.
-        </div>
-        <span class="read">Read More</span>
-      </div>
-    </a>
-
-    <!-- Card 3 -->
-    <a class="card" href="#" data-aos="fade-left">
-      <div class="img-box">
-        <img src="https://cdn.pixabay.com/photo/2021/03/28/10/48/battle-6132334_1280.jpg" alt="War">
-      </div>
-
-      <div class="content">
-        <div class="title">WAR</div>
-        <div class="desc">
-          The wars fought by Tamil kingdoms and their impact on history.
-        </div>
-        <span class="read">Read More</span>
-      </div>
-    </a>
+  <!-- Tabs -->
+  <div class="whyexpo-filters" data-aos="slide-up">
+    <button class="active" data-index="0">For Exhibitors</button>
+    <button data-index="1">For Investors</button>
+    <button data-index="2">For Buyers & Sellers</button>
+    <button data-index="3">To Showcase</button>
   </div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 900, once: true });
-  </script>
+  <!-- Dynamic Content -->
+  <div class="whyexpo-container" id="whyexpo-content"></div>
+</section>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:1000,once:true});
+
+const whyexpoData = [
+  {
+    number: "01",
+    title: "For Exhibitors",
+    text: "Bakery & Food Tec Expo 2026 provides an exceptional platform for exhibitors to showcase cutting-edge bakery, confectionery, and food processing technologies to a targeted audience of industry professionals, buyers, and distributors. Exhibitors can launch new products, demonstrate innovations, and establish strong brand visibility in one of India’s fastest-growing markets for food technology and equipment.",
+    img: "https://images.unsplash.com/photo-1604908177225-055f974c2b42?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    number: "02",
+    title: "For Investors",
+    text: "Bakery & Food Tec Expo 2026 serves as a strategic gateway for investors looking to capitalize on the booming bakery and processed food sectors. With India’s rising demand for packaged foods, expanding retail chains, and a growing café culture, investors can explore scalable opportunities across machinery manufacturing, automation, cold storage, logistics, and sustainable packaging. The expo connects investors directly with manufacturers, distributors, and policymakers, enabling data-driven investment decisions and long-term business growth.",
+    img: "https://images.unsplash.com/photo-1621276879633-5b5b87f3f3cf?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    number: "03",
+    title: "For Buyers & Sellers",
+    text: "The Expo acts as a vibrant B2B marketplace, connecting buyers, suppliers, and traders from across India and abroad. Visitors can explore a comprehensive range of bakery equipment, ingredients, packaging solutions, and food processing systems — all under one roof. The event enables businesses to discover new suppliers, negotiate deals, and expand their sourcing networks efficiently.",
+    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    number: "04",
+    title: "To Showcase",
+    text: "Bakery & Food Tec Expo 2026 is more than an exhibition — it’s a showcase of innovation and excellence in the bakery and food industry. From automated baking lines to eco-friendly packaging, exhibitors present next-generation solutions that redefine production standards. Live demonstrations, product launches, and interactive sessions create a powerful platform to engage audiences and drive brand recognition.",
+    img: "https://images.unsplash.com/photo-1613145993482-4a3e9d9a3b89?auto=format&fit=crop&w=800&q=80"
+  }
+];
+
+const container = document.getElementById("whyexpo-content");
+const buttons = document.querySelectorAll(".whyexpo-filters button");
+let current = 0;
+let autoplay;
+
+// render section with fade animation
+function showWhyexpo(i){
+  const s = whyexpoData[i];
+  container.classList.add("fade-out");
+  setTimeout(()=>{
+    container.innerHTML = `
+      <div class="whyexpo-text" data-aos="slide-up">
+        <div class="whyexpo-number">${s.number}</div>
+        <div class="whyexpo-content">
+          <div class="whyexpo-line"></div>
+          <h3>${s.title}</h3>
+          <p>${s.text}</p>
+          <button class="whyexpo-btn" onclick="window.location.href='register.html'">
+            <span>Register Now</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="whyexpo-image" data-aos="slide-up">
+        <div class="whyexpo-bg"></div>
+        <div class="whyexpo-frame"><img src="${s.img}" alt="${s.title}"></div>
+      </div>`;
+    buttons.forEach(b=>b.classList.remove("active"));
+    buttons[i].classList.add("active");
+    container.classList.remove("fade-out");
+    AOS.refreshHard();
+  }, 400);
+}
+
+// autoplay every 6s
+function startWhyexpoAutoplay(){
+  clearInterval(autoplay);
+  autoplay = setInterval(()=>{
+    current = (current + 1) % whyexpoData.length;
+    showWhyexpo(current);
+  },6000);
+}
+
+// manual switch
+buttons.forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    current = parseInt(btn.dataset.index);
+    showWhyexpo(current);
+    startWhyexpoAutoplay();
+  });
+});
+
+// init
+showWhyexpo(current);
+startWhyexpoAutoplay();
+</script>
 </body>
 </html>
