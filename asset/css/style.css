@@ -213,7 +213,7 @@ a:focus{
 
 
 .section-title{
-	margin-bottom: 60px;
+	/* margin-bottom: 60px; */
 	text-align: center;
 }
 
@@ -323,6 +323,23 @@ a:focus{
     height: auto;
     object-fit: contain; /* show full image without cropping */
   }
+  .about-section{
+    padding: 10px 0 !important;
+  }
+.expo-category-section{
+    padding: 10px !important;
+  }
+.banner-carousel .item img, .shaped-img {
+    width: 100%;
+    height: 400px !important;}
+    .about-contentv1 .section-title h2 {
+font-size: 25px !important;}
+    
+.key-highlights{
+  padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+
+}
 }
 
 /* Page Header Title Animation */
@@ -2154,11 +2171,11 @@ clip-path: inset(0 0 0 0 round 25%);
   .bakery-text h2 {
     font-size: 1.7rem;
   }
-  .key-highlights {
+  /* .key-highlights {
 
   padding-top: 9rem !important;
     padding-bottom: 9rem !important;
-}
+} */
 }
 
 
@@ -2272,7 +2289,7 @@ clip-path: inset(0 0 0 0 round 25%);
 /* Content Area */
 .whyexpo-container {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 5rem;
   transition: opacity 0.8s ease-in-out;
   opacity: 1;
@@ -2300,7 +2317,7 @@ clip-path: inset(0 0 0 0 round 25%);
 .whyexpo-number {
   font-size: 230px;
   font-weight: 700;
-  color: rgba(149, 31, 68, 0.08); /* soft berry tint instead of flat gray */
+  color: rgba(149, 31, 68, 0.6); /* soft berry tint instead of flat gray */
   line-height: 0.8;
   user-select: none;
 }
@@ -2341,60 +2358,6 @@ clip-path: inset(0 0 0 0 round 25%);
   transition: all 0.3s ease;
 }
 
-/* Button */
-.whyexpo-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 28px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #fff;
-  background: linear-gradient(to top, #520040, #951F44);
-  border: 2px solid white;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  transition: border 0.3s ease, transform 0.3s ease;
-}
-
-.whyexpo-btn:hover {
-  border-color: #D02AAC;
-  transform: translateY(-2px);
-}
-
-.whyexpo-btn svg {
-  width: 18px;
-  height: 18px;
-  transition: transform 0.3s ease;
-  z-index: 2;
-  position: relative;
-}
-
-.whyexpo-btn:hover svg {
-  transform: translateX(5px);
-}
-
-.whyexpo-btn::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #000;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-  z-index: 1;
-}
-
-.whyexpo-btn:hover::after {
-  transform: translateX(0);
-}
-
-.whyexpo-btn span {
-  position: relative;
-  z-index: 2;
-}
-
 /* Image Side */
 .whyexpo-image {
   flex: 1;
@@ -2405,16 +2368,17 @@ clip-path: inset(0 0 0 0 round 25%);
 
 .whyexpo-bg {
   position: absolute;
-  top: -20px;
+  top: -10px;
   right: -10px;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to right, #56126d, #9b1b6c);
-  height: 450px;
+  bottom: -10px;
+  left: -10px;
+  background: linear-gradient(to right, #951F44, #b12028);
   z-index: 1;
   border-radius: 12px;
   opacity: 0.9;
 }
+
+
 
 .whyexpo-frame::before,
 .whyexpo-frame::after {
@@ -2456,13 +2420,37 @@ clip-path: inset(0 0 0 0 round 25%);
    RESPONSIVE STYLES
    =============================== */
 
+/* Disable parallax on tablets and below */
 @media (max-width: 992px) {
   .whyexpo-section {
-    background-attachment: scroll; /* Disable parallax for mobile */
+    background-attachment: scroll;
+  }
+
+  /* Stack content vertically on medium screens */
+  .whyexpo-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .whyexpo-text,
+  .whyexpo-image {
+    max-width: 100%;
+  }
+
+  .whyexpo-content {
+    position: relative;
+    top: 0;
+    left: 0;
   }
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
+  .about-section .shape-1 {
+    display: none;
+  }
+
   .whyexpo-title {
     font-size: 2rem;
   }
@@ -2471,10 +2459,14 @@ clip-path: inset(0 0 0 0 round 25%);
     font-size: 150px;
   }
 
-  .whyexpo-content {
-    position: relative;
-    top: 0;
-    left: 0;
+  .whyexpo-container {
+    display: block; /* ensures full-width stacking */
+  }
+
+  .whyexpo-text,
+  .whyexpo-image {
+    width: 100%;
+    margin-bottom: 2rem;
   }
 
   .whyexpo-bg {
@@ -2486,9 +2478,10 @@ clip-path: inset(0 0 0 0 round 25%);
   }
 
   .whyexpo-content p {
-    background: rgba(255, 255, 255, 0.95); /* slightly stronger for smaller screens */
+    background: rgba(255, 255, 255, 0.95); /* stronger for smaller screens */
   }
 }
+
 
 /* Hero Section */
 .baking-hero {
