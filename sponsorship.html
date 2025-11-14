@@ -241,40 +241,41 @@
 <!-- Main Title End -->
     
 
-<form action="https://formsubmit.co/anujaramasamyv@gmail.com" method="POST" id="sponsorForm" 
-      class="p-4 shadow rounded-4 bg-white" 
-      data-aos="fade-up" data-aos-duration="1000">
+<form action="https://formsubmit.co/anujaramasamyv@gmail.com" 
+      method="POST" id="sponsorForm"
+      class="p-4 shadow rounded-4 bg-white">
+
+  <!-- Required Hidden Fields -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_subject" value="New Sponsorship Form Submission">
+
   <div class="row g-3">
 
-    <!-- Company Name -->
-    <div class="col-md-6" data-aos="fade-right" data-aos-delay="100" data-aos-duration="800">
-      <label class="form-label">Company Name <span class="text-danger"></span></label>
-      <input type="text" class="form-control" name="company_name" required>
+    <div class="col-md-6">
+      <label class="form-label">Company Name</label>
+      <input type="text" class="form-control" name="companyName" required>
     </div>
 
-    <!-- Contact Person -->
-    <div class="col-md-6" data-aos="fade-left" data-aos-delay="150" data-aos-duration="800">
-      <label class="form-label">Contact Person <span class="text-danger"></span></label>
-      <input type="text" class="form-control" name="contact_person" required>
+    <div class="col-md-6">
+      <label class="form-label">Contact Person</label>
+      <input type="text" class="form-control" name="contactPerson" required>
     </div>
 
-    <!-- Email -->
-    <div class="col-md-6" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
-      <label class="form-label">Email Address <span class="text-danger"></span></label>
+    <div class="col-md-6">
+      <label class="form-label">Email Address</label>
       <input type="email" class="form-control" name="email" required>
     </div>
 
-    <!-- Phone -->
-    <div class="col-md-6" data-aos="fade-left" data-aos-delay="250" data-aos-duration="800">
-      <label class="form-label">Phone Number <span class="text-danger"></span></label>
+    <div class="col-md-6">
+      <label class="form-label">Phone Number</label>
       <input type="tel" class="form-control" name="phone" required>
     </div>
 
-    <!-- Sponsorship Package -->
-    <div class="col-md-6" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
+    <div class="col-md-6">
       <label class="form-label">Sponsorship Package</label>
       <select class="form-select" name="package">
-        <option value="" selected disabled>Select Package</option>
+        <option value="" disabled selected>Select Package</option>
         <option>Platinum Sponsor</option>
         <option>Gold Sponsor</option>
         <option>Silver Sponsor</option>
@@ -282,25 +283,23 @@
       </select>
     </div>
 
-    <!-- Website -->
-    <div class="col-md-6" data-aos="fade-left" data-aos-delay="350" data-aos-duration="800">
+    <div class="col-md-6">
       <label class="form-label">Website (optional)</label>
       <input type="url" class="form-control" name="website">
     </div>
 
-    <!-- Message -->
-    <div class="col-12" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+    <div class="col-12">
       <label class="form-label">Message</label>
-      <textarea class="form-control" rows="4" name="message" placeholder="Tell us more about your brand or goals..."></textarea>
+      <textarea class="form-control" rows="4" name="message"></textarea>
     </div>
 
-    <!-- Submit Button -->
-    <div class="col-12 text-center mt-4" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800">
+    <div class="col-12 text-center mt-4">
       <button type="submit" class="btn-default">Submit Now</button>
     </div>
 
   </div>
 </form>
+
   </div>
 </section>
 <!-- ===== Sponsorship Form Section End ===== -->
@@ -419,17 +418,20 @@
     duration: 1000,    // Default duration
     mirror: true       // Animate elements on scroll up and down
   });
-document.getElementById("sponsorForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // stop default submission
 
-  alert("Your sponsorship request has been submitted successfully!");
 
-  this.reset(); // reset form fields
 
-  this.submit(); // now submit to FormSubmit.co
+
+</script>
+<script>
+document.getElementById("sponsorForm").addEventListener("submit", function () {
+    alert("Your sponsorship request has been submitted successfully!");
+
+    // Delay reset until after real submission occurs
+    setTimeout(() => {
+        this.reset();
+    }, 100); 
 });
-
-
 </script>
 
 <script>

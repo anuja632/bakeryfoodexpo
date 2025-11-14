@@ -1,9 +1,8 @@
- // Visitor registration form validation
 const form = document.getElementById("visitor-form");
 const statusEl = document.getElementById("formStatus");
 
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  // e.preventDefault(); // stop for validation only
   let valid = true;
 
   // Clear old error messages
@@ -27,7 +26,7 @@ form.addEventListener("submit", function (e) {
     valid = false;
   }
 
-  // Validate mobile number
+  // Validate mobile
   const mobile = document.querySelector("[name=mobile]").value;
   if (!/^[0-9]{10}$/.test(mobile)) {
     document.getElementById("err-mobile").textContent = "Enter 10-digit mobile number";
@@ -41,33 +40,23 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  // SUCCESS messages
+  // SUCCESS MESSAGE
+  alert("Registration Successful!");
+
   const messages = [
     "🎉 Registration successful! See you at the Bakery & Food Expo 🍰",
     "✅ You’re in! Get ready for a delicious experience!",
     "🥐 Thanks for registering — can’t wait to meet you at the Expo!",
     "🍩 Sweet! You’ve successfully registered for the Bakery & Food Expo!"
   ];
-
   const randomMsg = messages[Math.floor(Math.random() * messages.length)];
 
-  // SHOW ALERT
-  alert("Registration Successful!");
-
-  // Show animated success message
   statusEl.style.color = "#28a745";
-  statusEl.style.opacity = 0;
   statusEl.textContent = randomMsg;
-  statusEl.style.transition = "opacity 0.5s ease";
-  setTimeout(() => (statusEl.style.opacity = 1), 100);
 
-  // Reset form after 2 seconds
-  setTimeout(() => form.reset(), 2000);
+  // submit form to FormSubmit AFTER validation
+  setTimeout(() => {
+    form.submit();  // REAL SUBMISSION happens here
+    form.reset();   // Clear fields after sending
+  }, 300);
 });
-
-
-
-
-
-
-  

@@ -343,6 +343,9 @@
 
     <!-- Registration Form -->
 <form action="https://formsubmit.co/abianu632@gmail.com" method="POST"  id="exhibitor-form" class="p-4 shadow rounded bg-light">
+    <!-- Required for FormSubmit -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
   <div class="row g-3">
 
     <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -410,12 +413,19 @@
 
 <!-- ===== Exhibitor Form Script ===== -->
 <script>
-  document.getElementById("exhibitor-form").addEventListener("submit", function (e) {
-    e.preventDefault();
+document.getElementById("exhibitor-form").addEventListener("submit", function (e) {
+    // e.preventDefault(); // stop submission only for validation/alert
+
     alert("🎉 Thank you for registering as an exhibitor! Our team will contact you shortly.");
-    // window.location.href = "thankyou.html";
-  });
+
+    // Submit the form to FormSubmit AFTER alert
+    setTimeout(() => {
+        this.submit();   // real submission happens here
+        this.reset();    // clear fields after sending
+    }, 200);
+});
 </script>
+
 
 
 

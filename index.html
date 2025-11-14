@@ -123,6 +123,13 @@
     </div>
   </div>
 </div>
+<!-- Bakery & Food Expo Preloader -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="Bakery Loader">
+    <h3>Baking Your Experience...</h3>
+  </div>
+</div>
 <!-- ===== Home Banner Carousel Section ===== -->
 <section class="home-banner-section first-section">
   <div class="owl-carousel home-banner-carousel owl-theme">
@@ -687,6 +694,12 @@
       top: 0,
       behavior: "smooth"
     });
+  });
+    window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    setTimeout(() => {
+      preloader.classList.add("hidden");
+    }, 600); // Smooth fade-out
   });
 </script>
 
