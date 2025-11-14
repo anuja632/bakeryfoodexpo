@@ -80,6 +80,7 @@ buttons.forEach(btn=>{
 showWhyexpo(current);
 startWhyexpoAutoplay();
 
+
   // Countdown target date → March 13, 2026
   const targetDate = new Date("March 13, 2026 00:00:00").getTime();
 
@@ -102,22 +103,8 @@ startWhyexpoAutoplay();
       document.querySelector(".timer").innerHTML = "<h3>Event Started!</h3>";
     }
   }, 1000);
-    const scrollBtn = document.getElementById("scrollTopBtn");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
-  });
 
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
 
 
 

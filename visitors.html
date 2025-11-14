@@ -60,11 +60,11 @@
 
         <!-- Dropdown: Exhibitors -->
         <li class="nav-item dropdown">
-          <a class="nav-link left-gap" href="#" id="exhibitorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link  dropdown-toggle left-gap" href="#" id="exhibitorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             EXHIBITORS
           </a>
           <ul class="dropdown-menu" aria-labelledby="exhibitorsDropdown">
-            <li><a class="dropdown-item" href="exhibitors.html">EXHIBITORS</a></li>
+            <li><a class="dropdown-item " href="exhibitors.html">EXHIBITORS</a></li>
             <li><a class="dropdown-item" href="./asset/images/BAKERY AND FOOD TEC EXPO – 2026 FLOOR PLAN.pdf" target="_blank">FLOOR PLAN</a></li>
             <li><a class="dropdown-item" href="./asset/images/BAKERY AND FOOD TEC EXPO – 2026 PROFILE.pdf" target="_blank">BROCHURE</a></li>
           </ul>
@@ -355,33 +355,20 @@
                placeholder="Your designation" />
       </div>
 
-      <!-- Website -->
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-        <label class="form-label fw-bold">Website</label>
-        <input type="url" name="website" id="website" class="form-control"
-               placeholder="https://company.com" />
-      </div>
-
-      <!-- Country -->
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="650">
-        <label class="form-label fw-bold">Country</label>
-        <input type="text" name="country" id="country" class="form-control"
-               placeholder="Country" />
-      </div>
-
-      <!-- State -->
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">
-        <label class="form-label fw-bold">State</label>
-        <input type="text" name="state" id="state" class="form-control"
-               placeholder="State" />
-      </div>
-
       <!-- City -->
       <div class="col-md-6" data-aos="fade-up" data-aos-delay="750">
         <label class="form-label fw-bold">City</label>
         <input type="text" name="city" id="city" class="form-control"
                placeholder="City" />
       </div>
+
+      <!-- message -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">
+        <label class="form-label fw-bold">Message</label>
+        <input type="text" name="Message" id="Message" class="form-control"
+               placeholder="Message" />
+      </div>
+
 
       <!-- Submit Button -->
       <div class="col-12 text-center mt-4" data-aos="fade-up" data-aos-delay="800">
@@ -521,7 +508,24 @@
   });
 </script>
 
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
 
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 
   <!-- Your custom scripts (load after libraries) -->

@@ -124,7 +124,7 @@
   </div>
 </div>
 
-<div class="page-header">
+<div class="page-header first-section">
   <img src="./asset/images/banner/bakeryabout.png">
 </div>
 <!-- Main Title Start -->
@@ -146,7 +146,7 @@
 </div>
 <!-- Main Title End -->
 <!-- ===== About Section ===== -->
-<section class="about-section hom-about style-v01 section-padding white-bg position-relative">
+<section class="about-section hom-about style-v01 section-padding white-bg position-relative ">
   <!-- Decorative Shapes -->
   <img src="./asset/images/shape/aboutshape1.png" alt="shape" class="shape shape-1" loading="lazy" data-aos="fade-down" data-aos-duration="1000">
   <img src="./asset/images/shape/aboutshape2.png" alt="shape" class="shape shape-2" loading="lazy" data-aos="fade-up" data-aos-duration="1000">
@@ -315,13 +315,13 @@
   <span>&#9658;</span>
 </button>
 
-<!-- Video Modal -->
 <div id="videoModal" class="video-modal">
   <div class="video-modal-content">
     <span id="closeVideo" class="video-close">&times;</span>
-    <video id="promoVideo" src="./asset/images/foodvideo.mp4.crdownload" controls preload="none" loading="lazy"></video>
+    <video id="promoVideo" src="./asset/images/food.mp4" controls preload="none"></video>
   </div>
 </div>
+
 
 </section>
 
@@ -406,7 +406,7 @@
 
     <!-- Copyright -->
     <hr class="border-light">
-    <div class="text-center small pb-1" data-aos="fade-up" data-aos-delay="600">
+    <div class="text-center small pb-1">
       © 2026 Bakery & Food Tech Expo. All Rights Reserved.
       <span class="developed-by">Developed by <a href="https://www.webads.live/" target="_blank">Webads</a></span>
     </div>
@@ -434,14 +434,68 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-  AOS.init({
-    once: false,       // Animations repeat every time you scroll into view
-    duration: 1000,    // Default duration
-    mirror: true       // Animate elements on scroll up and down
-  });
+AOS.init({
+  once: false,
+  duration: 1000,
+  mirror: true
+});
+
+const playBtn = document.getElementById("playVideo");
+const modal = document.getElementById("videoModal");
+const closeBtn = document.getElementById("closeVideo");
+const video = document.getElementById("promoVideo");
+const modalContent = document.querySelector(".video-modal-content");
+
+// Open modal & play video
+playBtn.addEventListener("click", () => {
+  modal.style.display = "flex";
+  video.play();
+});
+
+// Close modal button
+closeBtn.addEventListener("click", () => {
+  closeVideoModal();
+});
+
+// Close when clicking outside video
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeVideoModal();
+  }
+});
+
+// Prevent closing when clicking inside
+modalContent.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+// Reusable close function
+function closeVideoModal() {
+  video.pause();
+  video.currentTime = 0;
+  modal.style.display = "none";
+}
+
 </script>
 
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
 
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 
   <!-- Your custom scripts (load after libraries) -->

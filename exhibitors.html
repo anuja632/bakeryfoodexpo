@@ -499,7 +499,7 @@
 
     <!-- Copyright -->
     <hr class="border-light">
-    <div class="text-center small pb-1" data-aos="fade-up" data-aos-delay="600">
+    <div class="text-center small pb-1">
       © 2026 Bakery & Food Tech Expo. All Rights Reserved.
       <span class="developed-by">Developed by <a href="https://www.webads.live/" target="_blank">Webads</a></span>
     </div>
@@ -533,7 +533,24 @@
     mirror: true       // Animate elements on scroll up and down
   });
 </script>
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
 
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 
 

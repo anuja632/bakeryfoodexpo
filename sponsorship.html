@@ -241,7 +241,7 @@
 <!-- Main Title End -->
     
 
-<form action="https://formsubmit.co/abianu632@gmail.com" method="POST" id="sponsorForm" 
+<form action="https://formsubmit.co/anujaramasamyv@gmail.com" method="POST" id="sponsorForm" 
       class="p-4 shadow rounded-4 bg-white" 
       data-aos="fade-up" data-aos-duration="1000">
   <div class="row g-3">
@@ -386,7 +386,7 @@
 
     <!-- Copyright -->
     <hr class="border-light">
-    <div class="text-center small pb-1" data-aos="fade-up" data-aos-delay="600">
+    <div class="text-center small pb-1">
       © 2026 Bakery & Food Tech Expo. All Rights Reserved.
       <span class="developed-by">Developed by <a href="https://www.webads.live/" target="_blank">Webads</a></span>
     </div>
@@ -419,9 +419,37 @@
     duration: 1000,    // Default duration
     mirror: true       // Animate elements on scroll up and down
   });
+document.getElementById("sponsorForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // stop default submission
+
+  alert("Your sponsorship request has been submitted successfully!");
+
+  this.reset(); // reset form fields
+
+  this.submit(); // now submit to FormSubmit.co
+});
+
+
 </script>
 
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
 
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 
   <!-- Your custom scripts (load after libraries) -->

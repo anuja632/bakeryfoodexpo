@@ -25,15 +25,13 @@ body {
 	font-weight: 400;
 	line-height: 1.6em;
 	color: var(--text-color);
-
-	
-}
-
-body,html{
     margin:0;
     padding:0;
     overflow-x: hidden;
-} 
+	
+}
+
+
 
 p{
 	line-height: 1.7em;
@@ -421,11 +419,8 @@ ease-in-out infinite;
 }
 
 .breadcrumb-item.active {
-  color: #ffd700;
+  color: #ffd700;}
 
-
-
-}
 
 /* Banner Section */
 .page-headers {
@@ -435,24 +430,76 @@ ease-in-out infinite;
   background-position: center;
   padding: 100px 0;
   position: relative;
-  overflow: visible;
   color: #fff;
 }
 
 .page-headers::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(15, 15, 15, 0.3); /* Overlay */
+  inset: 0;
+  background-color: rgba(15, 15, 15, 0.3);
   z-index: 1;
 }
 
 .page-headers .container {
   position: relative;
   z-index: 2;
+}
+
+/* Common Styling */
+.info-box {
+  padding: 20px;
+}
+
+.icon i {
+  font-size: 2.5rem;
+  color: #E9B472;
+}
+
+/* DESKTOP: 1080px and above */
+@media (min-width: 1000px) {
+  .info-desktop {
+    display: block;
+  }
+
+  .info-mobile {
+    display: none;
+  }
+
+  .info-section {
+    position: absolute;
+    bottom: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: #951F44;
+    border-radius: 10px;
+    padding: 30px 20px;
+    z-index: 10;
+  }
+
+}
+
+/* MOBILE/TABLET: Below 1080px */
+@media (max-width: 1079px) {
+  .info-desktop {
+    display: none;
+  }
+    .info-box {
+  padding: 10px;
+}
+
+  .info-mobile {
+    display: block;
+    background-color: #951F44;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width:1100px){
+    .info-box {
+  padding: 10px !important;
+}
 }
 
 .info-section,#bookings-form-section {
@@ -486,24 +533,10 @@ textarea.form-control {
 .icon i {
   color:#E9B472; /* Bootstrap warning yellow */
 }
-/* Info Section - Positioned on Banner */
-.info-section {
-  position: absolute;
-  bottom: -250px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  border-radius: 10px;
-  padding: 30px 20px;
-  /* background-color: #1e1e1e;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); */
-  z-index: 10;
-  text-align: center;
-}
-
+/* 
 /* Spacer */
 .info-spacer {
-  height: 260px;
+  height: 290px;
 }
 
 /* Info Box Icons */
@@ -511,38 +544,6 @@ textarea.form-control {
   font-size: 2.5rem;
 }
 
-/* Responsive Design */
-@media (max-width: 991px) {
-  .info-section {
-    width: 95%;
-    padding: 25px 15px;
-    bottom: -180px;
-  }
-
-  .info-spacer {
-    height: 250px;
-  }
-}
-
-@media (max-width: 767px) {
-  .info-section {
-    position: static;
-    transform: none;
-    width: 100%;
-    border-radius: 0;
-    box-shadow: none;
-    margin-top: 30px;
-    bottom: 0px;
-  }
-
-  .info-spacer {
-    height: 0;
-  }
-
-  .info-section .row > div {
-    margin-bottom: 30px;
-  }
-}
 
 /* Floating Buttons Common Style */
 .floating-buttons {
@@ -600,12 +601,25 @@ textarea.form-control {
 .fab-btn.phone {
   background-color:#00B4D8;
 }
-
 /* Scroll to Top Button */
 .fab-btn.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
   background-color: #951F44;
-  display: none; /* Hidden by default */
+  border-radius: 50%;
+  display: none; /* HIDDEN ALWAYS AT FIRST */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: pointer;
 }
+#scrollTopBtn {
+  display: none; /* Always hidden first */
+}
+
 
 /* Mobile Adjustment */
 @media (max-width: 576px) {
@@ -768,6 +782,9 @@ textarea.form-control {
   .footer {
     text-align: center;
   }
+  .info-spacer{
+    height: 0px;
+  }
   .footer .social-links {
     margin-bottom: 15px;
   }
@@ -820,7 +837,7 @@ textarea.form-control {
       margin: 50px auto;
       padding: 0 15px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
     }
 
@@ -1868,7 +1885,7 @@ clip-path: inset(0 0 0 0 round 25%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 
 }
 
@@ -2518,7 +2535,7 @@ clip-path: inset(0 0 0 0 round 25%);
 /* Hero Section */
 .baking-hero {
   position: relative;
-  height: 500px;
+  height: 600px;
   background: url('../images/bakerydiscover.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -2588,7 +2605,6 @@ clip-path: inset(0 0 0 0 round 25%);
 
 @media (max-width: 768px) {
   .baking-hero {
-    height: 400px;
     padding: 40px 20px;
   }
 
@@ -3052,7 +3068,9 @@ height: 100%;
 
 /* Mobile */
 @media (max-width: 576px) {
-
+.video-modal{
+  width: 95%;
+}
   .video-close {
     font-size: 24px;
     top: 5px;
@@ -3060,5 +3078,8 @@ height: 100%;
   }
   .video-modal video {
     height: auto;
+  }
+  .exhibit{
+    padding: 10px;
   }
 }

@@ -124,7 +124,7 @@
   </div>
 </div>
 <!-- ===== Home Banner Carousel Section ===== -->
-<section class="home-banner-section">
+<section class="home-banner-section first-section">
   <div class="owl-carousel home-banner-carousel owl-theme">
 
     <div class="item">
@@ -280,7 +280,6 @@
     </h5>
   </div>
 
-  
 <div class="expo-category-grid">
   <div class="expo-category-box bakery" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
     <h3>Bakery Equipment & Machinery</h3>
@@ -294,7 +293,7 @@
     <h3>Hotel & Restaurant Supplies</h3>
   </div>
 
-  <div class="expo-category-box packaging" data-aos="flip-left" data-aos-duration="800" data-aos-delay="400">
+  <div class="expo-category-box packaging" data-aos="flip-up" data-aos-duration="800" data-aos-delay="400">
     <h3>Food Processing & Packaging Machinery</h3>
   </div>
 
@@ -302,11 +301,11 @@
     <h3>Ice Cream, Dairy & Beverage Machines</h3>
   </div>
 
-  <div class="expo-category-box catering" data-aos="fade-up-left" data-aos-duration="800" data-aos-delay="600">
+  <div class="expo-category-box catering" data-aos="fade-down" data-aos-duration="800" data-aos-delay="600">
     <h3>Fast Food & Catering Equipment</h3>
   </div>
 
-  <div class="expo-category-box refrigeration" data-aos="fade-up-right" data-aos-duration="800" data-aos-delay="700">
+  <div class="expo-category-box refrigeration" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
     <h3>Refrigeration, Freezers & Chillers</h3>
   </div>
 
@@ -322,14 +321,15 @@
     <h3>Meat, Poultry & Seafood</h3>
   </div>
 
-  <div class="expo-category-box confectionery" data-aos="fade-left" data-aos-duration="800" data-aos-delay="1100">
+  <div class="expo-category-box confectionery" data-aos="fade-in" data-aos-duration="800" data-aos-delay="1100">
     <h3>Confectionery & Sweet-Making Machines</h3>
   </div>
 
-  <div class="expo-category-box beverage" data-aos="fade-right" data-aos-duration="800" data-aos-delay="1200">
+  <div class="expo-category-box beverage" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1200">
     <h3>Food Grains, Nuts & Oil Extraction Machinery</h3>
   </div>
 </div>
+
 
 </section>
 
@@ -467,7 +467,7 @@
 
       <!-- LEFT SIDE: IMAGE ONLY -->
       <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-once="false">
-        <img src="./asset/images/homecontact.jpg"
+        <img src="https://i.pinimg.com/736x/48/7f/2d/487f2d664ab0a17471c0229f39cee0b9.jpg"
              alt="Bakery Expo" class="img-fluid bakery-contact">
       </div>
 
@@ -635,7 +635,7 @@
 
     <!-- Copyright -->
     <hr class="border-light">
-    <div class="text-center small pb-1" data-aos="fade-up" data-aos-delay="600">
+    <div class="text-center small pb-1" >
       © 2026 Bakery & Food Tech Expo. All Rights Reserved.
       <span class="developed-by">Developed by <a href="https://www.webads.live/" target="_blank">Webads</a></span>
     </div>
@@ -668,8 +668,27 @@
     duration: 1000,    // Default duration
     mirror: true       // Animate elements on scroll up and down
   });
+  
 </script>
 
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 
 

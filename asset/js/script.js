@@ -1,30 +1,3 @@
-const playBtn = document.getElementById("playVideo");
-const modal = document.getElementById("videoModal");
-const closeBtn = document.getElementById("closeVideo");
-const video = document.getElementById("promoVideo");
-
-// Open modal & play video
-playBtn.addEventListener("click", () => {
-  modal.style.display = "flex";
-  video.play();
-});
-
-// Close modal & pause video
-closeBtn.addEventListener("click", () => {
-  video.pause();
-  video.currentTime = 0;
-  modal.style.display = "none";
-});
-
-// Optional: click outside video to close
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    video.pause();
-    video.currentTime = 0;
-    modal.style.display = "none";
-  }
-});
-
  // Visitor registration form validation
 const form = document.getElementById("visitor-form");
 const statusEl = document.getElementById("formStatus");
@@ -95,12 +68,6 @@ form.addEventListener("submit", function (e) {
 
 
 
-
- document.getElementById("sponsorForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Your sponsorship request has been submitted successfully!");
-    // window.location.href = "thankyou.html";
-  });
 
 
   
