@@ -284,56 +284,6 @@ a:focus{
   color: #b12028;
 }
 
-/* Bakery & Food Preloader */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fffdf8; /* Soft bakery warm background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999999;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-
-#preloader.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.preloader-inner {
-  text-align: center;
-  animation: bounce 1.6s ease-in-out infinite;
-}
-
-#preloader img {
-  width: 130px;
-  animation: rotate 2.2s linear infinite;
-  filter: drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.15));
-}
-
-#preloader h3 {
-  margin-top: 18px;
-  font-size: 22px;
-  font-weight: 600;
-  color: #951F44; /* Your brand color */
-  letter-spacing: 0.5px;
-}
-
-/* Icon Spin */
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Floating Effect */
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-14px); }
-}
 
 /* ===== Page Header Section ===== */
 .page-header {
@@ -3134,3 +3084,143 @@ height: 100%;
     padding: 10px;
   }
 }
+
+
+  /* Preloader styles (scoped) */
+  .preloader {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg,#fff6e6 0%, #ffeedd 50%, #fff 100%);
+    z-index: 9999;
+    transition: opacity 400ms ease, visibility 400ms;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .preloader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+  .preloader-inner {
+    text-align: center;
+    transform: translateZ(0);
+  }
+
+  /* Cupcake + Donut stage */
+  .bakery-stage {
+    width: 150px;
+    height: 120px;
+    position: relative;
+    margin: 0 auto 16px;
+  }
+
+  /* Cupcake base */
+  .cup-base {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 48px;
+    border-radius: 8px;
+    background: linear-gradient(180deg,#ffb27a,#ff9b4d);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    animation: bob 1.2s infinite ease-in-out;
+  }
+
+  .cup-base::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient( to right, rgba(255,255,255,0.06) 0 10%, transparent 10% 100%);
+    transform: skewX(-8deg);
+    opacity: 0.6;
+  }
+
+  /* Frosting */
+  .frosting {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 70px;
+    border-radius: 60px 60px 24px 24px;
+    background: radial-gradient(circle at 30% 20%, #fff8f3, #ffd9d2 40%, #ffb6aa 100%);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    animation: float 1.6s infinite ease-in-out;
+  }
+
+  /* Sprinkle dots */
+  .sprinkle { position: absolute; width:6px; height:10px; border-radius:3px; transform: rotate(25deg); }
+  .s1{ background:#ff6b6b; left:22%; top:18%; }
+  .s2{ background:#ffd93d; left:40%; top:10%; }
+  .s3{ background:#6bc3ff; left:62%; top:16%; }
+  .s4{ background:#b09bff; left:50%; top:28%; }
+  .s5{ background:#ff8cb3; left:30%; top:32%; }
+
+  /* Donut orbit */
+  .donut {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    top: -14px;
+    right: -10px;
+    background: conic-gradient(#ffd89b 0 60deg, #ffb266 60deg 180deg, #ffcfa7 180deg);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.08);
+    display: grid;
+    place-items: center;
+    animation: orbit 2s linear infinite;
+  }
+  .donut::before{
+    content:"";
+    width:14px;height:14px;border-radius:50%;background:#fff6ea;
+  }
+
+  /* Steam lines */
+  .steam {
+    position: absolute;
+    left: 50%;
+    bottom: 115px;
+    transform: translateX(-50%);
+    display:flex;
+    gap:8px;
+  }
+  .steam span {
+    width:6px;height:24px;border-radius:6px; background: linear-gradient(#fff,#fff0);
+    opacity:0.6; transform-origin: bottom center;
+    animation: steam 2s infinite;
+  }
+  .steam span:nth-child(2) { animation-delay: 0.25s; height:20px; opacity:0.5;}
+  .steam span:nth-child(3) { animation-delay: 0.5s; height:28px; opacity:0.45;}
+
+  /* Text */
+  .preloader h1 {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-size: 18px;
+    margin: 0 0 6px;
+    color: #333;
+    letter-spacing: .6px;
+  }
+  .preloader p {
+    margin:0; font-size:13px;color:#666;
+  }
+
+  /* Animations */
+  @keyframes bob { 0%{transform: translateX(-50%) translateY(0)} 50%{transform: translateX(-50%) translateY(6px)} 100%{transform: translateX(-50%) translateY(0)} }
+  @keyframes float { 0%{transform: translateX(-50%) translateY(0)} 50%{transform: translateX(-50%) translateY(-6px)} 100%{transform: translateX(-50%) translateY(0)} }
+  @keyframes orbit { 0%{ transform: rotate(0deg) translateX(0) } 100%{ transform: rotate(360deg) translateX(0) } }
+  @keyframes steam {
+    0% { transform: translateY(0) scaleY(0.8); opacity:0.25 }
+    40% { transform: translateY(-12px) scaleY(1.05); opacity:0.8 }
+    100% { transform: translateY(-30px) scaleY(1.2); opacity:0 }
+  }
+
+  /* small screens */
+  @media (max-width:420px){
+    .bakery-stage{ width:120px;height:100px }
+    .cup-base{ width:86px; height:40px }
+    .frosting{ width:96px; height:56px; bottom:36px }
+  }
