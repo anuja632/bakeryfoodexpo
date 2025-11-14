@@ -340,11 +340,30 @@ a:focus{
 font-size: 25px !important;}
     
 .key-highlights{
-  padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
+ padding: 10px;
+}
+.vision-mission-section::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px !important;
+    width: 100px !important;
+    height: 100px !important;
+    background: url(../images/shape/m9-sd-1-2.png) no-repeat;
+    background-size: contain;
+    opacity: 1;
+    animation: floatShape 6s 
+ease-in-out infinite;
+}
+.bakery-hero{
+  max-height: 800px;
+}
+.play-btn {
+    position: absolute;
+    top: 80% !important;
+    left: 43% !important;}
+}
 
-}
-}
 
 /* Page Header Title Animation */
 .text-anime .line {
@@ -3033,10 +3052,7 @@ height: 100%;
 
 /* Mobile */
 @media (max-width: 576px) {
-  .video-modal-content {
-    max-width: 100%;
-    width: 100%;
-  }
+
   .video-close {
     font-size: 24px;
     top: 5px;
