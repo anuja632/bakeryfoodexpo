@@ -124,7 +124,27 @@
   </div>
 </div>
 
+<div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading Food & Bakery Expo website">
+  <div class="preloader-inner">
+    <div class="bakery-stage" aria-hidden="true">
+      <div class="cup-base"></div>
+      <div class="frosting">
+        <span class="sprinkle s1"></span>
+        <span class="sprinkle s2"></span>
+        <span class="sprinkle s3"></span>
+        <span class="sprinkle s4"></span>
+        <span class="sprinkle s5"></span>
+      </div>
+      <div class="donut" aria-hidden="true"></div>
+      <div class="steam" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
 
+    <h1>Food & Bakery Expo</h1>
+    <p>Baking the future — loading…</p>
+  </div>
+</div>
 <div class="page-header">
   <img src="./asset/images/banner/snop.png">
 </div>
@@ -413,17 +433,38 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 <script>
+    // Hide preloader on window load, with a safety timeout (5s)
+  (function () {
+    const pre = document.getElementById('preloader');
+    let hidden = false;
+
+    function hidePreloader() {
+      if (hidden) return;
+      hidden = true;
+      pre.classList.add('hidden');
+      // remove from DOM after transition to allow interaction & a clean DOM
+      setTimeout(() => {
+        if (pre && pre.parentNode) pre.parentNode.removeChild(pre);
+      }, 600);
+    }
+
+    // If the page fully loads, hide immediately
+    window.addEventListener('load', hidePreloader);
+
+    // Fallback: hide after 5s even if 'load' didn't fire (network issues)
+    setTimeout(hidePreloader, 5000);
+
+    // Optional: allow user to skip preloader with Escape (accessibility)
+    window.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') hidePreloader();
+    });
+  })();
   AOS.init({
     once: false,       // Animations repeat every time you scroll into view
     duration: 1000,    // Default duration
     mirror: true       // Animate elements on scroll up and down
   });
 
-
-
-
-</script>
-<script>
 document.getElementById("sponsorForm").addEventListener("submit", function () {
     alert("Your sponsorship request has been submitted successfully!");
 
@@ -432,9 +473,7 @@ document.getElementById("sponsorForm").addEventListener("submit", function () {
         this.reset();
     }, 100); 
 });
-</script>
 
-<script>
   const scrollBtn = document.getElementById("scrollTopBtn");
 
   window.addEventListener("scroll", () => {
