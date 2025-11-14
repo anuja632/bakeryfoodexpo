@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bakery and Food Tech Expo 2026</title>
-  <!-- Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome (Optional for icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="./asset/css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="./asset/images/banner/bakerylogo.png">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./asset/images/banner/bakerylogo.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./asset/css/style.css" />
 </head>
-
 <body>
 
 <!-- Bootstrap Navbar -->
@@ -113,34 +128,44 @@
 <div class="page-header">
   <img src="./asset/images/banner/bakeryb1.png">
 </div>
+
 <section class="top-section">
   <div class="container">
-    <div class="content">
+    <div class="content" data-aos="fade-up" data-aos-duration="1000">
       <h1>
-        <span class="highlight">The Bakery & Food Tec Expo 2026</span>, Showcase. Connect. Grow.
+        <span class="highlight" data-aos="zoom-in" data-aos-delay="200">The Bakery & Food Tec Expo 2026</span>, Showcase. Connect. Grow.
       </h1>
-      <p class="subtext">
+      <p class="subtext" data-aos="fade-up" data-aos-delay="400">
         Showcase your products, connect with industry leaders, and expand your business in the bakery, food processing, and hospitality sectors.
       </p>
-      <p>
+      <p data-aos="fade-up" data-aos-delay="600">
         Participate in a high-impact event that brings together top manufacturers, suppliers, and innovators. 
         Engage directly with key buyers, decision-makers, and distributors from across India and beyond. 
         Whether launching new machinery or expanding market presence, this expo ensures maximum visibility and business growth.
       </p>
-      <a href="#" class="btn-default">Register Now</a>
+      <a href="#" class="btn-default" data-aos="fade-up" data-aos-delay="800">Register Now</a>
     </div>
 
     <div class="images">
-      <img src="https://exposol.de/wp-content/uploads/2021/02/Fortune_1200-x-900-1.jpg" alt="Main Exhibition" class="main-image">
-      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/ee707929221607.55e819edd0838.jpg" alt="Agri Field" class="small-image">
+      <!-- Lazy load images -->
+      <img src="./asset/images/echibit1.jpg" 
+           alt="Main Exhibition" 
+           class="main-image" 
+           loading="lazy" 
+           data-aos="fade-right" data-aos-duration="1200">
+      <img src="./asset/images/exhibit2.jpg" 
+           alt="Agri Field" 
+           class="small-image" 
+           loading="lazy" 
+           data-aos="fade-left" data-aos-duration="1200" 
+           data-aos-delay="300">
     </div>
   </div>
 </section>
 
 
-
 <!-- Main Title Start -->
-<div class="main-title text-center mt-5">
+<div class="main-title text-center mb-5" data-aos="fade-up">
   <h2 class="text-dark d-flex align-items-center justify-content-center gap-3 flex-wrap">
     <!-- Left SVG -->
 <svg xmlns="http://www.w3.org/2000/svg" width="68" height="23" viewBox="0 0 68 23" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.2 1.97854C10.8 -0.321462 6.90001 -0.821462 4.40001 1.57854C2.00001 3.87854 2.30001 7.57854 3.70001 10.2785C3.80001 10.4785 3.90001 10.5785 4.00001 10.7785C4.00001 10.8785 4.10001 10.9785 4.10001 10.9785C5.60001 13.2785 7.80001 15.0785 10.2 16.2785C17.3 19.7785 27.1 18.8785 37.6 14.7785C46.4 11.3785 56.6 9.47854 67.3 11.6785C56.9 7.67854 47.5 10.0785 37 14.0785C25.5 18.4785 16.5 18.8785 10.4 15.7785C7.70001 14.3785 5.00001 12.1785 3.70001 9.27854C2.70001 6.97854 2.50001 3.67854 4.60001 1.87854C5.30001 1.27854 6.10001 0.878538 7.00001 0.778538C7.90001 0.578538 8.90001 0.578538 9.90001 0.878538C11.5 1.27854 13.2 2.47854 14 3.97854C14.3 4.47854 14.4 5.17854 14.2 5.67854C14.1 6.27854 13.6 6.77854 13.1 6.87854C11.9 7.17854 10.4 6.37854 10.2 5.17854C10.2 4.97854 10.2 4.77854 10.3 4.67854C10.4 4.57854 10.6 4.47854 10.8 4.57854C11 4.67854 11.1 4.77854 11.2 4.87854C11.3 4.67854 11.2 4.37854 11 4.17854C10.6 3.77854 9.90001 3.97854 9.70001 4.47854C9.40001 4.87854 9.50001 5.27854 9.60001 5.67854C9.90001 6.27854 10.3 6.77854 10.9 7.17854C11.8 7.67854 13.1 7.87854 14 7.17854C14.4 6.87854 14.6 6.47854 14.7 5.97854C14.9 5.37854 14.8 4.67854 14.6 4.07854C14.4 3.17854 13.8 2.57854 13.2 1.97854Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 3.67847C0.3 4.27847 0.7 5.17847 1.1 5.77847C1.1 5.87847 1.2 5.87847 1.2 5.97847C1.3 5.97847 1.3 5.97847 1.3 6.07847C1.4 6.17847 1.5 6.27847 1.6 6.47847C1.8 6.67847 1.9 6.97847 2.1 7.17847C2.3 7.47847 2.4 7.67847 2.5 7.97847C2.6 8.17847 2.6 8.37847 2.6 8.57847C2.6 8.67847 2.6 8.77847 2.6 8.87847C2.6 9.07847 2.5 9.07847 2.3 9.07847C1.9 9.07847 1.7 8.87847 1.4 8.67847C1 8.27847 0.6 7.77847 0.4 7.17847C0.3 6.97847 0.2 6.77847 0.2 6.47847C0.1 6.27847 0.1 5.97847 0 5.77847C0 5.47847 0 5.27847 0 4.97847C0 4.77847 0.1 4.47847 0.1 4.27847C0.2 4.17847 0.3 3.97847 0.5 3.67847C0.4 3.67847 0.4 3.67847 0.5 3.67847Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M32.1 16.9784C32.8 16.5784 33.7 16.4784 34.4 16.3784C34.3 19.6784 30.6 20.5784 28 21.4784C29.7 20.2784 30.2 17.8784 32.1 16.9784Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.80002 4.0786C6.30002 4.2786 5.90002 4.3786 5.60002 4.8786C5.30002 5.2786 5.20002 5.7786 5.10002 6.2786C4.90002 6.9786 4.80002 7.6786 4.40002 8.2786C4.20002 8.5786 4.00002 8.4786 3.80002 8.2786C3.40002 7.8786 3.30002 7.2786 3.40002 6.6786C3.50002 6.0786 3.70002 5.5786 4.10002 5.0786C4.70002 4.3786 5.70002 3.5786 6.70002 3.9786C6.70002 4.0786 6.80002 4.0786 6.80002 4.0786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10.7 17.2786C10.7 17.3786 10.7 17.3786 10.7 17.3786C10.4 17.7786 10 17.9786 9.50001 18.0786C9.00001 18.1786 8.50001 18.0786 8.00001 17.9786C6.70001 17.5786 5.40001 16.8786 4.20001 16.2786C4.90001 16.3786 5.70001 16.2786 6.40001 16.2786C7.10001 16.2786 7.90001 16.1786 8.60001 16.2786C9.00001 16.3786 9.30001 16.4786 9.60001 16.5786C9.90001 16.7786 10.2 16.9786 10.5 17.1786C10.6 17.1786 10.6 17.1786 10.7 17.2786C10.6 17.2786 10.6 17.2786 10.7 17.2786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 18.5785L16.6 18.6785C16.6 18.7785 16.6 18.7785 16.6 18.8785C16.4 19.4785 15.9 19.7785 15.3 19.9785C14 20.3785 12.7 20.3785 11.4 20.1785C11.2 20.1785 10.9 20.0785 10.7 20.0785C10.5 20.0785 10.3 19.9785 10.1 19.9785C11.3 19.6785 12.4 19.0785 13.6 18.5785C14.1 18.3785 14.7 18.2785 15.3 18.1785C15.4 18.2785 16.2 18.2785 16.5 18.5785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.19999 10.1785C8.19999 10.2785 8.19999 10.3785 8.19999 10.3785C8.19999 10.4785 8.19999 10.5785 8.29999 10.5785C8.39999 10.6785 8.39999 10.8785 8.49999 10.9785C8.59999 11.2785 8.79999 11.4785 8.99999 11.6785C9.39999 12.1785 9.89999 12.5785 10.4 12.9785C10.9 13.3785 11.3 13.8785 11.5 14.3785C11.6 14.5785 11.7 14.7785 11.7 15.0785C11.7 15.1785 11.7 15.1785 11.7 15.2785L11.6 15.3785C11.5 15.3785 11.4 15.3785 11.3 15.3785C10.5 15.2785 9.69999 14.7785 9.19999 14.1785C8.69999 13.5785 8.39999 12.9785 8.19999 12.1785C7.99999 11.5785 7.99999 10.8785 8.19999 10.1785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7.1 6.27856C7 6.37856 6.9 6.57856 6.9 6.67856C6.9 6.77856 6.8 6.97856 6.8 7.07856C6.7 7.27856 6.7 7.57856 6.7 7.77856C6.7 8.27856 6.8 8.77856 6.9 9.37856C7.1 10.3786 7.2 11.3786 6.9 12.3786C6.9 12.3786 6.9 12.4786 6.8 12.4786C6.7 12.5786 6.4 12.3786 6.3 12.2786C6.1 12.1786 6 11.9786 5.8 11.8786C5.5 11.5786 5.3 11.1786 5.3 10.7786V10.6786C5.2 10.0786 5.3 9.47856 5.4 8.97856C5.6 8.27856 5.9 7.47856 6.4 6.87856C6.6 6.57856 6.8 6.47856 7.1 6.27856Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1 10.7786C1.3 11.0786 1.5 11.3786 1.8 11.5786C2.1 11.7786 2.5 11.9786 2.8 12.0786C3.4 12.2786 4 12.4786 4.6 12.7786C5.2 13.0786 5.8 13.4786 6.1 13.9786L6.2 14.0786C6.2 14.2786 6 14.3786 5.9 14.3786C4.8 14.6786 3.5 14.2786 2.6 13.5786C2.1 13.1786 1.8 12.7786 1.5 12.2786C1.3 11.9786 1 11.3786 1 10.7786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M11.8 11.0786C12.8 12.6786 14.7 13.3786 16 14.5786C20.6 19.8786 9.79998 15.1786 11.8 11.0786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M22.4 18.5785C22.6 18.6785 22.6 18.9785 22.6 19.1785C22.6 19.4785 22.5 19.6785 22.3 19.8785C22.2 20.0785 22 20.1785 21.8 20.2785C21.4 20.5785 21 20.7785 20.5 20.8785C20 21.0785 19.5 21.1785 18.9 21.2785C18.4 21.3785 17.9 21.4785 17.3 21.4785C16.9 21.4785 16.4 21.4785 16 21.4785C15.9 21.4785 15.7 21.4785 15.6 21.3785C15.7 21.3785 15.8 21.2785 15.9 21.2785C16 21.2785 16.1 21.1785 16.2 21.1785C16.4 21.0785 16.6 20.9785 16.8 20.8785C17.2 20.6785 17.6 20.4785 17.9 20.1785C18.6 19.6785 19.4 19.2785 20.2 18.8785C20.7 18.6785 21.3 18.4785 21.9 18.4785C22.2 18.5785 22.3 18.5785 22.4 18.5785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M23.2 16.5785C23.1 16.6785 23.1 16.6785 23.1 16.6785C21.6 16.7785 20.1 16.3785 18.8 15.4785C17.7 14.6785 16.8 13.6785 16.3 12.4785C17.7 13.3785 19.3 13.7785 20.8 14.4785C21.8 14.9785 22.6 15.5785 23.3 16.4785C23.2 16.4785 23.2 16.4785 23.2 16.5785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M28.3 18.6785C28.3 18.7785 28.3 18.7785 28.3 18.8785C27.9 19.6785 27.3 20.3785 26.6 20.8785C26.2 21.1785 25.7 21.3785 25.2 21.5785C24.7 21.7785 24.2 21.8785 23.7 22.0785C23.2 22.1785 22.7 22.2785 22.2 22.2785C22 22.2785 21.8 22.2785 21.6 22.2785L21.7 22.1785L21.8 22.0785C21.9 21.9785 22 21.9785 22.1 21.8785C22.3 21.6785 22.5 21.5785 22.6 21.3785C23 20.9785 23.3 20.5785 23.7 20.1785C24.1 19.7785 24.5 19.3785 24.9 19.0785C25.3 18.7785 25.7 18.4785 26.2 18.3785C26.9 18.1785 27.6 18.2785 28.3 18.5785C28.2 18.5785 28.2 18.5785 28.3 18.6785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M20.1 11.5786C22.2 12.7786 24.8 12.8786 26.9 14.0786C32.5 18.2786 22 16.0786 20.1 11.5786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M34.3 14.4785C30.2 16.8785 27.6 11.5785 24.5 9.97852C28 10.6785 31.9 11.4785 34.3 14.4785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M30.3 8.27856C33.1 8.87856 38.2 9.47856 39.1 12.7786C35.8 13.6786 32 11.1786 30.3 8.27856Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M36 18.1785C36.1 16.5785 37.5 15.2785 38.9 14.6785C38.9 16.1785 37.3 17.8785 36 18.1785Z" fill="#B12028"></path></svg>
@@ -157,12 +182,12 @@
 
 <div class="exhibit my-5">
   <div class="overlay"></div>
-
   <div class="exhibit-container container">
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
       <div class="img-box">
-        <img src="https://img.freepik.com/free-photo/many-ready-made-fresh-baked-croissant-bakery-oven_23-2148189055.jpg?uid=R189150807&ga=GA1.1.29269001.1752921385&semt=ais_hybrid&w=740&q=80" alt="Bakery & Dairy Machinery">
+        <img src="./asset/images/exhibit/exhibit1.jpg" 
+             alt="Bakery & Dairy Machinery" loading="lazy">
       </div>
       <div class="card-content">
         <h3>Bakery and Dairy Machinery</h3>
@@ -170,9 +195,10 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-right" data-aos-delay="200">
       <div class="img-box">
-        <img src="https://mahisa.com/wp-content/uploads/2024/12/food-industry-packaging-banner-1-2.webp" alt="Food Processing & Packaging Equipment">
+        <img src="./asset/images/exhibit/exhibit2.jpg" 
+             alt="Food Processing & Packaging Equipment" loading="lazy">
       </div>
       <div class="card-content">
         <h3>Food Processing & Packaging Equipment</h3>
@@ -180,9 +206,10 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-left" data-aos-delay="300">
       <div class="img-box">
-        <img src="https://5.imimg.com/data5/SELLER/Default/2023/11/358428413/BX/IC/XA/9360645/commercial-kitchen-equipment.jpeg" alt="Commercial Kitchen Equipment">
+        <img src="./asset/images/exhibit/exhibit3.jpeg" 
+             alt="Commercial Kitchen Equipment" loading="lazy">
       </div>
       <div class="card-content">
         <h3>Commercial Kitchen Equipment</h3>
@@ -190,9 +217,10 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="zoom-in" data-aos-delay="400">
       <div class="img-box">
-        <img src="https://acooker.com/wp-content/uploads/2024/05/Hotel-Restaurant-Equipment-Kitchen-Equipment-For-Restaurant-2.jpg" alt="Hotel, Restaurant & Catering Equipment">
+        <img src="./asset/images/exhibit/exhibit4.jpg" 
+             alt="Hotel, Restaurant & Catering Equipment" loading="lazy">
       </div>
       <div class="card-content">
         <h3>Hotel, Restaurant & Catering Equipment</h3>
@@ -200,9 +228,10 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="flip-left" data-aos-delay="500">
       <div class="img-box">
-        <img src="https://www.ancasterfoodequipment.com/wp-content/uploads/2023/11/How-to-Store-Food-in-a-Commercial-Fridge-5.jpeg" alt="Refrigeration, Freezers & Chillers">
+        <img src="./asset/images/exhibit/exhibit5.jpeg" 
+             alt="Refrigeration, Freezers & Chillers" loading="lazy">
       </div>
       <div class="card-content">
         <h3>Refrigeration, Freezers & Chillers</h3>
@@ -210,9 +239,10 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="flip-right" data-aos-delay="600">
       <div class="img-box">
-        <img src="https://img.freepik.com/premium-photo/making-dough-bread-kneader-bakery-industrial-mixer-kneading-dough_156745-1355.jpg" alt="Flour Kneading, Mixing & Baking Machines">
+        <img src="./asset/images/exhibit/exhibit6.jpg" 
+             alt="Flour Kneading, Mixing & Baking Machines" loading="lazy">
       </div>
       <div class="card-content">
         <h3>Flour Kneading, Mixing & Baking Machines</h3>
@@ -220,9 +250,10 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="700">
       <div class="img-box">
-        <img src="https://img.freepik.com/premium-photo/chocolate-candies-conveyor-confectionery_380164-212353.jpg?uid=R189150807&ga=GA1.1.29269001.1752921385&semt=ais_hybrid&w=740&q=80" alt="Confectionery, Snack & Beverage Machinery">
+        <img src="./asset/images/exhibit/exhibit7.jpg" 
+             alt="Confectionery, Snack & Beverage Machinery" loading="lazy">
       </div>
       <div class="card-content">
         <h3>Confectionery, Snack & Beverage Machinery</h3>
@@ -230,9 +261,10 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-right" data-aos-delay="800">
       <div class="img-box">
-        <img src="https://trusunhotellinen.com/wp-content/uploads/2022/01/27-Hotel-Bed-Linen-Manufacturer-1.jpg" alt="Hotel Appliances, Linen & Uniforms">
+        <img src="./asset/images/exhibit/exhibit8.jpg" 
+             alt="Hotel Appliances, Linen & Uniforms" loading="lazy">
       </div>
       <div class="card-content">
         <h3>Hotel Appliances, Linen & Uniforms</h3>
@@ -240,21 +272,21 @@
       </div>
     </div>
 
-<div class="card">
-  <div class="img-box">
-    <img src="https://5.imimg.com/data5/SELLER/Default/2022/1/GC/KI/OP/12918121/automatic-softy-making-machine-500x500.jpg" 
-         alt="Ice Cream Machines & Ice Buckets">
-  </div>
-  <div class="card-content">
-    <h3>Ice Cream Machines & Ice Buckets</h3>
-    <p>Premium ice cream makers and refrigeration accessories for frozen dessert perfection.</p>
-  </div>
-</div>
-
-
-    <div class="card">
+    <div class="card" data-aos="fade-left" data-aos-delay="900">
       <div class="img-box">
-        <img src="https://image.made-in-china.com/365f3j00mnfcvMYFMhkL/500kg-Per-Hour-Cooking-Oil-Press-Corn-Peanut-Oil-Extraction-Machine.webp" alt="Food Grains, Nuts & Oil Extraction Machinery">
+        <img src="./asset/images/exhibit/exhibit9.jpg" 
+             alt="Ice Cream Machines & Ice Buckets" loading="lazy">
+      </div>
+      <div class="card-content">
+        <h3>Ice Cream Machines & Ice Buckets</h3>
+        <p>Premium ice cream makers and refrigeration accessories for frozen dessert perfection.</p>
+      </div>
+    </div>
+
+    <div class="card" data-aos="zoom-in" data-aos-delay="1000">
+      <div class="img-box">
+        <img src="./asset/images/exhibit/exhibit10.jpg" 
+             alt="Food Grains, Nuts & Oil Extraction Machinery" loading="lazy">
       </div>
       <div class="card-content">
         <h3>Food Grains, Nuts & Oil Extraction Machinery</h3>
@@ -262,9 +294,10 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="flip-left" data-aos-delay="1100">
       <div class="img-box">
-        <img src="https://meatingpoint-mag.com/wp-content/uploads/2019/02/Marel-AMF.jpg" alt="Meat & Seafood Processing Equipment">
+        <img src="./asset/images/exhibit/exhibit11.jpg" 
+             alt="Meat & Seafood Processing Equipment" loading="lazy">
       </div>
       <div class="card-content">
         <h3>Meat & Seafood Processing Equipment</h3>
@@ -272,9 +305,10 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="flip-right" data-aos-delay="1200">
       <div class="img-box">
-        <img src="https://img.profoodworld.com/files/base/pmmi/all/image/2018/06/pfw_26106_gettyimages_675915945.png?auto=format%2Ccompress&fit=max&q=70&w=1200" alt="Fruit & Vegetable Processing Machinery">
+        <img src="./asset/images/exhibit/exhibit12.jpg" 
+             alt="Fruit & Vegetable Processing Machinery" loading="lazy">
       </div>
       <div class="card-content">
         <h3>Fruit & Vegetable Processing Machinery</h3>
@@ -285,6 +319,7 @@
   </div>
 </div>
 
+
 <!-- ===== Exhibitor Registration Section ===== -->
 <section class="exhibitor-register-section py-5">
   <div class="container">
@@ -292,7 +327,7 @@
 <!-- Main Title End -->
   <div class="container">
   <!-- Main Title Start -->
-<div class="main-title text-center mb-5">
+<div class="main-title text-center mb-5" data-aos="fade-up">
   <h2 class="text-dark d-flex align-items-center justify-content-center gap-3 flex-wrap">
     <!-- Left SVG -->
 <svg xmlns="http://www.w3.org/2000/svg" width="68" height="23" viewBox="0 0 68 23" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.2 1.97854C10.8 -0.321462 6.90001 -0.821462 4.40001 1.57854C2.00001 3.87854 2.30001 7.57854 3.70001 10.2785C3.80001 10.4785 3.90001 10.5785 4.00001 10.7785C4.00001 10.8785 4.10001 10.9785 4.10001 10.9785C5.60001 13.2785 7.80001 15.0785 10.2 16.2785C17.3 19.7785 27.1 18.8785 37.6 14.7785C46.4 11.3785 56.6 9.47854 67.3 11.6785C56.9 7.67854 47.5 10.0785 37 14.0785C25.5 18.4785 16.5 18.8785 10.4 15.7785C7.70001 14.3785 5.00001 12.1785 3.70001 9.27854C2.70001 6.97854 2.50001 3.67854 4.60001 1.87854C5.30001 1.27854 6.10001 0.878538 7.00001 0.778538C7.90001 0.578538 8.90001 0.578538 9.90001 0.878538C11.5 1.27854 13.2 2.47854 14 3.97854C14.3 4.47854 14.4 5.17854 14.2 5.67854C14.1 6.27854 13.6 6.77854 13.1 6.87854C11.9 7.17854 10.4 6.37854 10.2 5.17854C10.2 4.97854 10.2 4.77854 10.3 4.67854C10.4 4.57854 10.6 4.47854 10.8 4.57854C11 4.67854 11.1 4.77854 11.2 4.87854C11.3 4.67854 11.2 4.37854 11 4.17854C10.6 3.77854 9.90001 3.97854 9.70001 4.47854C9.40001 4.87854 9.50001 5.27854 9.60001 5.67854C9.90001 6.27854 10.3 6.77854 10.9 7.17854C11.8 7.67854 13.1 7.87854 14 7.17854C14.4 6.87854 14.6 6.47854 14.7 5.97854C14.9 5.37854 14.8 4.67854 14.6 4.07854C14.4 3.17854 13.8 2.57854 13.2 1.97854Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 3.67847C0.3 4.27847 0.7 5.17847 1.1 5.77847C1.1 5.87847 1.2 5.87847 1.2 5.97847C1.3 5.97847 1.3 5.97847 1.3 6.07847C1.4 6.17847 1.5 6.27847 1.6 6.47847C1.8 6.67847 1.9 6.97847 2.1 7.17847C2.3 7.47847 2.4 7.67847 2.5 7.97847C2.6 8.17847 2.6 8.37847 2.6 8.57847C2.6 8.67847 2.6 8.77847 2.6 8.87847C2.6 9.07847 2.5 9.07847 2.3 9.07847C1.9 9.07847 1.7 8.87847 1.4 8.67847C1 8.27847 0.6 7.77847 0.4 7.17847C0.3 6.97847 0.2 6.77847 0.2 6.47847C0.1 6.27847 0.1 5.97847 0 5.77847C0 5.47847 0 5.27847 0 4.97847C0 4.77847 0.1 4.47847 0.1 4.27847C0.2 4.17847 0.3 3.97847 0.5 3.67847C0.4 3.67847 0.4 3.67847 0.5 3.67847Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M32.1 16.9784C32.8 16.5784 33.7 16.4784 34.4 16.3784C34.3 19.6784 30.6 20.5784 28 21.4784C29.7 20.2784 30.2 17.8784 32.1 16.9784Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.80002 4.0786C6.30002 4.2786 5.90002 4.3786 5.60002 4.8786C5.30002 5.2786 5.20002 5.7786 5.10002 6.2786C4.90002 6.9786 4.80002 7.6786 4.40002 8.2786C4.20002 8.5786 4.00002 8.4786 3.80002 8.2786C3.40002 7.8786 3.30002 7.2786 3.40002 6.6786C3.50002 6.0786 3.70002 5.5786 4.10002 5.0786C4.70002 4.3786 5.70002 3.5786 6.70002 3.9786C6.70002 4.0786 6.80002 4.0786 6.80002 4.0786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10.7 17.2786C10.7 17.3786 10.7 17.3786 10.7 17.3786C10.4 17.7786 10 17.9786 9.50001 18.0786C9.00001 18.1786 8.50001 18.0786 8.00001 17.9786C6.70001 17.5786 5.40001 16.8786 4.20001 16.2786C4.90001 16.3786 5.70001 16.2786 6.40001 16.2786C7.10001 16.2786 7.90001 16.1786 8.60001 16.2786C9.00001 16.3786 9.30001 16.4786 9.60001 16.5786C9.90001 16.7786 10.2 16.9786 10.5 17.1786C10.6 17.1786 10.6 17.1786 10.7 17.2786C10.6 17.2786 10.6 17.2786 10.7 17.2786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 18.5785L16.6 18.6785C16.6 18.7785 16.6 18.7785 16.6 18.8785C16.4 19.4785 15.9 19.7785 15.3 19.9785C14 20.3785 12.7 20.3785 11.4 20.1785C11.2 20.1785 10.9 20.0785 10.7 20.0785C10.5 20.0785 10.3 19.9785 10.1 19.9785C11.3 19.6785 12.4 19.0785 13.6 18.5785C14.1 18.3785 14.7 18.2785 15.3 18.1785C15.4 18.2785 16.2 18.2785 16.5 18.5785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.19999 10.1785C8.19999 10.2785 8.19999 10.3785 8.19999 10.3785C8.19999 10.4785 8.19999 10.5785 8.29999 10.5785C8.39999 10.6785 8.39999 10.8785 8.49999 10.9785C8.59999 11.2785 8.79999 11.4785 8.99999 11.6785C9.39999 12.1785 9.89999 12.5785 10.4 12.9785C10.9 13.3785 11.3 13.8785 11.5 14.3785C11.6 14.5785 11.7 14.7785 11.7 15.0785C11.7 15.1785 11.7 15.1785 11.7 15.2785L11.6 15.3785C11.5 15.3785 11.4 15.3785 11.3 15.3785C10.5 15.2785 9.69999 14.7785 9.19999 14.1785C8.69999 13.5785 8.39999 12.9785 8.19999 12.1785C7.99999 11.5785 7.99999 10.8785 8.19999 10.1785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7.1 6.27856C7 6.37856 6.9 6.57856 6.9 6.67856C6.9 6.77856 6.8 6.97856 6.8 7.07856C6.7 7.27856 6.7 7.57856 6.7 7.77856C6.7 8.27856 6.8 8.77856 6.9 9.37856C7.1 10.3786 7.2 11.3786 6.9 12.3786C6.9 12.3786 6.9 12.4786 6.8 12.4786C6.7 12.5786 6.4 12.3786 6.3 12.2786C6.1 12.1786 6 11.9786 5.8 11.8786C5.5 11.5786 5.3 11.1786 5.3 10.7786V10.6786C5.2 10.0786 5.3 9.47856 5.4 8.97856C5.6 8.27856 5.9 7.47856 6.4 6.87856C6.6 6.57856 6.8 6.47856 7.1 6.27856Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1 10.7786C1.3 11.0786 1.5 11.3786 1.8 11.5786C2.1 11.7786 2.5 11.9786 2.8 12.0786C3.4 12.2786 4 12.4786 4.6 12.7786C5.2 13.0786 5.8 13.4786 6.1 13.9786L6.2 14.0786C6.2 14.2786 6 14.3786 5.9 14.3786C4.8 14.6786 3.5 14.2786 2.6 13.5786C2.1 13.1786 1.8 12.7786 1.5 12.2786C1.3 11.9786 1 11.3786 1 10.7786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M11.8 11.0786C12.8 12.6786 14.7 13.3786 16 14.5786C20.6 19.8786 9.79998 15.1786 11.8 11.0786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M22.4 18.5785C22.6 18.6785 22.6 18.9785 22.6 19.1785C22.6 19.4785 22.5 19.6785 22.3 19.8785C22.2 20.0785 22 20.1785 21.8 20.2785C21.4 20.5785 21 20.7785 20.5 20.8785C20 21.0785 19.5 21.1785 18.9 21.2785C18.4 21.3785 17.9 21.4785 17.3 21.4785C16.9 21.4785 16.4 21.4785 16 21.4785C15.9 21.4785 15.7 21.4785 15.6 21.3785C15.7 21.3785 15.8 21.2785 15.9 21.2785C16 21.2785 16.1 21.1785 16.2 21.1785C16.4 21.0785 16.6 20.9785 16.8 20.8785C17.2 20.6785 17.6 20.4785 17.9 20.1785C18.6 19.6785 19.4 19.2785 20.2 18.8785C20.7 18.6785 21.3 18.4785 21.9 18.4785C22.2 18.5785 22.3 18.5785 22.4 18.5785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M23.2 16.5785C23.1 16.6785 23.1 16.6785 23.1 16.6785C21.6 16.7785 20.1 16.3785 18.8 15.4785C17.7 14.6785 16.8 13.6785 16.3 12.4785C17.7 13.3785 19.3 13.7785 20.8 14.4785C21.8 14.9785 22.6 15.5785 23.3 16.4785C23.2 16.4785 23.2 16.4785 23.2 16.5785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M28.3 18.6785C28.3 18.7785 28.3 18.7785 28.3 18.8785C27.9 19.6785 27.3 20.3785 26.6 20.8785C26.2 21.1785 25.7 21.3785 25.2 21.5785C24.7 21.7785 24.2 21.8785 23.7 22.0785C23.2 22.1785 22.7 22.2785 22.2 22.2785C22 22.2785 21.8 22.2785 21.6 22.2785L21.7 22.1785L21.8 22.0785C21.9 21.9785 22 21.9785 22.1 21.8785C22.3 21.6785 22.5 21.5785 22.6 21.3785C23 20.9785 23.3 20.5785 23.7 20.1785C24.1 19.7785 24.5 19.3785 24.9 19.0785C25.3 18.7785 25.7 18.4785 26.2 18.3785C26.9 18.1785 27.6 18.2785 28.3 18.5785C28.2 18.5785 28.2 18.5785 28.3 18.6785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M20.1 11.5786C22.2 12.7786 24.8 12.8786 26.9 14.0786C32.5 18.2786 22 16.0786 20.1 11.5786Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M34.3 14.4785C30.2 16.8785 27.6 11.5785 24.5 9.97852C28 10.6785 31.9 11.4785 34.3 14.4785Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M30.3 8.27856C33.1 8.87856 38.2 9.47856 39.1 12.7786C35.8 13.6786 32 11.1786 30.3 8.27856Z" fill="#B12028"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M36 18.1785C36.1 16.5785 37.5 15.2785 38.9 14.6785C38.9 16.1785 37.3 17.8785 36 18.1785Z" fill="#B12028"></path></svg>
@@ -307,68 +342,69 @@
 </div>
 
     <!-- Registration Form -->
-    <form id="exhibitor-form" class="p-4 shadow rounded bg-light">
-      <div class="row g-3">
-        <div class="col-md-6">
-          <label class="form-label fw-bold">Company Name</label>
-          <input type="text" name="company" class="form-control" placeholder="Enter your company name" required />
-        </div>
+<form action="https://formsubmit.co/abianu632@gmail.com" method="POST"  id="exhibitor-form" class="p-4 shadow rounded bg-light">
+  <div class="row g-3">
 
-        <div class="col-md-6">
-          <label class="form-label fw-bold">Contact Person Name</label>
-          <input type="text" name="contact_person" class="form-control" placeholder="Full name" required />
-        </div>
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+      <label class="form-label fw-bold">Company Name</label>
+      <input type="text" name="company" class="form-control" placeholder="Enter your company name" required />
+    </div>
 
-        <div class="col-md-6">
-          <label class="form-label fw-bold">Designation</label>
-          <input type="text" name="designation" class="form-control" placeholder="Your designation" />
-        </div>
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+      <label class="form-label fw-bold">Contact Person Name</label>
+      <input type="text" name="contact_person" class="form-control" placeholder="Full name" required />
+    </div>
 
-        <div class="col-md-6">
-          <label class="form-label fw-bold">Mobile Number</label>
-          <input type="tel" name="phone" class="form-control" placeholder="Enter your mobile number" required />
-        </div>
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+      <label class="form-label fw-bold">Designation</label>
+      <input type="text" name="designation" class="form-control" placeholder="Your designation" />
+    </div>
 
-        <div class="col-md-6">
-          <label class="form-label fw-bold">Email ID</label>
-          <input type="email" name="email" class="form-control" placeholder="example@email.com" required />
-        </div>
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+      <label class="form-label fw-bold">Mobile Number</label>
+      <input type="tel" name="phone" class="form-control" placeholder="Enter your mobile number" required />
+    </div>
 
-        <div class="col-md-6">
-          <label class="form-label fw-bold">Website</label>
-          <input type="url" name="website" class="form-control" placeholder="https://yourcompany.com" />
-        </div>
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+      <label class="form-label fw-bold">Email ID</label>
+      <input type="email" name="email" class="form-control" placeholder="example@email.com" required />
+    </div>
 
-        <div class="col-12">
-          <label class="form-label fw-bold">Address</label>
-          <textarea name="address" rows="2" class="form-control" placeholder="Full address"></textarea>
-        </div>
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+      <label class="form-label fw-bold">Website</label>
+      <input type="url" name="website" class="form-control" placeholder="https://yourcompany.com" />
+    </div>
 
-        <div class="col-12">
-          <label class="form-label fw-bold">Products / Services of Your Company</label>
-          <textarea name="products" rows="2" class="form-control" placeholder="List your products/services"></textarea>
-        </div>
+    <div class="col-12" data-aos="fade-up" data-aos-delay="700">
+      <label class="form-label fw-bold">Products / Services of Your Company</label>
+      <textarea name="products" rows="2" class="form-control" placeholder="List your products/services"></textarea>
+    </div>
 
-        <div class="col-md-6">
-          <label class="form-label fw-bold">Bare Space / Shell Space</label>
-          <select id="spaceType" name="spaceType" class="form-select" required>
-            <option value="">Choose...</option>
-            <option value="Bare Space">Bare Space</option>
-            <option value="Shell Space">Shell Space</option>
-          </select>
-        </div>
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="800">
+      <label class="form-label fw-bold">Bare Space / Shell Space</label>
+      <select id="spaceType" name="spaceType" class="form-select" required>
+        <option value="">Choose...</option>
+        <option value="Bare Space">Bare Space</option>
+        <option value="Shell Space">Shell Space</option>
+      </select>
+    </div>
 
-        <div class="col-md-6">
-          <label class="form-label fw-bold">Preferred Stall Area (in Sq. Mtr.)</label>
-          <input type="text" id="stallArea" name="stallArea" class="form-control" placeholder="e.g., 9, 18, 27" />
-        </div>
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="900">
+      <label class="form-label fw-bold">Preferred Stall Area (in Sq. Mtr.)</label>
+      <input type="text" id="stallArea" name="stallArea" class="form-control" placeholder="e.g., 9, 18, 27" />
+    </div>
 
-        <div class="col-12 text-center mt-4">
-          <button type="submit" class="btn-default">Register Now</button>
-        </div>
+    <div class="col-12" data-aos="fade-up" data-aos-delay="1000">
+      <label class="form-label fw-bold">Address</label>
+      <textarea name="address" rows="2" class="form-control" placeholder="Full address"></textarea>
+    </div>
 
-      </div>
-    </form>
+    <div class="col-12 text-center mt-4" data-aos="fade-up" data-aos-delay="1100">
+      <button type="submit" class="btn-default">Register Now</button>
+    </div>
+
+  </div>
+</form>
   </div>
 </section>
 
@@ -380,6 +416,7 @@
     // window.location.href = "thankyou.html";
   });
 </script>
+
 
 
 <!-- Floating Action Buttons -->
@@ -394,13 +431,12 @@
     <i class="fas fa-phone"></i>
   </a>
 
-  <!-- Scroll To Top -->
-  <button class="fab-btn scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+<!-- Scroll To Top -->
+<button class="fab-btn" id="scrollTopBtn" aria-label="Scroll to top">
     <i class="fas fa-arrow-up"></i>
-  </button>
+</button>
+
 </div>
-
-
 <!-- =======================
      Footer Start
 ======================== -->
@@ -409,9 +445,9 @@
     <div class="row align-items-start text-center text-md-start">
 
       <!-- Logo + Social Links -->
-      <div class="col-lg-3 col-md-6 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
         <img src="./asset/images/logo.png" alt="Bakery & Food Tech Expo Logo" class="img-fluid mb-3">
-        <div class="social-links text-center ">
+        <div class="social-links text-center">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -420,7 +456,7 @@
       </div>
 
       <!-- Explore Links -->
-      <div class="col-lg-2 col-md-6 mb-4">
+      <div class="col-lg-2 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
         <h5 class="footer-title">Explore</h5>
         <ul class="list-unstyled footer-links">
           <li><a href="index.html"><i class="fas fa-home me-2"></i>Home</a></li>
@@ -434,61 +470,77 @@
       </div>
 
       <!-- Expo Dates -->
-      <div class="col-lg-3 col-md-6 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
         <h5 class="footer-title">Expo Dates</h5>
-        <p class="mb-1"><i class="fas fa-calendar-alt me-2"></i>MARCH 13, 2026</p>
-        <p class="mb-1"><i class="fas fa-calendar-alt me-2"></i>MARCH 14, 2026</p>
-        <p class="mb-3"><i class="fas fa-calendar-alt me-2"></i>MARCH 15, 2026</p>
-        <p class="mb-2 small"><i class="fas fa-map-marker-alt me-2"></i>Hills Exhibition Center,Hosur, Tamil Nadu</p>
+        <p class="mb-1"><i class="fas fa-calendar-alt me-2"></i>April 10, 2026</p>
+        <p class="mb-1"><i class="fas fa-calendar-alt me-2"></i>April 11, 2026</p>
+        <p class="mb-3"><i class="fas fa-calendar-alt me-2"></i>April 12, 2026</p>
+        <p class="mb-2 small"><i class="fas fa-map-marker-alt me-2"></i>Hills Exhibition Center, Hosur, Tamil Nadu</p>
       </div>
 
       <!-- Contact Info -->
-      <div class="col-lg-4 col-md-6 mb-4 text-md-start text-center">
+      <div class="col-lg-4 col-md-6 mb-4 text-md-start text-center" data-aos="fade-up" data-aos-delay="400">
         <h5 class="footer-title">Contact Us</h5>
         <div class="contact-info">
-          <p><i class="fas fa-phone me-2" ></i> +91 7406213220, +91 7406213221</p>
+          <p><i class="fas fa-phone me-2"></i> +91 7406213220, +91 7406213221</p>
           <p><i class="fas fa-phone me-2"></i> +91 7406213222, +91 7406213223</p>
           <p><i class="fas fa-phone me-2"></i> 080 23238677, 080 23238699</p>
           <p><i class="fas fa-envelope me-2"></i> bakerynfoodtecexpo.com@gmail.com</p>
           <p><i class="fas fa-envelope me-2"></i> info@bakerynfoodtecexpo.com</p>
-          <p class="small mb-0"><i class="fas fa-map-marker-alt me-2"></i>#372/1, 3rd Floor, 4th Stage, 8th Main Road,Basaweshwaranagar, Bangalore - 560079</p>
+          <p class="small mb-0"><i class="fas fa-map-marker-alt me-2"></i>#372/1, 3rd Floor, 4th Stage, 8th Main Road, Basaweshwaranagar, Bangalore - 560079</p>
         </div>
       </div>
     </div>
 
     <!-- Bottom Image -->
-    <div class="text-center mt-4">
-      <img src="https://jayasurya1912.github.io/Agri-Expo/images/fotin.png" alt="Bakery & Food Tech Expo Footer Image" class="footer-bottom-img img-fluid">
+    <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="500">
+      <img src="https://jayasurya1912.github.io/Agri-Expo/images/fotin.png" alt="Footer Image" class="footer-bottom-img img-fluid">
     </div>
 
     <!-- Copyright -->
-    <hr class="border-light ">
-    <div class="text-center small pb-1">
+    <hr class="border-light">
+    <div class="text-center small pb-1" data-aos="fade-up" data-aos-delay="600">
       © 2026 Bakery & Food Tech Expo. All Rights Reserved.
       <span class="developed-by">Developed by <a href="https://www.webads.live/" target="_blank">Webads</a></span>
     </div>
   </div>
 </footer>
+
 <!-- =======================
      Footer End
 ======================== -->
 
 
-  <!-- jQuery (one copy) - required by OwlCarousel -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- Bootstrap bundle (includes Popper) - only one copy -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap bundle (includes Popper) - only one copy -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery (one copy) - required by OwlCarousel -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Owl Carousel JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
   <!-- WOW.js (for Animate.css triggering) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-  new WOW().init();
+  AOS.init({
+    once: false,       // Animations repeat every time you scroll into view
+    duration: 1000,    // Default duration
+    mirror: true       // Animate elements on scroll up and down
+  });
 </script>
-<script src="js/script.js"></script>
+
+
+
+
+  <!-- Your custom scripts (load after libraries) -->
+  <script src="./asset/js/script.js"></script>
+  <script src="./asset/js/custom.js"></script>
+  <script src="./asset/js/slide.js"></script>
+
 </body>
 </html>

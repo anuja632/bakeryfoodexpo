@@ -1,49 +1,74 @@
+const playBtn = document.getElementById("playVideo");
+const modal = document.getElementById("videoModal");
+const closeBtn = document.getElementById("closeVideo");
+const video = document.getElementById("promoVideo");
 
- document.getElementById("sponsorForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Your sponsorship request has been submitted successfully!");
-    // window.location.href = "thankyou.html";
-  });
-// Visitor registration form validation
-const form = document.getElementById("visitorRegisterForm");
+// Open modal & play video
+playBtn.addEventListener("click", () => {
+  modal.style.display = "flex";
+  video.play();
+});
+
+// Close modal & pause video
+closeBtn.addEventListener("click", () => {
+  video.pause();
+  video.currentTime = 0;
+  modal.style.display = "none";
+});
+
+// Optional: click outside video to close
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    video.pause();
+    video.currentTime = 0;
+    modal.style.display = "none";
+  }
+});
+
+ // Visitor registration form validation
+const form = document.getElementById("visitor-form");
 const statusEl = document.getElementById("formStatus");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   let valid = true;
 
-  // Clear previous errors
+  // Clear old error messages
   document.querySelectorAll(".error").forEach(el => el.textContent = "");
 
-  const fields = ["firstName", "lastName", "mobile", "email"];
-  fields.forEach(id => {
-    const field = document.getElementById(id);
-    if (!field.value.trim()) {
-      document.getElementById("err-" + id).textContent = "This field is required";
+  // Required fields
+  const requiredFields = ["firstName", "lastName", "mobile", "email"];
+  requiredFields.forEach(id => {
+    const field = document.querySelector(`[name="${id}"]`);
+    const errorEl = document.getElementById("err-" + id);
+    if (field && !field.value.trim()) {
+      errorEl.textContent = "This field is required";
       valid = false;
     }
   });
 
-  const email = document.getElementById("email").value;
-  const mobile = document.getElementById("mobile").value;
-
+  // Validate email
+  const email = document.querySelector("[name=email]").value;
   if (!/^\S+@\S+\.\S+$/.test(email)) {
     document.getElementById("err-email").textContent = "Enter a valid email";
     valid = false;
   }
 
+  // Validate mobile number
+  const mobile = document.querySelector("[name=mobile]").value;
   if (!/^[0-9]{10}$/.test(mobile)) {
     document.getElementById("err-mobile").textContent = "Enter 10-digit mobile number";
     valid = false;
   }
 
+  // If validation fails
   if (!valid) {
     statusEl.style.color = "#d33";
     statusEl.textContent = "⚠️ Please correct the highlighted fields before submitting.";
     return;
   }
 
-  // Attractive random success messages
+  // SUCCESS messages
   const messages = [
     "🎉 Registration successful! See you at the Bakery & Food Expo 🍰",
     "✅ You’re in! Get ready for a delicious experience!",
@@ -53,6 +78,9 @@ form.addEventListener("submit", function (e) {
 
   const randomMsg = messages[Math.floor(Math.random() * messages.length)];
 
+  // SHOW ALERT
+  alert("Registration Successful!");
+
   // Show animated success message
   statusEl.style.color = "#28a745";
   statusEl.style.opacity = 0;
@@ -60,31 +88,18 @@ form.addEventListener("submit", function (e) {
   statusEl.style.transition = "opacity 0.5s ease";
   setTimeout(() => (statusEl.style.opacity = 1), 100);
 
-  // Reset form smoothly after 2 seconds
+  // Reset form after 2 seconds
   setTimeout(() => form.reset(), 2000);
 });
-  document.getElementById("visitorRegisterForm").addEventListener("submit", function (e) {
+
+
+
+
+
+ document.getElementById("sponsorForm").addEventListener("submit", function(e) {
     e.preventDefault();
-    alert("🎉 Thank you for registering as an exhibitor! Our team will contact you shortly.");
+    alert("Your sponsorship request has been submitted successfully!");
     // window.location.href = "thankyou.html";
-  });
-document.getElementById('playVideo').addEventListener('click', () => {
-  alert("Play video or open modal here!");
-});
-
-
-const scrollBtn = document.getElementById("scrollTopBtn");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
-  });
-
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
 

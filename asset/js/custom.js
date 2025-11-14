@@ -102,6 +102,33 @@ startWhyexpoAutoplay();
       document.querySelector(".timer").innerHTML = "<h3>Event Started!</h3>";
     }
   }, 1000);
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
 
 
-  
+
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("homecontact");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault(); // Prevent actual form submission
+        alert("Your request has been submitted successfully!");
+        
+        // Reset all form fields
+        form.reset();
+    });
+});

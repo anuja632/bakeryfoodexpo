@@ -1182,48 +1182,7 @@ textarea.form-control {
     }
 
 
-    .visitor-register-section {
-    padding: 60px 20px;
-    font-family: "Poppins", sans-serif;
-    background: #faf9fc;
-  }
-
-
-  .visitor-form {
-    max-width: 900px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
-  }
-
-  .form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  label {
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-    color: #333;
-  }
-
-  label span {
-    font-weight: 500;
-    margin-bottom: 6px;
-  }
-
-  input {
-    padding: 10px 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: 0.2s;
-  }
-
+ 
   input:focus {
     border-color: #951F44;
     box-shadow: 0 0 5px rgba(164, 62, 141, 0.3);
@@ -1237,20 +1196,6 @@ textarea.form-control {
     margin-top: 25px;
   }
 
-  .btn-submit, .btn-reset {
-    padding: 10px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 15px;
-  }
-
-
-  .btn-reset {
-    background: #f2f2f2;
-    color: #333;
-  }
 
   .form-status {
     text-align: center;
@@ -2566,14 +2511,14 @@ clip-path: inset(0 0 0 0 round 25%);
   z-index: 1;
 }
 
-.baking-content {
+.baking-contents {
   position: relative;
   z-index: 2;
   max-width: 800px;
   padding: 0 20px;
 }
 
-.baking-content h2 {
+.baking-contents h2 {
   font-size: 2rem;
   font-weight: 700;
   color: #ffc107;
@@ -2581,7 +2526,7 @@ clip-path: inset(0 0 0 0 round 25%);
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-.baking-content p {
+.baking-contents p {
   font-size: 15px;
   line-height: 1.7;
   color: #f5f5f5;
@@ -2592,7 +2537,7 @@ clip-path: inset(0 0 0 0 round 25%);
 /* Centered Play Button */
 .play-btn {
   position: absolute;
-  top: 80%; /* center vertically */
+  top: 70%; /* center vertically */
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80px;
@@ -2681,7 +2626,7 @@ height: 100%;
 
 .logo-carousel .slide {
   height: 150px;
-  width: 250px;
+  /* width: 250px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2711,7 +2656,7 @@ height: 100%;
 /* Responsive */
 @media (max-width: 768px) {
   .logo-carousel .slide img {
-    width: 100px;
+    width: auto;
   }
   .logo-carousel .slide-track {
     animation-duration: 25s;
@@ -3029,4 +2974,69 @@ height: 100%;
   color: #951f44 !important;
   font-weight: 600;
 }
+/* Base styles (already provided) */
+.video-modal {
+  display: none; 
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
 
+.video-modal-content {
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+}
+
+.video-modal video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* --- Media Queries --- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .video-modal-content {
+    max-width: 700px;
+    width: 95%;
+  }
+  .video-close {
+    font-size: 28px;
+    top: -15px;
+    right: -15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .video-modal-content {
+    max-width: 100%;
+    width: 100%;
+  }
+  .video-close {
+    font-size: 24px;
+    top: 5px;
+    right: 10px;
+  }
+  .video-modal video {
+    height: auto;
+  }
+}

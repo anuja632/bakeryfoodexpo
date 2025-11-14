@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bakery and Food Tech Expo 2026</title>
-  <!-- Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome (Optional for icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="./asset/css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="./asset/images/banner/bakerylogo.png">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./asset/images/banner/bakerylogo.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./asset/css/style.css" />
 </head>
 <body>
 
@@ -124,7 +140,7 @@
     <div class="row text-center">
 
       <!-- Sponsorship / Stall Booking -->
-      <div class="col-md-4 mb-4 mb-md-0">
+      <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
         <div class="info-box">
           <div class="icon mb-3">
             <i class="fas fa-phone-volume fs-1 text-warning"></i>
@@ -146,7 +162,7 @@
       </div>
 
       <!-- Location -->
-      <div class="col-md-4 mb-4 mb-md-0">
+      <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
         <div class="info-box">
           <div class="icon mb-3">
             <i class="fas fa-map-marker-alt fs-1 text-warning"></i>
@@ -158,7 +174,7 @@
       </div>
 
       <!-- Contact -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
         <div class="info-box">
           <div class="icon mb-3">
             <i class="fas fa-envelope fs-1 text-warning"></i>
@@ -182,7 +198,7 @@
       </div>
 
     </div>
-    <div class="text-center mt-3">
+    <div class="text-center mt-3" data-aos="fade-up" data-aos-delay="400">
       <h5 class="fw-bold">Your Presence is Important to Us</h5>
     </div>
   </div>
@@ -212,19 +228,19 @@
 
        
         
-        
-<!-- Booking Form + Map -->
+<!-- Booking Form + Image -->
 <div class="container py-5">
   <div class="row align-items-center justify-content-between py-5">
+
     <!-- Left: Form -->
-    <div class="col-lg-6 mb-4" data-aos="fade-right">
+    <div class="col-lg-6 mb-4" data-aos="fade-right" data-aos-duration="800">
       <div class="section-title mb-4">
-<h4>Join the Expo That’s Shaping the Future of Food!</h4>
+        <h4>Join the Expo That’s Shaping the Future of Food!</h4>
       </div>
 
       <form 
-        action="https://formsubmit.co/info@bakerynfoodtecexpo.com" 
-        method="POST"
+        action="https://formsubmit.co/abianu632@gmail.com" 
+        method="POST" id="contactformax"
       >
         <!-- Hidden Fields -->
         <input type="hidden" name="_subject" value="New Enquiry - Bakery & Food Tech Expo">
@@ -245,7 +261,6 @@
             <input type="text" class="form-control" name="company" placeholder="Company / Brand Name">
           </div>
 
-          <!-- Dropdown for Role -->
           <div class="col-md-12">
             <select class="form-select" name="enquiry_type" required>
               <option value="">Select Your Interest *</option>
@@ -256,7 +271,6 @@
             </select>
           </div>
 
-          <!-- Location Field -->
           <div class="col-md-12">
             <input type="text" class="form-control" name="location" placeholder="Your City / Location *" required>
           </div>
@@ -266,19 +280,19 @@
           </div>
 
           <div class="col-12 text-center">
-            <button type="submit" class="btn-default ">SUBMIT ENQUIRY</button>
+            <button type="submit" class="btn-default">SUBMIT ENQUIRY</button>
           </div>
         </div>
       </form>
     </div>
 
-
-    <!-- Right: Image instead of Map -->
-    <div class="col-lg-6 text-center" data-aos="fade-left">
+    <!-- Right: Image -->
+    <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="800">
       <div class="rounded shadow overflow-hidden">
-        <img src="https://img.freepik.com/free-photo/medium-shot-women-shopping-pastry_23-2149461691.jpg?t=st=1762503783~exp=1762507383~hmac=0c6207073683184dc56b5dcb7e3dc596c1dc707b25def733c255f77478fc4bdc&w=740" 
+        <img src="./asset/images/shopingcontact.jpg" 
              alt="Bakery & Food Tech Expo Venue" 
              class="img-fluid rounded"
+             loading="lazy"
              style="height:700px; width: 100%; object-fit: cover;">
       </div>
     </div>
@@ -298,13 +312,12 @@
     <i class="fas fa-phone"></i>
   </a>
 
-  <!-- Scroll To Top -->
-  <button class="fab-btn scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+<!-- Scroll To Top -->
+<button class="fab-btn" id="scrollTopBtn" aria-label="Scroll to top">
     <i class="fas fa-arrow-up"></i>
-  </button>
+</button>
+
 </div>
-
-
 <!-- =======================
      Footer Start
 ======================== -->
@@ -313,9 +326,9 @@
     <div class="row align-items-start text-center text-md-start">
 
       <!-- Logo + Social Links -->
-      <div class="col-lg-3 col-md-6 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
         <img src="./asset/images/logo.png" alt="Bakery & Food Tech Expo Logo" class="img-fluid mb-3">
-        <div class="social-links text-center ">
+        <div class="social-links text-center">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -324,7 +337,7 @@
       </div>
 
       <!-- Explore Links -->
-      <div class="col-lg-2 col-md-6 mb-4">
+      <div class="col-lg-2 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
         <h5 class="footer-title">Explore</h5>
         <ul class="list-unstyled footer-links">
           <li><a href="index.html"><i class="fas fa-home me-2"></i>Home</a></li>
@@ -338,60 +351,87 @@
       </div>
 
       <!-- Expo Dates -->
-      <div class="col-lg-3 col-md-6 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
         <h5 class="footer-title">Expo Dates</h5>
-        <p class="mb-1"><i class="fas fa-calendar-alt me-2"></i>MARCH 13, 2026</p>
-        <p class="mb-1"><i class="fas fa-calendar-alt me-2"></i>MARCH 14, 2026</p>
-        <p class="mb-3"><i class="fas fa-calendar-alt me-2"></i>MARCH 15, 2026</p>
-        <p class="mb-2 small"><i class="fas fa-map-marker-alt me-2"></i>Hills Exhibition Center,Hosur, Tamil Nadu</p>
+        <p class="mb-1"><i class="fas fa-calendar-alt me-2"></i>April 10, 2026</p>
+        <p class="mb-1"><i class="fas fa-calendar-alt me-2"></i>April 11, 2026</p>
+        <p class="mb-3"><i class="fas fa-calendar-alt me-2"></i>April 12, 2026</p>
+        <p class="mb-2 small"><i class="fas fa-map-marker-alt me-2"></i>Hills Exhibition Center, Hosur, Tamil Nadu</p>
       </div>
 
       <!-- Contact Info -->
-      <div class="col-lg-4 col-md-6 mb-4 text-md-start text-center">
+      <div class="col-lg-4 col-md-6 mb-4 text-md-start text-center" data-aos="fade-up" data-aos-delay="400">
         <h5 class="footer-title">Contact Us</h5>
         <div class="contact-info">
-          <p><i class="fas fa-phone me-2" ></i> +91 7406213220, +91 7406213221</p>
+          <p><i class="fas fa-phone me-2"></i> +91 7406213220, +91 7406213221</p>
           <p><i class="fas fa-phone me-2"></i> +91 7406213222, +91 7406213223</p>
           <p><i class="fas fa-phone me-2"></i> 080 23238677, 080 23238699</p>
           <p><i class="fas fa-envelope me-2"></i> bakerynfoodtecexpo.com@gmail.com</p>
           <p><i class="fas fa-envelope me-2"></i> info@bakerynfoodtecexpo.com</p>
-          <p class="small mb-0"><i class="fas fa-map-marker-alt me-2"></i>#372/1, 3rd Floor, 4th Stage, 8th Main Road,Basaweshwaranagar, Bangalore - 560079</p>
+          <p class="small mb-0"><i class="fas fa-map-marker-alt me-2"></i>#372/1, 3rd Floor, 4th Stage, 8th Main Road, Basaweshwaranagar, Bangalore - 560079</p>
         </div>
       </div>
     </div>
 
     <!-- Bottom Image -->
-    <div class="text-center mt-4">
-      <img src="https://jayasurya1912.github.io/Agri-Expo/images/fotin.png" alt="Bakery & Food Tech Expo Footer Image" class="footer-bottom-img img-fluid">
+    <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="500">
+      <img src="https://jayasurya1912.github.io/Agri-Expo/images/fotin.png" alt="Footer Image" class="footer-bottom-img img-fluid">
     </div>
 
     <!-- Copyright -->
-    <hr class="border-light ">
-    <div class="text-center small pb-1">
+    <hr class="border-light">
+    <div class="text-center small pb-1" data-aos="fade-up" data-aos-delay="600">
       © 2026 Bakery & Food Tech Expo. All Rights Reserved.
       <span class="developed-by">Developed by <a href="https://www.webads.live/" target="_blank">Webads</a></span>
     </div>
   </div>
 </footer>
+
 <!-- =======================
      Footer End
 ======================== -->
 
-  <!-- jQuery (one copy) - required by OwlCarousel -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- Bootstrap bundle (includes Popper) - only one copy -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap bundle (includes Popper) - only one copy -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery (one copy) - required by OwlCarousel -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Owl Carousel JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
   <!-- WOW.js (for Animate.css triggering) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-  new WOW().init();
+  AOS.init({
+    once: false,       // Animations repeat every time you scroll into view
+    duration: 1000,    // Default duration
+    mirror: true       // Animate elements on scroll up and down
+  });
 </script>
-<script src="js/script.js"></script>
+
+<script>
+  // Select the form
+  const form = document.getElementById('contactformax');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent actual form submission
+    alert('Thank you! Your message has been submitted.'); // Alert message
+    form.reset(); // Optional: reset the form after submission
+  });
+</script>
+
+
+
+  <!-- Your custom scripts (load after libraries) -->
+  <script src="./asset/js/script.js"></script>
+  <script src="./asset/js/custom.js"></script>
+  <script src="./asset/js/slide.js"></script>
+
 </body>
 </html>
