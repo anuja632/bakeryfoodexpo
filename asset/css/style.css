@@ -30,7 +30,22 @@ body {
     overflow-x: hidden;
 	
 }
+/* Remove Bootstrap's default blue active/focus color */
+.navbar .nav-link:focus,
+.navbar .nav-link:active,
+.navbar .dropdown-item:active,
+.navbar .dropdown-item:focus {
+  color: #951f44 !important;
+  background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
 
+/* Optional: make the active page link stay colored */
+.navbar .nav-link.active {
+  color: #951f44 !important;
+  font-weight: 600;
+}
 
 
 p{
@@ -3000,22 +3015,7 @@ height: 100%;
 }
 
 
-/* Remove Bootstrap's default blue active/focus color */
-.navbar .nav-link:focus,
-.navbar .nav-link:active,
-.navbar .dropdown-item:active,
-.navbar .dropdown-item:focus {
-  color: #951f44 !important;
-  background-color: transparent !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
 
-/* Optional: make the active page link stay colored */
-.navbar .nav-link.active {
-  color: #951f44 !important;
-  font-weight: 600;
-}
 /* Base styles (already provided) */
 .video-modal {
   display: none; 
