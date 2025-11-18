@@ -2729,7 +2729,7 @@ height: 100%;
     
       margin: auto;
       text-align: center;
-      padding: 60px 0;
+  
     }
 
     .industry-stats-section h2 {
@@ -2991,7 +2991,7 @@ height: 100%;
 /* ===== Dots Styling ===== */
 .home-banner-carousel .owl-dots {
   position: absolute;
-  bottom: 20px;          /* Position dots at bottom of banner */
+  bottom: 0px;          /* Position dots at bottom of banner */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
