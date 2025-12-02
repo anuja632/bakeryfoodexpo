@@ -579,6 +579,79 @@
     </div>
 
 </section>
+<!-- Popup Overlay -->
+<div id="popupOverlay" class="popup-overlay">
+  <div class="popup-box">
+    <span class="popup-close" id="closePopup">&times;</span>
+
+    <!-- Your Form -->
+    <form 
+      action="https://formsubmit.co/abianu632@gmail.com" 
+      method="POST" 
+      id="contactformax"
+    >
+      <input type="hidden" name="_subject" value="New Enquiry - Bakery & Food Tech Expo">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="row g-3">
+        <img src="./asset/images/logo.png">
+        <div class="col-md-12">
+          <input type="text" class="form-control" name="name" placeholder="Your Name *" required>
+        </div>
+        <div class="col-md-12">
+          <input type="tel" class="form-control" name="phone" placeholder="Phone Number *" required>
+        </div>
+        <div class="col-md-12">
+          <input type="email" class="form-control" name="email" placeholder="Your Email *" required>
+        </div>
+
+        <div class="col-md-12">
+          <select class="form-select" name="enquiry_type" required>
+            <option value="">Select Your Interest *</option>
+            <option value="Exhibitor">Exhibitor</option>
+            <option value="Sponsor">Sponsor</option>
+            <option value="Visitor">Visitor</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <textarea class="form-control" name="message" rows="3" placeholder="Additional Message"></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn-default">SUBMIT ENQUIRY</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+<script>
+// Popup elements
+const popup = document.getElementById("popupOverlay");
+const closeBtn = document.getElementById("closePopup");
+const form = document.getElementById("contactformax");
+
+// Show popup after 3 seconds (3000 ms)
+setTimeout(() => {
+  popup.classList.add("show");
+}, 3000);
+
+// Close popup by clicking X
+closeBtn.addEventListener("click", () => {
+  popup.classList.remove("show");
+});
+
+// Form submit thank you + reset + close popup
+form.addEventListener("submit", function(e) {
+  alert("Thank you! Your enquiry has been submitted successfully.");
+  form.reset();
+  popup.classList.remove("show");
+});
+</script>
+
+
 
 
 <!-- Floating Action Buttons -->
@@ -649,7 +722,7 @@
           <p><i class="fas fa-phone me-2"></i> +91 7406213220, +91 7406213221</p>
           <p><i class="fas fa-phone me-2"></i> +91 7406213222, +91 7406213223</p>
           <p><i class="fas fa-phone me-2"></i> 080 23238677, 080 23238699</p>
-          <p><i class="fas fa-envelope me-2"></i> bakerynfoodtecexpo.com@gmail.com</p>
+          <p><i class="fas fa-envelope me-2"></i> fnbtecexpo@gmail.com </p>
           <p><i class="fas fa-envelope me-2"></i> info@bakerynfoodtecexpo.com</p>
           <p class="small mb-0"><i class="fas fa-map-marker-alt me-2"></i>#372/1, 3rd Floor, 4th Stage, 8th Main Road, Basaweshwaranagar, Bangalore - 560079</p>
         </div>

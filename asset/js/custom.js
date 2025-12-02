@@ -81,8 +81,8 @@ showWhyexpo(current);
 startWhyexpoAutoplay();
 
 
-  // Countdown target date → March 13, 2026
-  const targetDate = new Date("April 10, 2026 00:00:00").getTime();
+  // Countdown target date → August21, 2026
+const targetDate = new Date("August 21, 2026 00:00:00").getTime();
 
   const timer = setInterval(function() {
     const now = new Date().getTime();
